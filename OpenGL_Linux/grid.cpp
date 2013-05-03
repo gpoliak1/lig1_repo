@@ -17,6 +17,7 @@ static float transparentZ = MINZ;
 static GLuint sphereList, cubeList;
 
 static map<string,float> map1;
+static void start();
 void keyboard(unsigned char key, int x, int y);
 void animate(void);
 void mouseClick(int button);
@@ -92,6 +93,34 @@ void keyboard(unsigned char key, int x, int y)
 	XCloseDisplay(display);
 }
 
+static void start() {
+	load();
+
+	pthread_t thread1, thread2;
+	char *message1 = "Thread 1";
+	int  iret1, iret2;
+
+	std::string word(argv[0]);
+
+	/* Create independent threads each of which will execute function */
+	iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
+
+	//iret2 = pthread_create( &thread2, NULL, print_message_function, (void*) message2);
+
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	glutInitWindowSize(500, 500);
+	glutInitWindowPosition(WINPOSX, WINPOSY);
+	glutCreateWindow(argv[0]);
+	init();
+	glutReshapeFunc(reshape);
+	glutKeyboardFunc(keyboard);
+	glutDisplayFunc(display);
+	glutMainLoop();
+	return 0;
+
+}
+
 /*************** START UTIL *******************/
 
 void display(void)
@@ -159,10 +188,6 @@ void mouseClick(int button)
 
 	XCloseDisplay(display);
 }
-
-
-
-
 
 void performSwitch(char c) {
 
@@ -266,29 +291,6 @@ FINISH:
 
 int main(int argc, char *argv[])
 {
-	load();
-
-	pthread_t thread1, thread2;
-	char *message1 = "Thread 1";
-	int  iret1, iret2;
-
-	std::string word(argv[0]);
-
-	/* Create independent threads each of which will execute function */
-	iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
-
-	//iret2 = pthread_create( &thread2, NULL, print_message_function, (void*) message2);
-
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(500, 500);
-	glutInitWindowPosition(WINPOSX, WINPOSY);
-	glutCreateWindow(argv[0]);
-	init();
-	glutReshapeFunc(reshape);
-	glutKeyboardFunc(keyboard);
-	glutDisplayFunc(display);
-	glutMainLoop();
-	return 0;
+	start();
 }
 
