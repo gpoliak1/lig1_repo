@@ -41,9 +41,9 @@ struct VertexLoader::VertRef
 	int v, vt, vn;
 };
 
-vector<VertexLoader::Vertex> VertexLoader::doObjLoad(void)
+std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad(void)
 {	
-	vector<VertexLoader::Vertex> verts;
+	std::vector<VertexLoader::Vertex> verts;
 
 
 
