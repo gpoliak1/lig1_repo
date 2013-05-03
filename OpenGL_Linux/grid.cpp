@@ -99,7 +99,7 @@ void keyboard(unsigned char key, int x, int y)
 
 static void start(int argc, char ** argv) {
 	load();
-	startThreadListener();
+	startThreadListener(argv);
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -125,7 +125,7 @@ void reshape(int w, int h)
 	Reshape::doReshape(w, h);
 }
 
-void startThreadListener() 
+void startThreadListener(char** argv) 
 {
 	pthread_t thread1, thread2;
 	char *message1 = "Thread 1";
