@@ -10,4 +10,4 @@ g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final readParse.o display.o resh
 
 ./final
 
-# https://github.com/lig1/lig1_repo.git master
+# git push https://github.com/lig1/lig1_repo.git master
