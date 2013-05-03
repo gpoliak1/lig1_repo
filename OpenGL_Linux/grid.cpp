@@ -42,28 +42,59 @@ static void load(void)
 
 static void init(void)
 {
-	GLfloat mat_specular[] = {1.0, 1.0, 1.0, 0.15};
-	GLfloat mat_shininess[] = { 100.0 };
-	GLfloat position[] = {0.5, 0.5, 1.0, 0.0};
-
+	//LIGHT0
+	GLfloat mat_specular[] = {1.0,1.0,1.0,1.0};
+	GLfloat mat_shininess[] = {50.0};
+	GLfloat light_position[] = {1.0, 1.0, 1.0, 0.0};
+	GLfloat white_light[] = {0.0, 1.0, 1.0, 1.0};
+	GLfloat lmodel_ambient[] = {0.1, 0.1, 0.1, 1.0};
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glShadeModel(GL_SMOOTH);
 	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
 	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
+
+	glLightfv(GL_LIGHT0, GL_POSITION, light_position);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
+	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
+
+	//LIGHT1
+	GLfloat mat_specular1[] = {1.0,1.0,1.0,1.0};
+	GLfloat mat_shininess1[] = {50.0};
+	GLfloat light_position1[] = {-1.0, 1.0, 1.0, 0.0};
+	GLfloat white_light1[] = {1.0, 1.0, 0.0, 1.0};
+	GLfloat lmodel_ambient1[] = {0.1, 0.1, 0.1, 1.0};
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glShadeModel(GL_SMOOTH);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular1);
+	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess1);
+
+	glLightfv(GL_LIGHT1, GL_POSITION, light_position1);
+	glLightfv(GL_LIGHT1, GL_DIFFUSE, white_light1);
+	glLightfv(GL_LIGHT1, GL_SPECULAR, white_light1);
+	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
+
+		//LIGHT2
+	GLfloat mat_specular2[] = {1.0,1.0,1.0,1.0};
+	GLfloat mat_shininess2[] = {50.0};
+	GLfloat light_position2[] = {1.0, -1.0, 1.0, 0.0};
+	GLfloat white_light2[] = {1.0, 0.0, 1.0, 1.0};
+	GLfloat lmodel_ambient2[] = {0.1, 0.1, 0.1, 1.0};
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glShadeModel(GL_SMOOTH);
+	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular2);
+	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess2);
+
+	glLightfv(GL_LIGHT2, GL_POSITION, light_position2);
+	glLightfv(GL_LIGHT2, GL_DIFFUSE, white_light2);
+	glLightfv(GL_LIGHT2, GL_SPECULAR, white_light2);
+	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
 
 	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+	glEnable(GL_LIGHT0); //if didnt exist - black, if exists but undefined, default - white
+	glEnable(GL_LIGHT1);
+	glEnable(GL_LIGHT2);
 	glEnable(GL_DEPTH_TEST);
-
-	sphereList = glGenLists(1);
-	glNewList(sphereList, GL_COMPILE);
-
-	glutSolidSphere(map1["SOL_SPH_X"], map1["SOL_SPH_Y"], map1["SOL_SPH_Z"]);
-	glEndList();
-	cubeList = glGenLists(1);
-	glNewList(cubeList, GL_COMPILE);
-	glutSolidCube(0.6);
-	glEndList();
-
 }
 
 void keyboard(unsigned char key, int x, int y)
@@ -102,14 +133,12 @@ static void start(int argc, char ** argv) {
 	startThreadListener(argv);
 
 	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
 	glutInitWindowSize(500, 500);
-	glutInitWindowPosition(WINPOSX, WINPOSY);
 	glutCreateWindow(argv[0]);
 	init();
-	glutReshapeFunc(reshape);
-	glutKeyboardFunc(keyboard);
 	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
 	glutMainLoop();
 }
 
