@@ -34,8 +34,8 @@
 
 namespace VertexLoader 
 {
-	struct Vertex;
-	struct VertRef;
+	extern struct Vertex;
+	extern struct VertRef;
 	extern std::vector<Vertex> doObjLoad( std::istream& in );
 	extern void loadTrigValsIntoArr(void);
 };
