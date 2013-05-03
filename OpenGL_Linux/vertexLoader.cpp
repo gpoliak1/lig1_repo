@@ -345,7 +345,7 @@ void myKey(unsigned char k, int x, int y)
     }
 }
 
-void loadTrigValsIntoArr(void) {
+void VertexLoader::loadTrigValsIntoArr(void) {
 
     trigCosVals[0] = (RADIUS * cos(360*PI/180));
     trigSinVals[0] = (RADIUS * sin(360*PI/180));
