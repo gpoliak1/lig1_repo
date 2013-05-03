@@ -30,8 +30,11 @@
     <ClInclude Include="readParse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="init.h">
+    <ClInclude Include="util.h">
       <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="execAll.h">
+      <Filter>Resource Files</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>
@@ -50,8 +53,11 @@
     <ClCompile Include="readParse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="init.cpp">
+    <ClCompile Include="util.cpp">
       <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="execAll.cpp">
+      <Filter>Resource Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
