@@ -18,6 +18,8 @@ static GLuint sphereList, cubeList;
 
 static map<string,float> map1;
 static void start();
+void display(void);
+void reshape(int w, int h);
 void keyboard(unsigned char key, int x, int y);
 void animate(void);
 void mouseClick(int button);
@@ -93,7 +95,7 @@ void keyboard(unsigned char key, int x, int y)
 	XCloseDisplay(display);
 }
 
-static void start() {
+static void start(int argc, char ** argv) {
 	load();
 
 	pthread_t thread1, thread2;
@@ -117,8 +119,6 @@ static void start() {
 	glutKeyboardFunc(keyboard);
 	glutDisplayFunc(display);
 	glutMainLoop();
-	return 0;
-
 }
 
 /*************** START UTIL *******************/
@@ -291,6 +291,6 @@ FINISH:
 
 int main(int argc, char *argv[])
 {
-	start();
+	start(argc, argv);
 }
 
