@@ -23,6 +23,7 @@ void reshape(int w, int h);
 void keyboard(unsigned char key, int x, int y);
 void animate(void);
 void mouseClick(int button);
+void *print_message_function( void *ptr )
 
 static void load(void)
 {
