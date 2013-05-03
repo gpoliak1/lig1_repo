@@ -30,7 +30,7 @@
     <ClInclude Include="readParse.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="vertex.h">
+    <ClInclude Include="vertexLoader.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -50,12 +50,18 @@
     <ClCompile Include="readParse.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="vertex.cpp">
+    <ClCompile Include="vertexLoader.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="test.cfg">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="execAll.sh">
+      <Filter>Resource Files</Filter>
+    </None>
+    <None Include="execCompOnly.sh">
       <Filter>Resource Files</Filter>
     </None>
   </ItemGroup>

@@ -65,7 +65,7 @@
     <ClInclude Include="grid.h" />
     <ClInclude Include="readParse.h" />
     <ClInclude Include="reshape.h" />
-    <ClInclude Include="vertex.h" />
+    <ClInclude Include="vertexLoader.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="child.cpp" />
@@ -73,9 +73,11 @@
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="readParse.cpp" />
     <ClCompile Include="reshape.cpp" />
-    <ClCompile Include="vertex.cpp" />
+    <ClCompile Include="vertexLoader.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="execAll.sh" />
+    <None Include="execCompOnly.sh" />
     <None Include="test.cfg" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
