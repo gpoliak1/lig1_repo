@@ -65,6 +65,7 @@
     <ClInclude Include="grid.h" />
     <ClInclude Include="readParse.h" />
     <ClInclude Include="reshape.h" />
+    <ClInclude Include="vertex.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="child.cpp" />
@@ -72,6 +73,7 @@
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="readParse.cpp" />
     <ClCompile Include="reshape.cpp" />
+    <ClCompile Include="vertex.cpp" />
   </ItemGroup>
   <ItemGroup>
     <None Include="test.cfg" />
