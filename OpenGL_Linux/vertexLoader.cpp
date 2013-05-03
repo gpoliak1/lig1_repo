@@ -26,24 +26,24 @@ float trigCosVals[10];
 using namespace std;
 using namespace glm;
 
-struct Vertex
+struct VertexLoader::Vertex
 {
-    vec3 position;
-    vec2 texcoord;
-    vec3 normal;
+	vec3 position;
+	vec2 texcoord;
+	vec3 normal;
 };
 
-struct VertRef
+struct VertexLoader::VertRef
 {
-    VertRef( int v, int vt, int vn )
-        : v(v), vt(vt), vn(vn)
-    { }
-    int v, vt, vn;
+	VertRef( int v, int vt, int vn )
+		: v(v), vt(vt), vn(vn)
+	{ }
+	int v, vt, vn;
 };
 
-vector< Vertex >  VertexLoader::doObjLoad(void)
+vector<VertexLoader::Vertex> VertexLoader::doObjLoad(void)
 {	
-	vector< Vertex > verts;
+	vector<VertexLoader::Vertex> verts;
 
 
 
