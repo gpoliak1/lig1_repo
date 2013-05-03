@@ -41,7 +41,7 @@ struct VertexLoader::VertRef
 	int v, vt, vn;
 };
 
-std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad(void)
+std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad( istream& in )
 {	
     std::vector<Vertex> verts;
 
@@ -52,7 +52,7 @@ std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad(void)
     while( getline( in, lineStr ) )
     {
         istringstream lineSS( lineStr );
-        string lineType;
+        std::string lineType;
         lineSS >> lineType;
 
         // vertex
