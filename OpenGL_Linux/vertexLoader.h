@@ -36,7 +36,7 @@ namespace VertexLoader
 {
 	struct Vertex;
 	struct VertRef;
-	extern std::vector<Vertex> doObjLoad( istream& in );
+	extern std::vector<Vertex> doObjLoad( std::istream& in );
 };
 
 #endif

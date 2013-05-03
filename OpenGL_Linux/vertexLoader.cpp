@@ -41,7 +41,7 @@ struct VertexLoader::VertRef
 	int v, vt, vn;
 };
 
-std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad( istream& in )
+std::vector<VertexLoader::Vertex> VertexLoader::doObjLoad( std::istream& in )
 {	
     std::vector<Vertex> verts;
 
