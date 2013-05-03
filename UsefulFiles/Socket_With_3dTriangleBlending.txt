@@ -1,0 +1,259 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <fcntl.h>
+#include <string.h>
+#include <errno.h>
+#include <math.h>
+#include <GL/glut.h>
+#include <vector>
+#include <fstream>
+#include <sstream>
+#include <iostream>
+#include <netinet/in.h>
+#include <resolv.h>
+#include <sys/socket.h>
+#include <arpa/inet.h>
+#include <unistd.h>
+#include <pthread.h>
+#include <pthread.h>
+#include <glm/glm.hpp>
+
+using namespace std;
+
+#define MAXZ 8.0
+#define MINZ -8.0
+#define ZINC 0.4
+static float solidZ = MAXZ;
+static float transparentZ = MINZ;
+static GLuint sphereList, cubeList;
+
+void* SocketHandler(void*);
+void *print_message_function( void *ptr );
+void performSwitch(char c);
+
+static void init(void)
+{
+    GLfloat mat_specular[] = {1.0, 1.0, 1.0, 0.15};
+    GLfloat mat_shininess[] = { 100.0 };
+    GLfloat position[] = {0.5, 0.5, 1.0, 0.0};
+
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+    glLightfv(GL_LIGHT0, GL_POSITION, position);
+
+    glEnable(GL_LIGHTING);
+    glEnable(GL_LIGHT0);
+    glEnable(GL_DEPTH_TEST);
+
+    sphereList = glGenLists(1);
+    glNewList(sphereList, GL_COMPILE);
+    glutSolidSphere(0.4, 16, 16);
+    glEndList();
+    cubeList = glGenLists(1);
+    glNewList(cubeList, GL_COMPILE);
+    glutSolidCube(0.6);
+    glEndList();
+
+}
+
+void display(void)
+{
+    GLfloat mat_solid[] = {0.75, 0.75, 0.0, 1.0};
+    GLfloat mat_zero[] = {0.0, 0.0, 0.0, 1.0};
+    GLfloat mat_transparent[] = {0.0, 0.8, 0.8, 0.6};
+    GLfloat mat_emission[] = {0.0, 0.3, 0.3, 0.6};
+
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+    glPushMatrix();
+    glTranslatef(-0.15, -0.15, solidZ);
+    glMaterialfv(GL_FRONT, GL_EMISSION, mat_zero);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_solid);
+    glCallList(sphereList);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(0.15, 0.15, transparentZ);
+    glRotatef(15.0, 1.0, 1.0, 0.0);
+    glRotatef(30.0, 0.0, 1.0, 0.0);
+    glMaterialfv(GL_FRONT, GL_EMISSION, mat_emission);
+    glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_transparent);
+    glEnable(GL_BLEND);
+    glDepthMask(GL_FALSE);
+    glBlendFunc(GL_SRC_ALPHA, GL_ONE);
+    glCallList(cubeList);
+    glDepthMask(GL_TRUE);
+    glDisable(GL_BLEND);
+    glPopMatrix();
+
+    glutSwapBuffers();
+}
+
+void reshape(int w, int h)
+{
+    glViewport(0, 0, (GLint) w, (GLint) h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+    if (w <= h)
+        glOrtho(-1.5, 1.5, -1.5*(GLfloat)h/(GLfloat)w, 1.5*(GLfloat)h/(GLfloat)w, -10.0, 10.0);
+    else
+        glOrtho(-1.5*(GLfloat)h/(GLfloat)w, 1.5*(GLfloat)h/(GLfloat)w, -1.5, 1.5, -10.0, 10.0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+}
+
+void animate(void)
+{
+    if (solidZ <= MINZ || transparentZ >= MAXZ)
+        glutIdleFunc(NULL);
+    else {
+        solidZ -= ZINC;
+        transparentZ += ZINC;
+        glutPostRedisplay();
+    }
+}
+
+void keyboard(unsigned char key, int x, int y)
+{
+    switch (key) {
+    case 'a':
+    case 'A':
+        solidZ = MAXZ;
+        transparentZ = MINZ;
+        glutIdleFunc(animate);
+        break;
+    case 'r':
+    case 'R':
+        solidZ = MAXZ;
+        transparentZ = MINZ;
+        glutPostRedisplay();
+        break;
+    case 27:
+        exit(0);
+        break;
+
+    }
+}
+
+int main(int argc, char *argv[])
+{
+    pthread_t thread1, thread2;
+    char *message1 = "Thread 1";
+    int  iret1, iret2;
+
+    std::string word(argv[0]);
+
+    /* Create independent threads each of which will execute function */
+    iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
+
+    //iret2 = pthread_create( &thread2, NULL, print_message_function, (void*) message2);
+
+    glutInit(&argc, argv);
+    glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
+    glutInitWindowSize(500, 500);
+    glutCreateWindow(argv[0]);
+    init();
+    glutReshapeFunc(reshape);
+    glutKeyboardFunc(keyboard);
+    glutDisplayFunc(display);
+    glutMainLoop();
+    return 0;
+}
+
+void performSwitch(char c) {
+
+    int x = glutGet(GLUT_WINDOW_X);
+    int y = glutGet(GLUT_WINDOW_Y);
+
+    keyboard(c, x, y);
+}
+
+void *print_message_function( void *ptr )
+{
+    int host_port= 6789;
+
+    struct sockaddr_in my_addr;
+
+    int hsock;
+    int * p_int ;
+    int err;
+
+    socklen_t addr_size = 0;
+    int* csock;
+    sockaddr_in sadr;
+    pthread_t thread_id=0;
+
+
+    hsock = socket(AF_INET, SOCK_STREAM, 0);
+    if(hsock == -1) {
+        printf("Error initializing socket %d\n", errno);
+        goto FINISH;
+    }
+
+    p_int = (int*)malloc(sizeof(int));
+    *p_int = 1;
+
+    if( (setsockopt(hsock, SOL_SOCKET, SO_REUSEADDR, (char*)p_int, sizeof(int)) == -1 )||
+            (setsockopt(hsock, SOL_SOCKET, SO_KEEPALIVE, (char*)p_int, sizeof(int)) == -1 ) ) {
+        printf("Error setting options %d\n", errno);
+        free(p_int);
+        goto FINISH;
+    }
+    free(p_int);
+
+    my_addr.sin_family = AF_INET ;
+    my_addr.sin_port = htons(host_port);
+
+    memset(&(my_addr.sin_zero), 0, 8);
+    my_addr.sin_addr.s_addr = INADDR_ANY ;
+
+    if( bind( hsock, (sockaddr*)&my_addr, sizeof(my_addr)) == -1 ) {
+        fprintf(stderr,"Error binding to socket, make sure nothing else is listening on this port %d\n",errno);
+        goto FINISH;
+    }
+    if(listen( hsock, 10) == -1 ) {
+        fprintf(stderr, "Error listening %d\n",errno);
+        goto FINISH;
+    }
+
+    //Now lets do the server stuff
+
+    addr_size = sizeof(sockaddr_in);
+
+    while(true) {
+        printf("waiting for a connection\n");
+        csock = (int*)malloc(sizeof(int));
+        if((*csock = accept( hsock, (sockaddr*)&sadr, &addr_size))!= -1) {
+            printf("---------------------\nReceived connection from %s\n",inet_ntoa(sadr.sin_addr));
+            pthread_create(&thread_id,0,&SocketHandler, (void*)csock );
+            pthread_detach(thread_id);
+        }
+        else {
+            fprintf(stderr, "Error accepting %d\n", errno);
+        }
+    }
+
+FINISH:
+    ;
+}
+
+void* SocketHandler(void* lp) {
+    int *csock = (int*)lp;
+
+    char buffer[1024];
+    int buffer_len = 1024;
+    int bytecount;
+
+    const char yChar = 'y';
+    while ((bytecount = recv(*csock, buffer, buffer_len, 0)) > 0) {
+
+        performSwitch(*buffer);
+
+        printf("Rec bytes %c\n", *buffer);
+    }
+
+
+FINISH:
+    free(csock);
+    return 0;
+}
