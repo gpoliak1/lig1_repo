@@ -1,11 +1,11 @@
 #include "util.h"
 
-using namespace std;
-using namespace glm;
-
 #define PI				3.14159265
 #define RADIUS			5
 #define NUM_OF_ANGLES	10
+
+using namespace std;
+using namespace glm;
 
 float Grid::trigSinVals[10];
 float Grid::trigCosVals[10];
