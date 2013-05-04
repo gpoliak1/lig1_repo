@@ -1,8 +1,14 @@
 #include "util.h"
 
+using namespace std;
+using namespace glm;
+
 #define PI				3.14159265
 #define RADIUS			5
 #define NUM_OF_ANGLES	10
+
+float Grid::trigSinVals[10];
+float Grid::trigCosVals[10];
 
 void Util::loadTrigValsIntoArr(void) {
 	Grid::trigCosVals[0] = (RADIUS * cos(360*PI/180));

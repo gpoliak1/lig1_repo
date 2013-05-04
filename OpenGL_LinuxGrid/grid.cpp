@@ -1,4 +1,5 @@
 #include "display.h"
+#include "util.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -357,7 +358,7 @@ int main(int argc, char **argv)
     model = LoadOBJ( ifile );
 
     glutInit( &argc, argv );
-	loadTrigValsIntoArr();
+	Util::loadTrigValsIntoArr();
     glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
     glutInitWindowSize( 640, 480 );
 	glutReshapeFunc(myReshape);
