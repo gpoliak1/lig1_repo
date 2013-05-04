@@ -1,5 +1,4 @@
 #include "display.h"
-#include "grid.h"
 
 #define ROT_INC			0.1
 #define factor 			1
