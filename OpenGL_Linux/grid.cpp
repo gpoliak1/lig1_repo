@@ -185,7 +185,7 @@ void idle(void) {
 
 static void start(int argc, char ** argv) {
 	load();
-	startThreadListener(argv);
+//	startThreadListener(argv);
 
 	//from objloader
     ifstream ifile("test.obj" );
