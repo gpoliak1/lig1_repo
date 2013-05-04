@@ -47,7 +47,7 @@ struct VertRef
 };
 
 
-vector<vector<Vertex>> models;
+vector< Vertex > models[2];
 
 vector< Vertex > LoadOBJ( istream& in )
 {
@@ -279,6 +279,18 @@ void display(void)
 	int w = glutGet(GLUT_WINDOW_WIDTH);
 	int h = glutGet(GLUT_WINDOW_HEIGHT);
 
+	glEnable( GL_DEPTH_TEST );
+
+	// set up "headlamp"-like light
+	glShadeModel( GL_SMOOTH );
+	glEnable( GL_COLOR_MATERIAL );
+	glColorMaterial( GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE );
+	glEnable( GL_LIGHTING );
+	glEnable( GL_LIGHT0 );
+
+	GLfloat position[] = { 0, 0, 1, 0 };
+	glLightfv( GL_LIGHT0, GL_POSITION, position );
+
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective( 60.0, (GLdouble)w/(GLdouble)h, 0.1, 40.0);
@@ -294,19 +306,39 @@ void display(void)
 	OglDisplay::drawGrid();
 
 	/** stone */
+	int j;
+	//glColor3ub( 180, 0, 0 );
+	//glTranslatef(10, -1, -1);
+	for (j = 0; j < 1; j++) {
 	glColor3ub( 180, 0, 0 );
-	glTranslatef(-10, -1, -1);
+	glTranslatef(2, -1, -1);
 
 	glEnableClientState( GL_VERTEX_ARRAY );
 	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
 	glEnableClientState( GL_NORMAL_ARRAY );
-	glVertexPointer( 3, GL_FLOAT, sizeof(Vertex), &model[0].position );
-	glTexCoordPointer( 2, GL_FLOAT, sizeof(Vertex), &model[0].texcoord );
-	glNormalPointer( GL_FLOAT, sizeof(Vertex), &model[0].normal );
-	glDrawArrays( GL_TRIANGLES, 0, model.size() );
+	glVertexPointer( 3, GL_FLOAT, sizeof(Vertex), &models[j][0].position );
+	glTexCoordPointer( 2, GL_FLOAT, sizeof(Vertex), &models[j][0].texcoord );
+	glNormalPointer( GL_FLOAT, sizeof(Vertex), &models[j][0].normal );
+	glDrawArrays( GL_TRIANGLES, 0, models[j].size() );
 	glDisableClientState( GL_VERTEX_ARRAY );
 	glDisableClientState( GL_TEXTURE_COORD_ARRAY );
 	glDisableClientState( GL_NORMAL_ARRAY );
+	}
+
+	/** stone 2 */
+	/*glColor3ub( 0, 180, 0 );
+	glTranslatef(-5, -1, -1);
+
+	glEnableClientState( GL_VERTEX_ARRAY );
+	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
+	glEnableClientState( GL_NORMAL_ARRAY );
+	glVertexPointer( 3, GL_FLOAT, sizeof(Vertex), &models[j][0].position );
+	glTexCoordPointer( 2, GL_FLOAT, sizeof(Vertex), &models[j][0].texcoord );
+	glNormalPointer( GL_FLOAT, sizeof(Vertex), &models[j][0].normal );
+	glDrawArrays( GL_TRIANGLES, 0, models[j].size() );
+	glDisableClientState( GL_VERTEX_ARRAY );
+	glDisableClientState( GL_TEXTURE_COORD_ARRAY );
+	glDisableClientState( GL_NORMAL_ARRAY );*/
 	
 	glPopMatrix();
 	glutSwapBuffers();
@@ -341,13 +373,16 @@ void myIdleFunc(void) {
 int main(int argc, char **argv)
 {
 	//from objloader
-	ifstream ifile("test.obj" );
-	ifstream arr[1];
-	arr[0]=ifile;
-	int j;
-	for (j=0;j<1;j++) {
-		models.push_back(LoadOBJ( ifile ));
-	}
+	ifstream stone("test.obj" );
+	ifstream stone2("test.obj" );
+	ifstream stone3("test.obj" );
+	ifstream stone4("test.obj" );
+	ifstream stone5("test.obj" );
+	models[0] = LoadOBJ(stone);
+	models[1] = LoadOBJ(stone2);
+	models[2] = LoadOBJ(stone3);
+	models[3] = LoadOBJ(stone4);
+	models[4] = LoadOBJ(stone5);
 
 	glutInit( &argc, argv );
 	Util::loadTrigValsIntoArr();
@@ -360,14 +395,14 @@ int main(int argc, char **argv)
 	glutKeyboardFunc(myKey);
 	glutMouseFunc(myMouse);
 
-	glEnable( GL_DEPTH_TEST );
+	/*glEnable( GL_DEPTH_TEST );
 
 	// set up "headlamp"-like light
 	glShadeModel( GL_SMOOTH );
 	glEnable( GL_COLOR_MATERIAL );
 	glColorMaterial( GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE ) ;
 	glEnable( GL_LIGHTING );
-	glEnable( GL_LIGHT0 );
+	glEnable( GL_LIGHT0 );*/
 
 	//glMatrixMode(GL_PROJECTION);
 	//gluLookAt(-10, 0, 5, 0, 0, 5, 0.0, 1.0, 0.0);
@@ -377,8 +412,8 @@ int main(int argc, char **argv)
 	glScalef(1.0, 1.0, -1.0);
 	glTranslatef(-1,-1,-1);
 
-	GLfloat position[] = { 0, 0, 1, 0 };
-	glLightfv( GL_LIGHT0, GL_POSITION, position );
+	/*GLfloat position[] = { 0, 0, 1, 0 };
+	glLightfv( GL_LIGHT0, GL_POSITION, position );*/
 
 	glPolygonMode( GL_FRONT, GL_FILL );
 	glPolygonMode( GL_BACK, GL_LINE );
