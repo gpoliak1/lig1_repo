@@ -47,7 +47,7 @@ struct VertRef
 };
 
 
-vector< Vertex > model;
+vector<vector<Vertex>> models;
 
 vector< Vertex > LoadOBJ( istream& in )
 {
@@ -342,7 +342,12 @@ int main(int argc, char **argv)
 {
 	//from objloader
 	ifstream ifile("test.obj" );
-	model = LoadOBJ( ifile );
+	ifstream arr[1];
+	arr[0]=ifile;
+	int j;
+	for (j=0;j<1;j++) {
+		models.push_back(LoadOBJ( ifile ));
+	}
 
 	glutInit( &argc, argv );
 	Util::loadTrigValsIntoArr();
