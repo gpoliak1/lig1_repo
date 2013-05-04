@@ -9,7 +9,6 @@
 void *font = GLUT_BITMAP_8_BY_13;
 static GLfloat g_rotate = 0;
 static GLfloat g_rotInc = ROT_INC;
-static void (*drawPrimP)(void) = drawGrid;
 
 float eyeX = 0.0;
 float eyeY = 0.0;
