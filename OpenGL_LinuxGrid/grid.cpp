@@ -10,12 +10,12 @@
 #include <fstream>
 #include <sstream>
 
-using namespace std;
-using namespace glm;
-
+#define NUM_OF_ANGLES	10
 #define ROT_INC			0.1
 #define factor 			1
 
+using namespace std;
+using namespace glm;
 
 //void drawGrid(void);
 void setCamera(void);
@@ -213,8 +213,8 @@ void myKey(unsigned char k, int x, int y)
             multiplierXZ = NUM_OF_ANGLES - 1;
         }
 
-        lookatX = trigSinVals[multiplierXZ] + eyeX;
-        lookatZ = trigCosVals[multiplierXZ] + eyeZ;
+        lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
+        lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
 
         setCamera();
         break;
@@ -227,8 +227,8 @@ void myKey(unsigned char k, int x, int y)
             multiplierXZ = 0;
         }
 
-        lookatX = trigSinVals[multiplierXZ] + eyeX;
-        lookatZ = trigCosVals[multiplierXZ] + eyeZ;
+        lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
+        lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
 
 		printf("\nAngle XZ: %d",multiplierYZ*36);
 
@@ -243,8 +243,8 @@ void myKey(unsigned char k, int x, int y)
             multiplierYZ = 9;
         }
 
-        lookatY = trigSinVals[multiplierYZ] + eyeY;
-        lookatZ = trigCosVals[multiplierYZ] + eyeZ;
+        lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
+        lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
 
 	printf("\nAngle YZ: %d",multiplierYZ*36);
 
@@ -259,8 +259,8 @@ void myKey(unsigned char k, int x, int y)
             multiplierYZ = 0;
         }
 
-        lookatY = trigSinVals[multiplierYZ] + eyeY;
-        lookatZ = trigCosVals[multiplierYZ] + eyeZ;
+        lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
+        lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
 
         setCamera();
         break;
