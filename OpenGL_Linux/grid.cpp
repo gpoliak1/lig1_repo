@@ -16,6 +16,17 @@ static float solidZ = MAXZ;
 static float transparentZ = MINZ;
 static GLuint sphereList, cubeList;
 
+static float eyeX = 0.0;
+static float eyeY = 0.0;
+static float eyeZ = -10.0;
+static float lookatX = 0.0;
+static float lookatY = 0.0;
+static float lookatZ = -15.0;
+static int multiplierXZ = 0;
+static int multiplierYZ = 0;
+static float trigSinVals[10];
+static float trigCosVals[10];
+
 static map<string,float> map1;
 static void start();
 void display(void);

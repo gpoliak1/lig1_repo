@@ -10,18 +10,6 @@ void *font = GLUT_BITMAP_8_BY_13;
 static GLfloat g_rotate = 0;
 static GLfloat g_rotInc = ROT_INC;
 
-float eyeX = 0.0;
-float eyeY = 0.0;
-float eyeZ = -10.0;
-float lookatX = 0.0;
-float lookatY = 0.0;
-float lookatZ = -15.0;
-
-int multiplierXZ = 0;
-int multiplierYZ = 0;
-float trigSinVals[10];
-float trigCosVals[10];
-
 void drawGrid(void);
 
 void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
@@ -50,8 +38,8 @@ vector< Vertex > model;
 
 void OglDisplay::doOglDisplay(float solidZ, GLuint sphereList, float transparentZ, GLuint cubeList) {
 
-    printf("%s%g%s%g%s%g", "\nDISPLAY - Camera now positioned at ", eyeX, ",", eyeY, ",", eyeZ);
-    printf("%s%g%s%g%s%g%s", "\nDISPLAY - Looking at ", lookatX, ",", lookatY, ",", lookatZ, "\n");
+    printf("%s%g%s%g%s%g", "\nDISPLAY - Camera now positioned at ", Grid::eyeX, ",", Grid::eyeY, ",", Grid::eyeZ);
+    printf("%s%g%s%g%s%g%s", "\nDISPLAY - Looking at ", Grid::lookatX, ",", Grid::lookatY, ",", Grid::lookatZ, "\n");
 
     glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
 
@@ -68,7 +56,7 @@ void OglDisplay::doOglDisplay(float solidZ, GLuint sphereList, float transparent
 	glScalef(1.0, 1.0, -1.0);
 	glTranslatef(-1,-1,-1);
 
-    gluLookAt(eyeX, eyeY, eyeZ,lookatX, lookatY, lookatZ,0.0, 1.0, 0.0);
+    gluLookAt(Grid::eyeX, Grid::eyeY, Grid::eyeZ,Grid::lookatX, Grid::lookatY, Grid::lookatZ,0.0, 1.0, 0.0);
     glColor3ub( 0, 0, 180 );
     glEnableClientState( GL_VERTEX_ARRAY );
     glEnableClientState( GL_TEXTURE_COORD_ARRAY );

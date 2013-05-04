@@ -42,7 +42,7 @@ public:
 	void reshape(int w, int h);
 
 	void keyboard(unsigned char key, int x, int y);
-	
+
 	void performSwitch(char c);
 	void* print_message_function( void *ptr );
 	void* SocketHandler(void*);
@@ -52,7 +52,16 @@ public:
 
 	void mouseClick(int button);
 
-
+	static float eyeX = 0.0;
+	static float eyeY = 0.0;
+	static float eyeZ = -10.0;
+	static float lookatX = 0.0;
+	static float lookatY = 0.0;
+	static float lookatZ = -15.0;
+	static int multiplierXZ = 0;
+	static int multiplierYZ = 0;
+	static float trigSinVals[10];
+	static float trigCosVals[10];
 private:
 
 
