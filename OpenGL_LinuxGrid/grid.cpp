@@ -37,8 +37,8 @@ float lookatZ = -15.0;
 
 int multiplierXZ = 0;
 int multiplierYZ = 0;
-float Grid::trigSinVals[10];
-float Grid::trigCosVals[10];
+//float Grid::trigSinVals[10];
+//float Grid::trigCosVals[10];
 
 
 
