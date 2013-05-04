@@ -52,14 +52,14 @@ public:
 
 	void mouseClick(int button);
 
-	static float eyeX = 0.0;
-	static float eyeY = 0.0;
-	static float eyeZ = -10.0;
-	static float lookatX = 0.0;
-	static float lookatY = 0.0;
-	static float lookatZ = -15.0;
-	static int multiplierXZ = 0;
-	static int multiplierYZ = 0;
+	static float eyeX;
+	static float eyeY;
+	static float eyeZ;
+	static float lookatX;
+	static float lookatY;
+	static float lookatZ;
+	static int multiplierXZ;
+	static int multiplierYZ;
 	static float trigSinVals[10];
 	static float trigCosVals[10];
 private:
