@@ -3,6 +3,7 @@
 #include "readParse.h"
 #include "display.h"
 using namespace std;
+using namespace glm;
 
 float MAXZ;
 float MINZ;

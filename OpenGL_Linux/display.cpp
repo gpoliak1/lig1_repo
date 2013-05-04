@@ -18,6 +18,17 @@ static void (*drawPrimP)(void) = drawGrid;
 using namespace std;
 using namespace glm;
 
+	/*float Grid::eyeX;
+	float Grid::eyeY;
+	float Grid::eyeZ;
+	float Grid::lookatX;
+	float Grid::lookatY;
+	float Grid::lookatZ;
+	int Grid::multiplierXZ;
+	int Grid::multiplierYZ;
+	float Grid::trigSinVals[10];
+	float Grid::trigCosVals[10];*/
+
 struct Vertex
 {
     vec3 position;
