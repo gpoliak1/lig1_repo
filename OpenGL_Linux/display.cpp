@@ -6,6 +6,25 @@
 #define RADIUS			5
 #define NUM_OF_ANGLES	10
 
+void *font = GLUT_BITMAP_8_BY_13;
+static GLfloat g_rotate = 0;
+static GLfloat g_rotInc = ROT_INC;
+
+float eyeX = 0.0;
+float eyeY = 0.0;
+float eyeZ = -10.0;
+float lookatX = 0.0;
+float lookatY = 0.0;
+float lookatZ = -15.0;
+
+int multiplierXZ = 0;
+int multiplierYZ = 0;
+float trigSinVals[10];
+float trigCosVals[10];
+
+using namespace std;
+using namespace glm;
+
 void OglDisplay::doOglDisplay(float solidZ, GLuint sphereList, float transparentZ, GLuint cubeList) {
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
