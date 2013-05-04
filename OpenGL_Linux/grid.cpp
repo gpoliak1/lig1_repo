@@ -3,7 +3,7 @@
 #include "readParse.h"
 #include "display.h"
 using namespace std;
-using namespace glm; //temp temp temp
+//using namespace glm; //temp temp temp
 
 float MAXZ;
 float MINZ;
@@ -192,7 +192,7 @@ static void start(int argc, char ** argv) {
 //    model = LoadOBJ( ifile );
 
     glutInit( &argc, argv );
-//	loadTrigValsIntoArr();
+	loadTrigValsIntoArr();
     glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
     glutInitWindowSize( 640, 480 );
 	glutReshapeFunc(Reshape::doReshape);
