@@ -8,16 +8,16 @@
 using namespace std;
 using namespace glm;
 
-	static float eyeX;
-	static float eyeY;
-	static float eyeZ;
-	static float lookatX;
-	static float lookatY;
-	static float lookatZ;
-	static int multiplierXZ;
-	static int multiplierYZ;
-	static float trigSinVals[10];
-	static float trigCosVals[10];
+	float Grid::eyeX;
+	float Grid::eyeY;
+	float Grid::eyeZ;
+	float Grid::lookatX;
+	float Grid::lookatY;
+	float Grid::lookatZ;
+	int Grid::multiplierXZ;
+	int Grid::multiplierYZ;
+	float Grid::trigSinVals[10];
+	float Grid::trigCosVals[10];
 
 void Reshape::doReshape(int w, int h) {
 
