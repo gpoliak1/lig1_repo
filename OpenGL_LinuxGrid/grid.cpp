@@ -287,12 +287,11 @@ void display(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glScalef(1.0, 1.0, -1.0);
-	glTranslatef(-5,-5,-5);
+	glTranslatef(-1, -1, -1);
 
 	gluLookAt(eyeX, eyeY, eyeZ,lookatX, lookatY, lookatZ,0.0, 1.0, 0.0);
 	glColor3ub( 0, 0, 180 );
 
-	
 	glEnableClientState( GL_VERTEX_ARRAY );
 	glEnableClientState( GL_TEXTURE_COORD_ARRAY );
 	glEnableClientState( GL_NORMAL_ARRAY );
