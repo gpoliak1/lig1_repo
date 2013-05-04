@@ -1,148 +1,366 @@
-#include "grid.h"
-#include "reshape.h"
-#include "readParse.h"
-#include "display.h"
-using namespace std;
-//using namespace glm; //temp temp temp
+#include <stdlib.h>
+#include <stdio.h>
+#include <math.h>
+#include <GL/glut.h>
 
-float MAXZ;
-float MINZ;
-float ZINC;
-float WINPOSX;
-float WINPOSY;
+#include <glm/glm.hpp>
+#include <vector>
+#include <fstream>
+#include <sstream>
 
-#define CONFIG		"test.cfg"
+
 #define ROT_INC			0.1
 #define factor 			1
 #define PI				3.14159265
 #define RADIUS			5
 #define NUM_OF_ANGLES	10
 
-static float solidZ = MAXZ;
-static float transparentZ = MINZ;
-static GLuint sphereList, cubeList;
+void drawGrid(void);
+void setCamera(void);
+void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
+static void (*drawPrimP)(void) = drawGrid;
 
-static float eyeX = 0.0;
-static float eyeY = 0.0;
-static float eyeZ = -10.0;
-static float lookatX = 0.0;
-static float lookatY = 0.0;
-static float lookatZ = -15.0;
-static int multiplierXZ = 0;
-static int multiplierYZ = 0;
-static float trigSinVals[10];
-static float trigCosVals[10];
+void *font = GLUT_BITMAP_8_BY_13;
+static GLfloat g_rotate = 0;
+static GLfloat g_rotInc = ROT_INC;
 
-static map<string,float> map1;
-static void start();
-void display(void);
-void reshape(int w, int h);
-void keyboard(unsigned char key, int x, int y);
-void animate(void);
-void mouseClick(int button);
-void startThreadListener(char **);
-void *print_message_function( void *ptr );
 
-static void load(void)
+
+float eyeX = 0.0;
+float eyeY = 0.0;
+float eyeZ = -10.0;
+float lookatX = 0.0;
+float lookatY = 0.0;
+float lookatZ = -15.0;
+
+int multiplierXZ = 0;
+int multiplierYZ = 0;
+float trigSinVals[10];
+float trigCosVals[10];
+
+using namespace std;
+using namespace glm;
+
+struct Vertex
 {
-	map1 = Readparse::doReadParse(CONFIG);
+    vec3 position;
+    vec2 texcoord;
+    vec3 normal;
+};
 
-	std::map<std::string, float>::iterator iter;
-	std::string strToReturn; //This is no longer on the heap
+struct VertRef
+{
+    VertRef( int v, int vt, int vn )
+        : v(v), vt(vt), vn(vn)
+    { }
+    int v, vt, vn;
+};
 
-	MAXZ = map1["MAXZ"];
-	MINZ = map1["MINZ"];
-	ZINC = map1["ZINC"];
-	WINPOSX = map1["WINPOSX"];
-	WINPOSY = map1["WINPOSY"];
+
+vector< Vertex > model;
+
+vector< Vertex > LoadOBJ( istream& in )
+{
+    vector< Vertex > verts;
+
+    vector< vec4 > positions( 1, vec4( 0, 0, 0, 0 ) );
+    vector< vec3 > texcoords( 1, vec3( 0, 0, 0 ) );
+    vector< vec3 > normals( 1, vec3( 0, 0, 0 ) );
+    string lineStr;
+    while( getline( in, lineStr ) )
+    {
+        istringstream lineSS( lineStr );
+        string lineType;
+        lineSS >> lineType;
+
+        // vertex
+        if( lineType == "v" )
+        {
+            float x = 0, y = 0, z = 0, w = 1;
+            lineSS >> x >> y >> z >> w;
+            positions.push_back( vec4( x, y, z, w ) );
+        }
+
+        // texture
+        if( lineType == "vt" )
+        {
+            float u = 0, v = 0, w = 0;
+            lineSS >> u >> v >> w;
+            texcoords.push_back( vec3( u, v, w ) );
+        }
+
+        // normal
+        if( lineType == "vn" )
+        {
+            float i = 0, j = 0, k = 0;
+            lineSS >> i >> j >> k;
+            normals.push_back( normalize( vec3( i, j, k ) ) );
+        }
+
+        // polygon
+        if( lineType == "f" )
+        {
+            vector< VertRef > refs;
+            string refStr;
+            while( lineSS >> refStr )
+            {
+                istringstream ref( refStr );
+                string vStr, vtStr, vnStr;
+                getline( ref, vStr, '/' );
+                getline( ref, vtStr, '/' );
+                getline( ref, vnStr, '/' );
+                int v = atoi( vStr.c_str() );
+                int vt = atoi( vtStr.c_str() );
+                int vn = atoi( vnStr.c_str() );
+                v  = (  v >= 0 ?  v : positions.size() +  v );
+                vt = ( vt >= 0 ? vt : texcoords.size() + vt );
+                vn = ( vn >= 0 ? vn : normals.size()   + vn );
+                refs.push_back( VertRef( v, vt, vn ) );
+            }
+
+            if( refs.size() < 3 )
+            {
+                // error, skip
+                continue;
+            }
+
+            // triangulate, assuming n>3-gons are convex and coplanar
+            VertRef* p[3] = { &refs[0], NULL, NULL };
+            for( size_t i = 1; i+1 < refs.size(); ++i )
+            {
+                p[1] = &refs[i+0];
+                p[2] = &refs[i+1];
+
+                vec3 U( positions[ p[1]->v ] - positions[ p[0]->v ] );
+                vec3 V( positions[ p[2]->v ] - positions[ p[0]->v ] );
+                vec3 faceNormal = normalize( cross( U, V ) );
+
+                for( size_t j = 0; j < 3; ++j )
+                {
+                    Vertex vert;
+                    vert.position = vec3( positions[ p[j]->v ] );
+                    vert.texcoord = vec2( texcoords[ p[j]->vt ] );
+                    vert.normal   = ( p[j]->vn != 0 ? normals[ p[j]->vn ] : faceNormal );
+                    verts.push_back( vert );
+                }
+            }
+        }
+    }
+
+    return verts;
 }
 
-static void init(void)
-{
-	//LIGHT0
-	GLfloat mat_specular[] = {1.0,1.0,1.0,1.0};
-	GLfloat mat_shininess[] = {50.0};
-	GLfloat light_position[] = {1.0, 1.0, 1.0, 0.0};
-	GLfloat white_light[] = {0.0, 1.0, 1.0, 1.0};
-	GLfloat lmodel_ambient[] = {0.1, 0.1, 0.1, 1.0};
-	glClearColor(0.0, 0.0, 0.0, 0.0);
-	glShadeModel(GL_SMOOTH);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+void drawGrid(void) {
 
-	glLightfv(GL_LIGHT0, GL_POSITION, light_position);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
-	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
+    float color[4] = {0.0, 0.0, 1.0, 0.0};
 
-	//LIGHT1
-	GLfloat mat_specular1[] = {1.0,1.0,1.0,1.0};
-	GLfloat mat_shininess1[] = {50.0};
-	GLfloat light_position1[] = {-1.0, 1.0, 1.0, 0.0};
-	GLfloat white_light1[] = {1.0, 1.0, 0.0, 1.0};
-	GLfloat lmodel_ambient1[] = {0.1, 0.1, 0.1, 1.0};
-	glClearColor(0.0, 0.0, 0.0, 0.0);
-	glShadeModel(GL_SMOOTH);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular1);
-	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess1);
+    int a, b, c;
+    for (a=0; a<10; a++) {
+        for (b=0; b<10; b++) {
+            for (c=0; c<10; c++) {
 
-	glLightfv(GL_LIGHT1, GL_POSITION, light_position1);
-	glLightfv(GL_LIGHT1, GL_DIFFUSE, white_light1);
-	glLightfv(GL_LIGHT1, GL_SPECULAR, white_light1);
-	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
+                float pos[3];
+                pos[0] = (float)a;
+                pos[1] = (float)b;
+                pos[2] = (float)c;
 
-		//LIGHT2
-	GLfloat mat_specular2[] = {1.0,1.0,1.0,1.0};
-	GLfloat mat_shininess2[] = {50.0};
-	GLfloat light_position2[] = {1.0, -1.0, 1.0, 0.0};
-	GLfloat white_light2[] = {1.0, 0.0, 1.0, 1.0};
-	GLfloat lmodel_ambient2[] = {0.1, 0.1, 0.1, 1.0};
-	glClearColor(0.0, 0.0, 0.0, 0.0);
-	glShadeModel(GL_SMOOTH);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular2);
-	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess2);
+                char buffer1 [5];
+                char buffer3 [5];
+                char buffer5 [5];
+                char final [50];
 
-	glLightfv(GL_LIGHT2, GL_POSITION, light_position2);
-	glLightfv(GL_LIGHT2, GL_DIFFUSE, white_light2);
-	glLightfv(GL_LIGHT2, GL_SPECULAR, white_light2);
-	//glLightModelfv(GL_LIGHT_MODEL_LOCAL_VIEWER, GL_FALSE);
+                int n;
+                n = sprintf(buffer1, "%d", a);
+                n = sprintf(buffer3, "%d", b);
+                n = sprintf(buffer5, "%d", c);
 
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0); //if didnt exist - black, if exists but undefined, default - white
-	glEnable(GL_LIGHT1);
-	glEnable(GL_LIGHT2);
-	glEnable(GL_DEPTH_TEST);
+                int d;
+                for(d=0; d<2; d++)
+                    final[d] = buffer1[d];
+
+                for(d=0; d<2; d++)
+                    final[d+2] = buffer3[d];
+
+                for(d=0; d<2; d++)
+                    final[d+4] = buffer5[d];
+
+                final[d+6] = (char)'\0';
+
+                for(d=0; d<5; d++)
+//printf("%c", final[d]);
+
+//printf("%s", " ");
+                    if (((a % factor) == 0) && ((b % factor) == 0) && ((c % factor) == 0)) {
+                        drawNumbers(buffer1, buffer3, buffer5, pos, color, font);
+                    }
+            }
+        }
+    }
+
+    glBegin(GL_LINES);
+    int i;
+
+    for(i=0; i<=10; i++) {
+        if ((i % factor) == 0) {
+            int j;
+            for (j=0; j<=10; j++) {
+                if ((j % factor) == 0) {
+                    glVertex3f(i,0,j);
+                    glVertex3f(i,10,j);
+
+                    glVertex3f(0,i,j);
+                    glVertex3f(10,i,j);
+                }
+            }
+
+            int k;
+            for (k=0; k<=10; k++) {
+                if ((k % factor) == 0) {
+                    glVertex3f(i,k,0);
+                    glVertex3f(i,k,10);
+
+                    glVertex3f(0,k,i);
+                    glVertex3f(10,k,i);
+                }
+            }
+        }
+    }
+    glEnd();
 }
 
-void keyboard(unsigned char key, int x, int y)
+void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font)
 {
-	switch (key) {
-	case 'a':
-	case 'A':
-		solidZ = MAXZ;
-		transparentZ = MINZ;
-		glutIdleFunc(animate);
-		break;
-	case 'r':
-	case 'R':
-		solidZ = MAXZ;
-		transparentZ = MINZ;
-		glutPostRedisplay();
-		break;
-	case 27:
-		exit(0);
-		break;
-	}
+    glPushAttrib(GL_LIGHTING_BIT | GL_CURRENT_BIT); // lighting and color mask
+    glDisable(GL_LIGHTING);// need to disable lighting for proper text color
+    glDisable(GL_TEXTURE_2D);
 
-	Display *display = XOpenDisplay(0);
-	Window root = DefaultRootWindow(display);
+    glColor4fv(color);
+    glRasterPos3fv(pos);
 
-	XWarpPointer(display, None, root, 0, 0, 0, 0, WINPOSX+30, WINPOSY+30);
+    glutBitmapCharacter(font, *str1);
+    glutBitmapCharacter(font, ',');
+    glutBitmapCharacter(font, *str2);
+    glutBitmapCharacter(font, ',');
+    glutBitmapCharacter(font, *str3);
 
-	mouseClick(Button1);
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+    glPopAttrib();
+}
 
-	XFlush(display);
-	XCloseDisplay(display);
+
+
+
+void myKey(unsigned char k, int x, int y)
+{
+    float resX;
+    float resY;
+
+    switch (k) {
+    case 'q':
+    case 'Q':
+        exit(0);
+        break;
+    case 'r':
+        eyeX -= 1.0;
+        lookatX -= 1.0;
+
+        setCamera();
+        break;
+    case 'l':
+        eyeX += 1.0;
+        lookatX += 1.0;
+
+        setCamera();
+        break;
+    case 'u':
+        eyeY += 1.0;
+        lookatY += 1.0;
+
+        setCamera();
+        break;
+    case 'd':
+        eyeY -= 1.0;
+        lookatY -= 1.0;
+
+        setCamera();
+        break;
+    case 'i':
+        eyeZ += 1.0;
+        lookatZ += 1.0;
+
+        setCamera();
+        break;
+    case 'o':
+        eyeZ -= 1.0;
+        lookatZ -= 1.0;
+
+        setCamera();
+        break;
+    case 'm':
+        //looks immediately left
+
+        if (multiplierXZ != 0) {
+            multiplierXZ--;
+        } else {
+            multiplierXZ = NUM_OF_ANGLES - 1;
+        }
+
+        lookatX = trigSinVals[multiplierXZ] + eyeX;
+        lookatZ = trigCosVals[multiplierXZ] + eyeZ;
+
+        setCamera();
+        break;
+    case 'n':
+        //looks immediately right
+
+        if (multiplierXZ != (NUM_OF_ANGLES - 1)) {
+            multiplierXZ++;
+        } else {
+            multiplierXZ = 0;
+        }
+
+        lookatX = trigSinVals[multiplierXZ] + eyeX;
+        lookatZ = trigCosVals[multiplierXZ] + eyeZ;
+
+		printf("\nAngle XZ: %d",multiplierYZ*36);
+
+        setCamera();
+        break;
+    case 'j':
+        //looks immediately left
+
+        if (multiplierYZ != 0) {
+            multiplierYZ--;
+        } else {
+            multiplierYZ = 9;
+        }
+
+        lookatY = trigSinVals[multiplierYZ] + eyeY;
+        lookatZ = trigCosVals[multiplierYZ] + eyeZ;
+
+	printf("\nAngle YZ: %d",multiplierYZ*36);
+
+        setCamera();
+        break;
+    case 'k':
+        //looks immediately right
+
+        if (multiplierYZ != 9) {
+            multiplierYZ++;
+        } else {
+            multiplierYZ = 0;
+        }
+
+        lookatY = trigSinVals[multiplierYZ] + eyeY;
+        lookatZ = trigCosVals[multiplierYZ] + eyeZ;
+
+        setCamera();
+        break;
+    default:
+        printf("Unknown keyboard command \'%c\'.\n", k);
+        break;
+    }
 }
 
 void loadTrigValsIntoArr(void) {
@@ -172,35 +390,105 @@ void loadTrigValsIntoArr(void) {
         printf("\nCos: %f", trigCosVals[i]);
         printf("\nSin: %f", trigSinVals[i]);
     }
+
 }
 
-void mouse(int btn, int state, int x, int y)
+void setCamera(void) {
+    int w = glutGet(GLUT_WINDOW_WIDTH);
+    int h = glutGet(GLUT_WINDOW_HEIGHT);
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+	glScalef(1.0, 1.0, -1.0);
+    //glScalef(1.0, 1.0, -1.0);
+    gluPerspective( 60.0, (GLdouble)w/(GLdouble)h, 0.1, 40.0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+    gluLookAt(eyeX, eyeY, eyeZ,lookatX, lookatY, lookatZ,0.0, 1.0, 0.0);
+
+	glutPostRedisplay();
+}
+
+void display(void)
+{
+    printf("%s%g%s%g%s%g", "\nDISPLAY - Camera now positioned at ", eyeX, ",", eyeY, ",", eyeZ);
+    printf("%s%g%s%g%s%g%s", "\nDISPLAY - Looking at ", lookatX, ",", lookatY, ",", lookatZ, "\n");
+
+    glClear( GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT );
+
+    int w = glutGet(GLUT_WINDOW_WIDTH);
+    int h = glutGet(GLUT_WINDOW_HEIGHT);
+
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
+
+    gluPerspective( 60.0, (GLdouble)w/(GLdouble)h, 0.1, 40.0);
+
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+	glScalef(1.0, 1.0, -1.0);
+	glTranslatef(-1,-1,-1);
+
+    gluLookAt(eyeX, eyeY, eyeZ,lookatX, lookatY, lookatZ,0.0, 1.0, 0.0);
+    glColor3ub( 0, 0, 180 );
+    glEnableClientState( GL_VERTEX_ARRAY );
+    glEnableClientState( GL_TEXTURE_COORD_ARRAY );
+    glEnableClientState( GL_NORMAL_ARRAY );
+    glVertexPointer( 3, GL_FLOAT, sizeof(Vertex), &model[0].position );
+    glTexCoordPointer( 2, GL_FLOAT, sizeof(Vertex), &model[0].texcoord );
+    glNormalPointer( GL_FLOAT, sizeof(Vertex), &model[0].normal );
+    glDrawArrays( GL_TRIANGLES, 0, model.size() );
+    glDisableClientState( GL_VERTEX_ARRAY );
+    glDisableClientState( GL_TEXTURE_COORD_ARRAY );
+    glDisableClientState( GL_NORMAL_ARRAY );
+	(*drawPrimP)();
+    glPopMatrix();
+
+    glutSwapBuffers();
+}
+
+
+void myReshape(int w, int h)
+{
+    glViewport(0, 0, w, h);
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity(); /* init projection matrix */
+    gluPerspective( 60.0, (GLdouble)w/(GLdouble)h, 0.1, 40.0);
+    glMatrixMode(GL_MODELVIEW);
+    glLoadIdentity();
+	glScalef(1.0, 1.0, -1.0);
+    gluLookAt(eyeX, eyeY, eyeZ,
+              lookatX, lookatY, lookatZ,
+              0.0, 1.0, 0.0);
+
+	printf("%s","\nreshape");
+}
+
+void myMouse(int btn, int state, int x, int y)
 {
 
 }
 
-void idle(void) {
+void myIdleFunc(void) {
 
 }
 
-static void start(int argc, char ** argv) {
-	load();
-//	startThreadListener(argv);
-
+int main(int argc, char **argv)
+{
 	//from objloader
     ifstream ifile("test.obj" );
-//    model = LoadOBJ( ifile );
+    model = LoadOBJ( ifile );
 
     glutInit( &argc, argv );
 	loadTrigValsIntoArr();
     glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
     glutInitWindowSize( 640, 480 );
-	glutReshapeFunc(Reshape::doReshape);
+	glutReshapeFunc(myReshape);
     glutCreateWindow( "3D GRID" );
     glutDisplayFunc( display );
-    glutIdleFunc(idle);
-    glutKeyboardFunc(keyboard);
-    glutMouseFunc(mouse);
+    glutIdleFunc(myIdleFunc);
+    glutKeyboardFunc(myKey);
+    glutMouseFunc(myMouse);
 
     glEnable( GL_DEPTH_TEST );
 
@@ -226,189 +514,7 @@ static void start(int argc, char ** argv) {
     glPolygonMode( GL_BACK, GL_LINE );
 
     glutMainLoop();
-}
 
-/*************** START UTIL *******************/
-
-void display(void)
-{	
-	OglDisplay::doOglDisplay(solidZ, sphereList, transparentZ, cubeList);
-}
-
-void reshape(int w, int h)
-{
-	Reshape::doReshape(w, h);
-}
-
-void startThreadListener(char** argv) 
-{
-	pthread_t thread1, thread2;
-	char *message1 = "Thread 1";
-	int  iret1, iret2;
-
-	std::string word(argv[0]);
-
-	iret1 = pthread_create( &thread1, NULL, print_message_function, (void*) message1);
-}
-
-void animate(void)
-{
-	if (solidZ <= MINZ || transparentZ >= MAXZ)
-		glutIdleFunc(NULL);
-	else {
-		solidZ -= ZINC;
-		transparentZ += ZINC;
-		glutPostRedisplay();
-	}
-}
-
-void mouseClick(int button)
-{
-	Display *display = XOpenDisplay(NULL);
-
-	XEvent event;
-
-	if(display == NULL)
-	{
-		fprintf(stderr, "Errore nell'apertura del Display !!!\n");
-		exit(EXIT_FAILURE);
-	}
-
-	memset(&event, 0x00, sizeof(event));
-
-	event.type = ButtonPress;
-	event.xbutton.button = button;
-	event.xbutton.same_screen = True;
-
-	XQueryPointer(display, RootWindow(display, DefaultScreen(display)), &event.xbutton.root, &event.xbutton.window, &event.xbutton.x_root, &event.xbutton.y_root, &event.xbutton.x, &event.xbutton.y, &event.xbutton.state);
-
-	event.xbutton.subwindow = event.xbutton.window;
-
-	while(event.xbutton.subwindow)
-	{
-		event.xbutton.window = event.xbutton.subwindow;
-
-		XQueryPointer(display, event.xbutton.window, &event.xbutton.root, &event.xbutton.subwindow, &event.xbutton.x_root, &event.xbutton.y_root, &event.xbutton.x, &event.xbutton.y, &event.xbutton.state);
-	}
-
-	if(XSendEvent(display, PointerWindow, True, 0xfff, &event) == 0) fprintf(stderr, "Error\n");
-
-	XFlush(display);
-
-	usleep(100000);
-
-	event.type = ButtonRelease;
-	event.xbutton.state = 0x100;
-
-	if(XSendEvent(display, PointerWindow, True, 0xfff, &event) == 0) fprintf(stderr, "Error\n");
-
-	XFlush(display);
-
-	XCloseDisplay(display);
-}
-
-void performSwitch(char c) {
-
-	int x = glutGet(GLUT_WINDOW_X);
-	int y = glutGet(GLUT_WINDOW_Y);
-
-	keyboard(c, x, y);
-}
-
-void* SocketHandler(void* lp) {
-	int *csock = (int*)lp;
-
-	char buffer[1024];
-	int buffer_len = 1024;
-	int bytecount;
-
-	const char yChar = 'y';
-	while ((bytecount = recv(*csock, buffer, buffer_len, 0)) > 0) {
-
-		performSwitch(*buffer);
-
-		printf("Rec bytes %c\n", *buffer);
-	}
-
-
-FINISH:
-	free(csock);
-	return 0;
-}
-
-void *print_message_function( void *ptr )
-{
-	int host_port= 6789;
-
-	struct sockaddr_in my_addr;
-
-	int hsock;
-	int * p_int ;
-	int err;
-
-	socklen_t addr_size = 0;
-	int* csock;
-	sockaddr_in sadr;
-	pthread_t thread_id=0;
-
-
-	hsock = socket(AF_INET, SOCK_STREAM, 0);
-	if(hsock == -1) {
-		printf("Error initializing socket %d\n", errno);
-		goto FINISH;
-	}
-
-	p_int = (int*)malloc(sizeof(int));
-	*p_int = 1;
-
-	if( (setsockopt(hsock, SOL_SOCKET, SO_REUSEADDR, (char*)p_int, sizeof(int)) == -1 )||
-		(setsockopt(hsock, SOL_SOCKET, SO_KEEPALIVE, (char*)p_int, sizeof(int)) == -1 ) ) {
-			printf("Error setting options %d\n", errno);
-			free(p_int);
-			goto FINISH;
-	}
-	free(p_int);
-
-	my_addr.sin_family = AF_INET ;
-	my_addr.sin_port = htons(host_port);
-
-	memset(&(my_addr.sin_zero), 0, 8);
-	my_addr.sin_addr.s_addr = INADDR_ANY ;
-
-	if( bind( hsock, (sockaddr*)&my_addr, sizeof(my_addr)) == -1 ) {
-		fprintf(stderr,"Error binding to socket, make sure nothing else is listening on this port %d\n",errno);
-		goto FINISH;
-	}
-	if(listen( hsock, 10) == -1 ) {
-		fprintf(stderr, "Error listening %d\n",errno);
-		goto FINISH;
-	}
-
-	//Now lets do the server stuff
-
-	addr_size = sizeof(sockaddr_in);
-
-	while(true) {
-		printf("waiting for a connection\n");
-		csock = (int*)malloc(sizeof(int));
-		if((*csock = accept( hsock, (sockaddr*)&sadr, &addr_size))!= -1) {
-			printf("---------------------\nReceived connection from %s\n",inet_ntoa(sadr.sin_addr));
-			pthread_create(&thread_id,0,&SocketHandler, (void*)csock );
-			pthread_detach(thread_id);
-		}
-		else {
-			fprintf(stderr, "Error accepting %d\n", errno);
-		}
-	}
-
-FINISH:
-	;
-}
-
-/*************** END UTIL *******************/
-
-int main(int argc, char *argv[])
-{
-	start(argc, argv);
+    return 0;
 }
 
