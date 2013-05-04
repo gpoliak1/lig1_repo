@@ -9,6 +9,9 @@
 #include <fstream>
 #include <sstream>
 
+using namespace std;
+using namespace glm;
+
 
 #define ROT_INC			0.1
 #define factor 			1
@@ -39,8 +42,7 @@ int multiplierYZ = 0;
 float trigSinVals[10];
 float trigCosVals[10];
 
-using namespace std;
-using namespace glm;
+
 
 struct Vertex
 {
