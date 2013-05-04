@@ -64,12 +64,14 @@
     <ClCompile Include="grid.cpp" />
     <ClCompile Include="readParse.cpp" />
     <ClCompile Include="reshape.cpp" />
+    <ClCompile Include="util.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="display.h" />
     <ClInclude Include="grid.h" />
     <ClInclude Include="readParse.h" />
     <ClInclude Include="reshape.h" />
+    <ClInclude Include="util.h" />
   </ItemGroup>
   <ItemGroup>
     <None Include="exec.sh" />

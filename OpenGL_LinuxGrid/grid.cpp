@@ -12,12 +12,9 @@
 using namespace std;
 using namespace glm;
 
-
 #define ROT_INC			0.1
 #define factor 			1
-#define PI				3.14159265
-#define RADIUS			5
-#define NUM_OF_ANGLES	10
+
 
 //void drawGrid(void);
 void setCamera(void);
@@ -39,8 +36,8 @@ float lookatZ = -15.0;
 
 int multiplierXZ = 0;
 int multiplierYZ = 0;
-float trigSinVals[10];
-float trigCosVals[10];
+float Grid::trigSinVals[10];
+float Grid::trigCosVals[10];
 
 
 
@@ -272,35 +269,6 @@ void myKey(unsigned char k, int x, int y)
     }
 }
 
-void loadTrigValsIntoArr(void) {
-
-    trigCosVals[0] = (RADIUS * cos(360*PI/180));
-    trigSinVals[0] = (RADIUS * sin(360*PI/180));
-    trigCosVals[1] = (RADIUS * cos(36*PI/180));
-    trigSinVals[1] = (RADIUS * sin(36*PI/180));
-    trigCosVals[2] = (RADIUS * cos(72*PI/180));
-    trigSinVals[2] = (RADIUS * sin(72*PI/180));
-    trigCosVals[3] = (RADIUS * cos(108*PI/180));
-    trigSinVals[3] = (RADIUS * sin(108*PI/180));
-    trigCosVals[4] = (RADIUS * cos(144*PI/180));
-    trigSinVals[4] = (RADIUS * sin(144*PI/180));
-    trigCosVals[5] = (RADIUS * cos(180*PI/180));
-    trigSinVals[5] = (RADIUS * sin(180*PI/180));
-    trigCosVals[6] = (RADIUS * cos(216*PI/180));
-    trigSinVals[6] = (RADIUS * sin(216*PI/180));
-    trigCosVals[7] = (RADIUS * cos(252*PI/180));
-    trigSinVals[7] = (RADIUS * sin(252*PI/180));
-    trigCosVals[8] = (RADIUS * cos(288*PI/180));
-    trigSinVals[8] = (RADIUS * sin(288*PI/180));
-    trigCosVals[9] = (RADIUS * cos(324*PI/180));
-    trigSinVals[9] = (RADIUS * sin(324*PI/180));
-    int i;
-    for (i=0; i<NUM_OF_ANGLES; i++) {
-        printf("\nCos: %f", trigCosVals[i]);
-        printf("\nSin: %f", trigSinVals[i]);
-    }
-
-}
 
 void setCamera(void) {
     int w = glutGet(GLUT_WINDOW_WIDTH);
