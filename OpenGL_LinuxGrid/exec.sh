@@ -1,8 +1,8 @@
 #!/bin/bash
 
-g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -c readParse.cpp display.cpp reshape.cpp grid.cpp -pthread
+g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -c readParse.cpp display.cpp reshape.cpp util.cpp grid.cpp -pthread
 
-g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final readParse.o display.o reshape.o grid.o -pthread
+g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final readParse.o display.o reshape.o util.o grid.o -pthread
 
 #(exec wmctrl -k on)
 
