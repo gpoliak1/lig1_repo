@@ -19,7 +19,7 @@
 //void drawGrid(void);
 void setCamera(void);
 //void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
-static void (*drawPrimP)(void) = OglDisplay::drawGrid;
+//static void (*drawPrimP)(void) = OglDisplay::drawGrid;
 
 void *font = GLUT_BITMAP_8_BY_13;
 static GLfloat g_rotate = 0;
@@ -348,7 +348,7 @@ void display(void)
     glDisableClientState( GL_VERTEX_ARRAY );
     glDisableClientState( GL_TEXTURE_COORD_ARRAY );
     glDisableClientState( GL_NORMAL_ARRAY );
-	(*drawPrimP)();
+	OglDisplay::drawGrid();
     glPopMatrix();
 
     glutSwapBuffers();
