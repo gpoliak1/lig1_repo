@@ -8,5 +8,5 @@
 namespace Util
 {
 	extern void loadTrigValsIntoArr(void);
-}
+};
 #endif
