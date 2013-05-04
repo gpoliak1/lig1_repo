@@ -7,5 +7,5 @@
 namespace Readparse
 {
 
-}
+};
 #endif //_READPARSE_H

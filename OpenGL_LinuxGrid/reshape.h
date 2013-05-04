@@ -32,7 +32,7 @@
 namespace Reshape
 {
 extern void doReshape(int, int);
-}
+};
 #endif //_RESHAPE_H
 
 //void reshape(int w, int h)
