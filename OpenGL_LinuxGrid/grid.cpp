@@ -24,7 +24,7 @@ void setCamera(void);
 //void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
 //static void (*drawPrimP)(void) = OglDisplay::drawGrid;
 
-void *font = GLUT_BITMAP_8_BY_13;
+//void *font = GLUT_BITMAP_8_BY_13;
 static GLfloat g_rotate = 0;
 static GLfloat g_rotInc = ROT_INC;
 

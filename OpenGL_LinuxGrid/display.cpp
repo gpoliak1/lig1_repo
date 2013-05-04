@@ -8,6 +8,8 @@ using namespace std;
 #define RADIUS			5
 #define NUM_OF_ANGLES	10
 
+void *font = GLUT_BITMAP_8_BY_13;
+
 void OglDisplay::doOglDisplay(float solidZ, GLuint sphereList, float transparentZ, GLuint cubeList) {
 
 
