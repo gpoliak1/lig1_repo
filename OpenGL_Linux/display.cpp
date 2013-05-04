@@ -23,6 +23,11 @@ int multiplierYZ = 0;
 float trigSinVals[10];
 float trigCosVals[10];
 
+void drawGrid(void);
+
+void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
+static void (*drawPrimP)(void) = drawGrid;
+
 using namespace std;
 using namespace glm;
 
