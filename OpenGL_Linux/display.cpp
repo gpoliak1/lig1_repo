@@ -18,7 +18,7 @@ static void (*drawPrimP)(void) = drawGrid;
 using namespace std;
 using namespace glm;
 
-	/*float Grid::eyeX;
+	float Grid::eyeX;
 	float Grid::eyeY;
 	float Grid::eyeZ;
 	float Grid::lookatX;
@@ -27,7 +27,7 @@ using namespace glm;
 	int Grid::multiplierXZ;
 	int Grid::multiplierYZ;
 	float Grid::trigSinVals[10];
-	float Grid::trigCosVals[10];*/
+	float Grid::trigCosVals[10];
 
 struct Vertex
 {
