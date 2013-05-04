@@ -128,18 +128,58 @@ void keyboard(unsigned char key, int x, int y)
 	XCloseDisplay(display);
 }
 
+void mouse(int btn, int state, int x, int y)
+{
+
+}
+
+void idle(void) {
+
+}
+
 static void start(int argc, char ** argv) {
 	load();
 	startThreadListener(argv);
 
-	glutInit(&argc, argv);
-	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(500, 500);
-	glutCreateWindow(argv[0]);
-	init();
-	glutDisplayFunc(display);
-	glutReshapeFunc(reshape);
-	glutMainLoop();
+	//from objloader
+    ifstream ifile("test.obj" );
+//    model = LoadOBJ( ifile );
+
+    glutInit( &argc, argv );
+//	loadTrigValsIntoArr();
+    glutInitDisplayMode( GLUT_RGBA | GLUT_DEPTH | GLUT_DOUBLE );
+    glutInitWindowSize( 640, 480 );
+	glutReshapeFunc(Reshape::doReshape);
+    glutCreateWindow( "3D GRID" );
+    glutDisplayFunc( display );
+    glutIdleFunc(idle);
+    glutKeyboardFunc(keyboard);
+    glutMouseFunc(mouse);
+
+    glEnable( GL_DEPTH_TEST );
+
+    // set up "headlamp"-like light
+    glShadeModel( GL_SMOOTH );
+    glEnable( GL_COLOR_MATERIAL );
+    glColorMaterial( GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE ) ;
+    glEnable( GL_LIGHTING );
+    glEnable( GL_LIGHT0 );
+
+	//glMatrixMode(GL_PROJECTION);
+	//gluLookAt(-10, 0, 5, 0, 0, 5, 0.0, 1.0, 0.0);
+
+    glMatrixMode( GL_MODELVIEW );
+    glLoadIdentity();
+	glScalef(1.0, 1.0, -1.0);
+	glTranslatef(-1,-1,-1);
+
+    GLfloat position[] = { 0, 0, 1, 0 };
+    glLightfv( GL_LIGHT0, GL_POSITION, position );
+
+    glPolygonMode( GL_FRONT, GL_FILL );
+    glPolygonMode( GL_BACK, GL_LINE );
+
+    glutMainLoop();
 }
 
 /*************** START UTIL *******************/
