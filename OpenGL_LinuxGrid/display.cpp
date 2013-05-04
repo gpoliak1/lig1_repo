@@ -1,5 +1,11 @@
 #include "display.h"
 
+#define ROT_INC			0.1
+#define factor 			1
+#define PI				3.14159265
+#define RADIUS			5
+#define NUM_OF_ANGLES	10
+
 void OglDisplay::doOglDisplay(float solidZ, GLuint sphereList, float transparentZ, GLuint cubeList) {
 
 

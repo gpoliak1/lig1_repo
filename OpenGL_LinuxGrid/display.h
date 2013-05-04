@@ -1,3 +1,5 @@
+#include "grid.h"
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <fcntl.h>
@@ -25,7 +27,7 @@
 
 namespace OglDisplay 
 {
-void doOglDisplay(float, GLuint, float, GLuint);
+extern void doOglDisplay(float, GLuint, float, GLuint);
 extern void drawGrid(void);
 extern void drawNumbers(const char *str1, const char *str2, const char *str3, float pos[3], float color[4], void *font);
 };
