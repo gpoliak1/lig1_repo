@@ -291,6 +291,26 @@ void display(void)
 	GLfloat position[] = { 0, 0, 1, 0 };
 	glLightfv( GL_LIGHT0, GL_POSITION, position );
 
+
+    /*GLfloat mat_specular[] = { 0.3, 1.0, 0.3, 1.0 };
+    GLfloat mat_shininess[] = { 50.0 };
+    GLfloat light_position[] = { 6,6,6, 1.0 };
+    GLfloat spotDir[] = { 5,5,5};
+    //glClearColor (0,0,0);
+    glShadeModel (GL_SMOOTH);
+    glLightfv(GL_LIGHT0,GL_SPECULAR,mat_specular);
+    glLightfv(GL_LIGHT0,GL_POSITION,light_position);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
+    glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+    glLightf(GL_LIGHT0,GL_SPOT_CUTOFF,25.0);
+    glLightf(GL_LIGHT0,GL_SPOT_EXPONENT,2.0);
+    glLightfv(GL_LIGHT0,GL_SPOT_DIRECTION,spotDir);
+    glEnable(GL_COLOR_MATERIAL);
+    glEnable(GL_DEPTH_TEST);
+	glEnable( GL_LIGHTING );
+	glEnable( GL_LIGHT0 );*/
+
+
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective( 60.0, (GLdouble)w/(GLdouble)h, 0.1, 40.0);
