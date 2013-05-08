@@ -1,8 +1,8 @@
 #!/bin/bash
 
-gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -c lightlab.c quad.c
+gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -lm -c starWarsScroller.cpp
 
-gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final quad.o
+gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -lm -o starWarsScroller starWarsScroller.o
 
 #(exec wmctrl -k on)
 

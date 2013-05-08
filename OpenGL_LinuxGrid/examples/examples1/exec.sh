@@ -1,8 +1,8 @@
 #!/bin/bash
 
-gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -c displayListMain.c
+gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -c lightlab.c
 
-gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final displayListMain.o
+gcc -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final lightlab.o
 
 #(exec wmctrl -k on)
 
