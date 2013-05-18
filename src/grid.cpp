@@ -189,31 +189,6 @@ void keyboard(unsigned char k, int x, int y) {
 		exit(0);
 		break;
 
-//	case 'r':
-////		eyeX -= 1.0;
-////		lookatX -= 1.0;
-////
-////		setCamera();
-//		break;
-//	case 'l':
-////		eyeX += 1.0;
-////		lookatX += 1.0;
-////
-////		setCamera();
-////		break;
-//	case 'u':
-////		eyeY += 1.0;
-////		lookatY += 1.0;
-////
-////		setCamera();
-////		break;
-//	case 'd':
-////		eyeY -= 1.0;
-////		lookatY -= 1.0;
-////
-////		setCamera();
-////		break;
-
 	case 'f':
 
 		moveForward();
@@ -226,7 +201,16 @@ void keyboard(unsigned char k, int x, int y) {
 		setCamera();
 		break;
 
-	case 'm':
+	default:
+		printf("Unknown keyboard command \'%c\'.\n", k);
+		break;
+	}
+}
+
+void processSpecialKeys(int key, int x, int y) {
+
+	switch (key) {
+	case GLUT_KEY_LEFT:
 		//looks immediately left
 
 		if (multiplierXZ != 0) {
@@ -240,7 +224,7 @@ void keyboard(unsigned char k, int x, int y) {
 
 		setCamera();
 		break;
-	case 'n':
+	case GLUT_KEY_RIGHT:
 		//looks immediately right
 
 		if (multiplierXZ != (Util::numOfAngles - 1)) {
@@ -256,7 +240,8 @@ void keyboard(unsigned char k, int x, int y) {
 
 		setCamera();
 		break;
-	case 'j':
+
+	case GLUT_KEY_UP:
 		//looks immediately left
 
 		if (multiplierYZ != 0) {
@@ -272,7 +257,8 @@ void keyboard(unsigned char k, int x, int y) {
 
 		setCamera();
 		break;
-	case 'k':
+
+	case GLUT_KEY_DOWN:
 		//looks immediately right
 
 		if (multiplierYZ != 9) {
@@ -286,10 +272,8 @@ void keyboard(unsigned char k, int x, int y) {
 
 		setCamera();
 		break;
-	default:
-		printf("Unknown keyboard command \'%c\'.\n", k);
-		break;
 	}
+
 }
 
 void setCamera(void) {
@@ -430,6 +414,7 @@ int main(int argc, char **argv) {
 	glutDisplayFunc(display);
 	glutIdleFunc(idle);
 	glutKeyboardFunc(keyboard);
+	glutSpecialFunc(processSpecialKeys);
 	glutMouseFunc(mouse);
 
 	/*glEnable( GL_DEPTH_TEST );

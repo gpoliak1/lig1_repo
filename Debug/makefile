@@ -44,8 +44,7 @@ all: openGlProj
 openGlProj: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: GCC C++ Linker'
-	#g++  -o "openGlProj" $(OBJS) $(USER_OBJS) $(LIBS)
-	g++ -lglut -lGL -lGLEW -lGLU -lpthread -lX11 -o final readParse.o display.o reshape.o util.o grid.o -pthread
+	g++  -o "openGlProj" $(OBJS) $(USER_OBJS) $(LIBS)
 	@echo 'Finished building target: $@'
 	@echo ' '
 
