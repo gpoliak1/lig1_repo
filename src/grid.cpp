@@ -13,8 +13,6 @@
 using namespace std;
 using namespace glm;
 
-void setCamera(void);
-
 //General values
 float eyeX = 0.0;
 float eyeY = 0.0;
@@ -22,12 +20,11 @@ float eyeZ = 15.0;
 float lookatX = 0.0;
 float lookatY = 0.0;
 float lookatZ = -15.0;
-int multiplierXZ = 0;
-int multiplierYZ = 0;
+int multiplierXZ = 20;
+int multiplierYZ = 20;
 
 //Basic Config
 #define STEPINCR		0.5
-//#define NUM_OF_ANGLES	10
 #define ROT_INC			0.1
 #define FACTOR 			1
 bool gridOn = false;
@@ -192,13 +189,13 @@ void keyboard(unsigned char k, int x, int y) {
 	case 'f':
 
 		moveForward();
-		setCamera();
+		glutPostRedisplay();
 		break;
 
 	case 'b':
 
 		moveBackward();
-		setCamera();
+		glutPostRedisplay();
 		break;
 
 	default:
@@ -207,89 +204,76 @@ void keyboard(unsigned char k, int x, int y) {
 	}
 }
 
+void lookLeft() {
+	if (multiplierXZ != 0) {
+		multiplierXZ--;
+	} else {
+		multiplierXZ = Util::numOfAngles - 1;
+	}
+	lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
+	lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
+
+	printf("@@@ %f lookatX is: ", lookatX);
+	printf("@@@ %f lookatZ is: ", lookatZ);
+}
+
+void lookRight() {
+	if (multiplierXZ != (Util::numOfAngles - 1)) {
+		multiplierXZ++;
+	} else {
+		multiplierXZ = 0;
+	}
+	lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
+	lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
+	printf("\nAngle XZ: %d", multiplierYZ * 36);
+}
+
+void lookUp() {
+	if (multiplierYZ != 0) {
+		multiplierYZ--;
+	} else {
+		multiplierYZ = Util::numOfAngles - 1;
+	}
+	lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
+	lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
+	printf("\nAngle YZ: %d", multiplierYZ * 36);
+}
+
+void lookDown() {
+	if (multiplierYZ != Util::numOfAngles - 1) {
+		multiplierYZ++;
+	} else {
+		multiplierYZ = 0;
+	}
+	lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
+	lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
+}
+
 void processSpecialKeys(int key, int x, int y) {
 
 	switch (key) {
 	case GLUT_KEY_LEFT:
-		//looks immediately left
 
-		if (multiplierXZ != 0) {
-			multiplierXZ--;
-		} else {
-			multiplierXZ = Util::numOfAngles - 1;
-		}
-
-		lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
-		lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
-
-		setCamera();
+		lookLeft();
+		glutPostRedisplay();
 		break;
 	case GLUT_KEY_RIGHT:
-		//looks immediately right
 
-		if (multiplierXZ != (Util::numOfAngles - 1)) {
-			multiplierXZ++;
-		} else {
-			multiplierXZ = 0;
-		}
-
-		lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
-		lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
-
-		printf("\nAngle XZ: %d", multiplierYZ * 36);
-
-		setCamera();
+		lookRight();
+		glutPostRedisplay();
 		break;
-
 	case GLUT_KEY_UP:
-		//looks immediately left
 
-		if (multiplierYZ != 0) {
-			multiplierYZ--;
-		} else {
-			multiplierYZ = Util::numOfAngles - 1;
-		}
-
-		lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
-		lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
-
-		printf("\nAngle YZ: %d", multiplierYZ * 36);
-
-		setCamera();
+		lookUp();
+		glutPostRedisplay();
 		break;
-
 	case GLUT_KEY_DOWN:
-		//looks immediately right
 
-		if (multiplierYZ != 9) {
-			multiplierYZ++;
-		} else {
-			multiplierYZ = 0;
-		}
-
-		lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;
-		lookatZ = Grid::trigCosVals[multiplierYZ] + eyeZ;
-
-		setCamera();
+		lookDown();
+		glutPostRedisplay();
 		break;
 	}
 
-}
-
-void setCamera(void) {
-	int w = glutGet(GLUT_WINDOW_WIDTH);
-	int h = glutGet(GLUT_WINDOW_HEIGHT);
-
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	glScalef(1.0, 1.0, -1.0);
-	//glScalef(1.0, 1.0, -1.0);
-	gluPerspective(60.0, (GLdouble) w / (GLdouble) h, 0.1, 40.0);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
-
-	glutPostRedisplay();
 }
 
 void display(void) {
@@ -334,11 +318,8 @@ void display(void) {
 
 	/** stone */
 	int j;
-	//glColor3ub( 180, 0, 0 );
-	//glTranslatef(10, -1, -1);
 	for (j = 0; j < 1; j++) {
 		glColor3ub(180, 0, 0);
-		glTranslatef(2, -1, -1);
 
 		glEnableClientState(GL_VERTEX_ARRAY);
 		glEnableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -438,6 +419,8 @@ int main(int argc, char **argv) {
 
 	glPolygonMode(GL_FRONT, GL_FILL);
 	glPolygonMode(GL_BACK, GL_LINE);
+
+	lookLeft();
 
 	glutMainLoop();
 
