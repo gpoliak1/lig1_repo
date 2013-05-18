@@ -23,11 +23,14 @@ float lookatZ = -15.0;
 int multiplierXZ = 20;
 int multiplierYZ = 20;
 
+//Flags
+bool initSatisfied = false;
+
 //Basic Config
 #define STEPINCR		0.5
 #define ROT_INC			0.1
 #define FACTOR 			1
-bool gridOn = false;
+bool gridOn = true;
 
 struct Vertex {
 	vec3 position;
@@ -183,41 +186,46 @@ void keyboard(unsigned char k, int x, int y) {
 	switch (k) {
 	case 'q':
 	case 'Q':
+
 		exit(0);
 		break;
-
 	case 'f':
 
 		moveForward();
 		glutPostRedisplay();
 		break;
-
 	case 'b':
 
 		moveBackward();
 		glutPostRedisplay();
 		break;
-
 	default:
+
 		printf("Unknown keyboard command \'%c\'.\n", k);
 		break;
 	}
 }
 
-void lookLeft() {
-	if (multiplierXZ != 0) {
-		multiplierXZ--;
-	} else {
-		multiplierXZ = Util::numOfAngles - 1;
-	}
-	lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
-	lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
+void lookRight() {
 
-	printf("@@@ %f lookatX is: ", lookatX);
-	printf("@@@ %f lookatZ is: ", lookatZ);
+	if (initSatisfied) {
+
+		if (multiplierXZ != 0) {
+			multiplierXZ--;
+		} else {
+			multiplierXZ = Util::numOfAngles - 1;
+		}
+		lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
+		lookatZ = Grid::trigCosVals[multiplierXZ] + eyeZ;
+	} else {
+
+		initSatisfied = true;
+		lookatX = 0;
+		lookatZ = 0;
+	}
 }
 
-void lookRight() {
+void lookLeft() {
 	if (multiplierXZ != (Util::numOfAngles - 1)) {
 		multiplierXZ++;
 	} else {
@@ -276,6 +284,8 @@ void processSpecialKeys(int key, int x, int y) {
 
 }
 
+static int spin = 0;
+
 void display(void) {
 	printf("%s%g%s%g%s%g", "\nDISPLAY - Camera now positioned at ", eyeX, ",",
 			eyeY, ",", eyeZ);
@@ -287,30 +297,60 @@ void display(void) {
 	int w = glutGet(GLUT_WINDOW_WIDTH);
 	int h = glutGet(GLUT_WINDOW_HEIGHT);
 
-	glEnable(GL_DEPTH_TEST);
+	//glEnable(GL_DEPTH_TEST);
 
-	// set up "headlamp"-like light
+	/** lighting */
+
+	//Moving Light position
+	GLfloat movingLightPos[] = { 0.0, 0.0, 1.5, 1.0 };
+
 	glShadeModel(GL_SMOOTH);
 	glEnable(GL_COLOR_MATERIAL);
 	glColorMaterial(GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE);
-	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+//	glEnable(GL_LIGHTING);
+//	glEnable(GL_LIGHT0);
+//
+//	GLfloat position[] = { 0, 0, 1, 0 };
+//	glLightfv(GL_LIGHT0, GL_POSITION, position);
 
-	GLfloat position[] = { 0, 0, 1, 0 };
-	glLightfv(GL_LIGHT0, GL_POSITION, position);
-
+	/** projection */
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(60.0, (GLdouble) w / (GLdouble) h, 0.1, 40.0);
-
 	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
 
 	/** grid */
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glScalef(1.0, 1.0, 1.0);
-	glTranslatef(-1, -1, -1);
-	glColor3ub(0, 0, 180);
+//	glScalef(1.0, 1.0, 1.0);
+//	glTranslatef(-1, -1, -1);
+//	glColor3ub(0, 0, 180);
+
+//Start moving light
+	glPushMatrix();
+	glTranslatef(5.0, 5.0, 5.0);
+
+	//
+	glPushMatrix();
+	glRotated((GLdouble) spin, 0.0, 1.0, 0.0);
+	glRotated(0.0, 1.0, 0.0, 0.0);
+	glLightfv(GL_LIGHT0, GL_POSITION, movingLightPos);
+
+	glTranslated(0.0, 0.0, 1.5);
+	glDisable(GL_LIGHTING);
+	glColor3f(0.0, 1.0, 1.0);
+	glutWireCube(0.1);
+	glEnable(GL_LIGHTING);
+	glPopMatrix();
+	//
+
+	glutSolidTeapot(1.0);
+	glPopMatrix();
+	//
+
+	glPushAttrib(GL_ENABLE_BIT);
+//	glDisable(GL_DEPTH_TEST);
+//	glDisable(GL_LIGHTING);
 
 	if (gridOn) {
 		OglDisplay::drawGrid();
@@ -373,6 +413,13 @@ void idle(void) {
 
 }
 
+void init() {
+	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHT0);
+	glDepthFunc(GL_LESS);
+	glEnable(GL_DEPTH_TEST);
+}
+
 int main(int argc, char **argv) {
 	//from objloader
 	ifstream stone("test.obj");
@@ -392,35 +439,23 @@ int main(int argc, char **argv) {
 	glutInitWindowSize(640, 480);
 	glutReshapeFunc(reshape);
 	glutCreateWindow("3D GRID");
+
+	init();
 	glutDisplayFunc(display);
 	glutIdleFunc(idle);
 	glutKeyboardFunc(keyboard);
 	glutSpecialFunc(processSpecialKeys);
 	glutMouseFunc(mouse);
 
-	/*glEnable( GL_DEPTH_TEST );
-
-	 // set up "headlamp"-like light
-	 glShadeModel( GL_SMOOTH );
-	 glEnable( GL_COLOR_MATERIAL );
-	 glColorMaterial( GL_FRONT_AND_BACK, GL_AMBIENT_AND_DIFFUSE ) ;
-	 glEnable( GL_LIGHTING );
-	 glEnable( GL_LIGHT0 );*/
-
-	//glMatrixMode(GL_PROJECTION);
-	//gluLookAt(-10, 0, 5, 0, 0, 5, 0.0, 1.0, 0.0);
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glScalef(1.0, 1.0, -1.0);
 	glTranslatef(-1, -1, -1);
 
-	/*GLfloat position[] = { 0, 0, 1, 0 };
-	 glLightfv( GL_LIGHT0, GL_POSITION, position );*/
-
 	glPolygonMode(GL_FRONT, GL_FILL);
 	glPolygonMode(GL_BACK, GL_LINE);
 
-	lookLeft();
+	lookRight();
 
 	glutMainLoop();
 
