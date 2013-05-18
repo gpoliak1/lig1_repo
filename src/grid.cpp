@@ -30,7 +30,7 @@ bool initSatisfied = false;
 #define STEPINCR		0.5
 #define ROT_INC			0.1
 #define FACTOR 			1
-bool gridOn = true;
+bool gridOn = false;
 
 struct Vertex {
 	vec3 position;
@@ -292,6 +292,8 @@ void display(void) {
 	printf("%s%g%s%g%s%g%s", "\nDISPLAY - Looking at ", lookatX, ",", lookatY,
 			",", lookatZ, "\n");
 
+	spin++;
+
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
 	int w = glutGet(GLUT_WINDOW_WIDTH);
@@ -326,26 +328,65 @@ void display(void) {
 //	glTranslatef(-1, -1, -1);
 //	glColor3ub(0, 0, 180);
 
+//	glPushMatrix();
+//	glTranslatef(5.0, 5.0, 5.0);
+//
+//	glBegin(GL_QUADS);
+//	glColor3d(1, 0, 0);
+//	glVertex3f(-1, -1, -10);
+//	glColor3d(1, 1, 0);
+//	glVertex3f(1, -1, -10);
+//	glColor3d(1, 1, 1);
+//	glVertex3f(1, 1, -10);
+//	glColor3d(0, 1, 1);
+//	glVertex3f(-1, 1, -10);
+//	glEnd();
+
 //Start moving light
 	glPushMatrix();
-	glTranslatef(5.0, 5.0, 5.0);
+		glTranslatef(5.0, 0.0, 0.0);
+		glScalef(-1.0, 1.0, 0.1);
 
-	//
-	glPushMatrix();
-	glRotated((GLdouble) spin, 0.0, 1.0, 0.0);
-	glRotated(0.0, 1.0, 0.0, 0.0);
-	glLightfv(GL_LIGHT0, GL_POSITION, movingLightPos);
+		//glEnable(GL_DEPTH_TEST);
+		//glDepthMask(GL_TRUE);
+		//glDepthFunc(GL_LEQUAL);
+		//glDepthRange(0.0f, 1.0f);
+		//glClearColor(1.0f, 1.0f, 1.0f, 0.0f);
+		//glClearDepth(1.0f);
+		//glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+		//glClearColor (1.0, 1.0, 1.0, 1.0);
+		//glClearDepth(0.0);
+		//glEnable(GL_BLEND); //lights from behind
+		//glShadeModel (GL_FLAT);
+		glColor3f(1.0,0.0,0.0);//,0.5);
+		glEnableClientState(GL_NORMAL_ARRAY);
+		glutSolidCube(1.0);
+		glDisableClientState(GL_NORMAL_ARRAY);
+		//
+		glPushMatrix();
+			glLoadIdentity();
+			glTranslatef(5.0, 0.0, 0.0);
 
-	glTranslated(0.0, 0.0, 1.5);
-	glDisable(GL_LIGHTING);
-	glColor3f(0.0, 1.0, 1.0);
-	glutWireCube(0.1);
-	glEnable(GL_LIGHTING);
+			glRotated((GLdouble) spin, 0.0, 1.0, 0.0);
+			glRotated(0.0, 1.0, 0.0, 0.0);
+			glLightfv(GL_LIGHT0, GL_POSITION, movingLightPos);
+
+			glTranslated(0.0, 0.0, 1.5);
+			glDisable(GL_LIGHTING);
+			glColor3f(0.0, 1.0, 1.0);
+			glutWireCube(0.1);
+			glEnable(GL_LIGHTING);
+		glPopMatrix();
+		//
+
+		glLoadIdentity();
+		glTranslatef(5.0, 0.0, 0.0);
+
+		glutSolidTeapot(1.0);
 	glPopMatrix();
 	//
 
-	glutSolidTeapot(1.0);
-	glPopMatrix();
+//	glPopMatrix();
 	//
 
 	glPushAttrib(GL_ENABLE_BIT);
@@ -390,6 +431,8 @@ void display(void) {
 
 	glPopMatrix();
 	glutSwapBuffers();
+
+	glutPostRedisplay();
 }
 
 void reshape(int w, int h) {
@@ -442,10 +485,10 @@ int main(int argc, char **argv) {
 
 	init();
 	glutDisplayFunc(display);
-	glutIdleFunc(idle);
+//	glutIdleFunc(idle);
 	glutKeyboardFunc(keyboard);
 	glutSpecialFunc(processSpecialKeys);
-	glutMouseFunc(mouse);
+//	glutMouseFunc(mouse);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
