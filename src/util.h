@@ -13,8 +13,9 @@
 #ifndef _UTIL_H
 #define _UTIL_H
 
-namespace Util
-{
+namespace Util {
 	extern void loadTrigValsIntoArr(void);
-};
+	static int numOfAngles = 40;
+}
+;
 #endif

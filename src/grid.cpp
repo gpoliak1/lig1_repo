@@ -10,10 +10,6 @@
 #include <fstream>
 #include <sstream>
 
-#define NUM_OF_ANGLES	10
-#define ROT_INC			0.1
-#define factor 			1
-
 using namespace std;
 using namespace glm;
 
@@ -30,6 +26,10 @@ int multiplierXZ = 0;
 int multiplierYZ = 0;
 
 //Basic Config
+#define STEPINCR		0.5
+//#define NUM_OF_ANGLES	10
+#define ROT_INC			0.1
+#define FACTOR 			1
 bool gridOn = false;
 
 struct Vertex {
@@ -131,53 +131,53 @@ vector<Vertex> LoadOBJ(istream& in) {
 
 void moveForward() {
 	if ((lookatX - eyeX) > 0) {
-		eyeX += 1.0;
-		lookatX += 1.0;
+		eyeX += STEPINCR;
+		lookatX += STEPINCR;
 	} else if ((lookatX - eyeX) < 0) {
-		eyeX -= 1.0;
-		lookatX -= 1.0;
+		eyeX -= STEPINCR;
+		lookatX -= STEPINCR;
 	}
 
 	if ((lookatY - eyeY) > 0) {
-		eyeY += 1.0;
-		lookatY += 1.0;
+		eyeY += STEPINCR;
+		lookatY += STEPINCR;
 	} else if ((lookatY - eyeY) < 0) {
-		eyeY -= 1.0;
-		lookatY -= 1.0;
+		eyeY -= STEPINCR;
+		lookatY -= STEPINCR;
 	}
 
 	if ((lookatZ - eyeZ) > 0) {
-		eyeZ += 1.0;
-		lookatZ += 1.0;
+		eyeZ += STEPINCR;
+		lookatZ += STEPINCR;
 	} else if ((lookatZ - eyeZ) < 0) {
-		eyeZ -= 1.0;
-		lookatZ -= 1.0;
+		eyeZ -= STEPINCR;
+		lookatZ -= STEPINCR;
 	}
 }
 
 void moveBackward() {
 	if ((lookatX - eyeX) > 0) {
-		eyeX -= 1.0;
-		lookatX -= 1.0;
+		eyeX -= STEPINCR;
+		lookatX -= STEPINCR;
 	} else if ((lookatX - eyeX) < 0) {
-		eyeX += 1.0;
-		lookatX += 1.0;
+		eyeX += STEPINCR;
+		lookatX += STEPINCR;
 	}
 
 	if ((lookatY - eyeY) > 0) {
-		eyeY -= 1.0;
-		lookatY -= 1.0;
+		eyeY -= STEPINCR;
+		lookatY -= STEPINCR;
 	} else if ((lookatY - eyeY) < 0) {
-		eyeY += 1.0;
-		lookatY += 1.0;
+		eyeY += STEPINCR;
+		lookatY += STEPINCR;
 	}
 
 	if ((lookatZ - eyeZ) > 0) {
-		eyeZ -= 1.0;
-		lookatZ -= 1.0;
+		eyeZ -= STEPINCR;
+		lookatZ -= STEPINCR;
 	} else if ((lookatZ - eyeZ) < 0) {
-		eyeZ += 1.0;
-		lookatZ += 1.0;
+		eyeZ += STEPINCR;
+		lookatZ += STEPINCR;
 	}
 }
 
@@ -232,7 +232,7 @@ void keyboard(unsigned char k, int x, int y) {
 		if (multiplierXZ != 0) {
 			multiplierXZ--;
 		} else {
-			multiplierXZ = NUM_OF_ANGLES - 1;
+			multiplierXZ = Util::numOfAngles - 1;
 		}
 
 		lookatX = Grid::trigSinVals[multiplierXZ] + eyeX;
@@ -243,7 +243,7 @@ void keyboard(unsigned char k, int x, int y) {
 	case 'n':
 		//looks immediately right
 
-		if (multiplierXZ != (NUM_OF_ANGLES - 1)) {
+		if (multiplierXZ != (Util::numOfAngles - 1)) {
 			multiplierXZ++;
 		} else {
 			multiplierXZ = 0;
@@ -262,7 +262,7 @@ void keyboard(unsigned char k, int x, int y) {
 		if (multiplierYZ != 0) {
 			multiplierYZ--;
 		} else {
-			multiplierYZ = 9;
+			multiplierYZ = Util::numOfAngles - 1;
 		}
 
 		lookatY = Grid::trigSinVals[multiplierYZ] + eyeY;

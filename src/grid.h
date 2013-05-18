@@ -5,8 +5,8 @@
 
 class Grid {
 public:
-	static float trigSinVals[10];
-	static float trigCosVals[10];
+	static float trigSinVals[40];
+	static float trigCosVals[40];
 
 };
 
