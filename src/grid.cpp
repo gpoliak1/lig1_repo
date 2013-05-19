@@ -345,7 +345,7 @@ void display(void) {
 //Start moving light
 	glPushMatrix();
 		glTranslatef(5.0, 0.0, 0.0);
-		glScalef(-1.0, 1.0, 0.1);
+		glScalef(1.0, 1.0, 0.1);
 
 		//glEnable(GL_DEPTH_TEST);
 		//glDepthMask(GL_TRUE);
