@@ -1,0 +1,75 @@
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/OpenGL_Primary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Primary.d" -MT"src/OpenGL_Primary.d" -o "src/OpenGL_Primary.o" "../src/OpenGL_Primary.cpp"
+Finished building: ../src/OpenGL_Primary.cpp
+ 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building file: ../src/lodepng.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lodepng.d" -MT"src/lodepng.d" -o "src/lodepng.o" "../src/lodepng.cpp"
+Finished building: ../src/lodepng.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lSDL -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
