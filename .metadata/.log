@@ -409,3 +409,6 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1410)
 !SUBENTRY 1 org.eclipse.core.resources 4 274 2013-06-03 12:56:46.216
 !MESSAGE Resource is out of sync with the file system: '/OpenGL_Primary/src/exec.sh'.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-06-03 21:22:45.694
+!MESSAGE Indexed 'OpenGL_Auxiliary' (1 sources, 170 headers) in 2.15 sec: 10,398 declarations; 15,620 references; 0 unresolved inclusions; 7 syntax errors; 71 unresolved names (0.27%)

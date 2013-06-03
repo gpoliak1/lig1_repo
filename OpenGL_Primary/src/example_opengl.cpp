@@ -42,15 +42,16 @@
 #include "lodepng.h"
 
 #include <iostream>
-//#include <SDL/SDL.h>
 #include <GL/gl.h>
 #include <GL/glut.h>
+#include <stdio.h>
 
-size_t u2 = 1;
-size_t v2 = 1;
+size_t u2;
+size_t v2;
 double u3;
 double v3;
-std::vector<unsigned char> image;
+std::vector<unsigned char> bricks;
+std::vector<unsigned char> wood;
 unsigned width, height;
 
 //General values
@@ -61,22 +62,85 @@ float lookatX = 0.0;
 float lookatY = 0.0;
 float lookatZ = -15.0;
 
+static GLuint texName[2];
+
+std::vector<unsigned char> makeBricksPowerOfTwo(size_t& u2, size_t& v2) {
+	// Make power of two version of the image.
+	std::vector<unsigned char> bricks2(u2 * v2 * 4);
+	unsigned origWidth = width;
+	unsigned origHeight = height;
+
+	for (size_t y = 0; y < height; y++)
+		for (size_t x = 0; x < width; x++)
+			for (size_t c = 0; c < 4; c++) {
+				bricks2[4 * u2 * y + 4 * x + c] = bricks[4 * width * y + 4 * x
+						+ c];
+			}
+	width = origWidth;
+	height = origHeight;
+
+	return bricks2;
+}
+
+std::vector<unsigned char> makeWoodPowerOfTwo(size_t& u2, size_t& v2) {
+	// Make power of two version of the image.
+	std::vector<unsigned char> wood2(u2 * v2 * 4);
+	unsigned origWidth = width;
+	unsigned origHeight = height;
+
+	for (size_t y = 0; y < height; y++)
+		for (size_t x = 0; x < width; x++)
+			for (size_t c = 0; c < 4; c++) {
+				wood2[4 * u2 * y + 4 * x + c] = wood[4 * width * y + 4 * x + c];
+			}
+	width = origWidth;
+	height = origHeight;
+
+	return wood2;
+}
+
 void init() {
-	const char* filename = "bricks.png"; //argv[1];
-
 	// Load file and decode image.
-	lodepng::decode(image, width, height, filename);
+	lodepng::decode(bricks, width, height, "bricks.png");
 
-	// Here the PNG is loaded in "image". All the rest of the code is SDL and OpenGL stuff.
-	int screenw = width;
-	if (screenw > 1024)
-		screenw = 1024;
-	int screenh = height;
-	if (screenh > 768)
-		screenw = 768;
+	u2 = 1;
+	v2 = 1;
+	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
+	while (u2 < width)
+		u2 *= 2;
+	while (v2 < height)
+		v2 *= 2;
+	// Ratio for power of two version compared to actual version, to render the non power of two image with proper size.
+	u3 = (double) (width) / u2;
+	v3 = (double) (height) / v2;
+
+	// Make power of two version of the image.
+	std::vector<unsigned char> bricks2 = makeBricksPowerOfTwo(u2, v2);
+
+	/*
+	// Load file and decode image.
+	lodepng::decode(wood, width, height, "wood.png");
+
+	u2 = 1;
+	v2 = 1;
+	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
+	while (u2 < width)
+		u2 *= 2;
+	while (v2 < height)
+		v2 *= 2;
+	// Ratio for power of two version compared to actual version, to render the non power of two image with proper size.
+	u3 = (double) (width) / u2;
+	v3 = (double) (height) / v2;
+
+	// Make power of two version of the image.
+	std::vector<unsigned char> wood2 = makeWoodPowerOfTwo(u2, v2);
+*/
+
+
+
 
 	// The official code for "Setting Your Raster Position to a Pixel Location" (i.e. set up a camera for 2D screen)
-	glViewport(0, 0, screenw, screenh);
+	glViewport(0, 0, 768, 768);
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -88,32 +152,12 @@ void init() {
 	glEnable(GL_BLEND);
 	glDisable(GL_ALPHA_TEST);
 
-	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
-	size_t u2 = 1;
-	while (u2 < width)
-		u2 *= 2;
-	size_t v2 = 1;
-	while (v2 < height)
-		v2 *= 2;
-	// Ratio for power of two version compared to actual version, to render the non power of two image with proper size.
-	u3 = (double) width / u2;
-	v3 = (double) height / v2;
-
-	// Make power of two version of the image.
-	std::vector<unsigned char> image2(u2 * v2 * 4);
-	for (size_t y = 0; y < height; y++)
-		for (size_t x = 0; x < width; x++)
-			for (size_t c = 0; c < 4; c++) {
-				image2[4 * u2 * y + 4 * x + c] =
-						image[4 * width * y + 4 * x + c];
-			}
-
 	// Enable the texture for OpenGL.
 	glEnable(GL_TEXTURE_2D);
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST); //GL_NEAREST = no smoothing
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 4, u2, v2, 0, GL_RGBA, GL_UNSIGNED_BYTE,
-			&image2[0]);
+			&bricks2[0]);
 
 }
 

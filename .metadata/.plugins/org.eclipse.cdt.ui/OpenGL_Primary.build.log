@@ -5,6 +5,7 @@ make all
 Building file: ../src/example_opengl.cpp
 Invoking: GCC C++ Compiler
 g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp:65:15: warning: ‘texName’ defined but not used [-Wunused-variable]
 Finished building: ../src/example_opengl.cpp
  
 Building target: OpenGL_Primary
