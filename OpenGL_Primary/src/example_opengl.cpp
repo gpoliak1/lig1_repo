@@ -53,6 +53,14 @@ double v3;
 std::vector<unsigned char> image;
 unsigned width, height;
 
+//General values
+float eyeX = 4.0;
+float eyeY = 4.0;
+float eyeZ = 2.0;
+float lookatX = 0.0;
+float lookatY = 0.0;
+float lookatZ = -15.0;
+
 void init() {
 	const char* filename = "bricks.png"; //argv[1];
 
@@ -113,16 +121,37 @@ void display(void) {
 	glClearColor(0, 0, 0, 0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	int w = glutGet(GLUT_WINDOW_WIDTH);
+	int h = glutGet(GLUT_WINDOW_HEIGHT);
+
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60.0, (GLdouble) w / (GLdouble) h, 0.1, 40.0);
+	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
+
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glPushMatrix();
+
+	glTranslatef(-2.0, -2.0, -4.6);
+	glScalef(7.0, 7.0, 7.0);
+
 	glBegin(GL_QUADS);
+
 	glTexCoord2d(0, 0);
 	glVertex2f(0, 0);
-	glTexCoord2d(5, 0);
-	glVertex2f(5, 0);
-	glTexCoord2d(5, 5);
-	glVertex2f(5, 5);
-	glTexCoord2d(0, 5);
-	glVertex2f(0, 5);
+
+	glTexCoord2d(1, 0);
+	glVertex2f(1, 0);
+
+	glTexCoord2d(1, 1);
+	glVertex2f(1, 1);
+
+	glTexCoord2d(0, 1);
+	glVertex2f(0, 1);
+
 	glEnd();
+	glPopMatrix();
 
 	glutSwapBuffers();
 }
@@ -130,12 +159,13 @@ void display(void) {
 void reshape(int w, int h) {
 
 	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 30.0);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glTranslatef(-3.0, -3.0, -4.6);
+//	glMatrixMode(GL_PROJECTION);
+//	glLoadIdentity();
+//	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 30.0);
+//	glMatrixMode(GL_MODELVIEW);
+//	glLoadIdentity();
+//	glTranslatef(-2.0, -2.0, -4.6);
+//	glScalef(7.0, 7.0, 7.0);
 }
 
 int main(int argc, char *argv[]) {
