@@ -1,8 +1,8 @@
 #!/bin/bash
 
-g++ -lGL -lSDL -c example_opengl.cpp lodepng.cpp
+g++ -lGL -lGLU -lGLEW -lglut -c example_opengl.cpp lodepng.cpp
 
-g++ -lGL -lSDL -o final example_opengl.o lodepng.o
+g++ -lGL -lGLU -lGLEW -lglut -o final example_opengl.o lodepng.o
 
 #(exec wmctrl -k on)
 

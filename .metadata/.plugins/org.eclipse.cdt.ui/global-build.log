@@ -73,3 +73,506 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘int main(int, char**)’:
+../src/example_opengl.cpp:138:2: error: ‘SDL_Event’ was not declared in this scope
+../src/example_opengl.cpp:138:12: error: expected ‘;’ before ‘event’
+../src/example_opengl.cpp:118:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:119:9: warning: unused variable ‘v3’ [-Wunused-variable]
+make: *** [src/example_opengl.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘int main(int, char**)’:
+../src/example_opengl.cpp:118:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:119:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lSDL -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘int main(int, char**)’:
+../src/example_opengl.cpp:118:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:119:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lSDL -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:58:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:106:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:107:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lSDL -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:59:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:107:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:108:9: warning: unused variable ‘v3’ [-Wunused-variable]
+../src/example_opengl.cpp: In function ‘int main(int, char**)’:
+../src/example_opengl.cpp:141:21: error: ‘display’ was not declared in this scope
+../src/example_opengl.cpp:142:21: error: ‘reshape’ was not declared in this scope
+../src/example_opengl.cpp:143:22: error: ‘keyboard’ was not declared in this scope
+make: *** [src/example_opengl.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:59:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:107:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:108:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lSDL -lGL
+../src/example_opengl.cpp:139: error: undefined reference to 'glutInit'
+../src/example_opengl.cpp:140: error: undefined reference to 'glutInitDisplayMode'
+../src/example_opengl.cpp:141: error: undefined reference to 'glutInitWindowSize'
+../src/example_opengl.cpp:142: error: undefined reference to 'glutInitWindowPosition'
+../src/example_opengl.cpp:143: error: undefined reference to 'glutCreateWindow'
+../src/example_opengl.cpp:145: error: undefined reference to 'glutDisplayFunc'
+../src/example_opengl.cpp:148: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [OpenGL_Primary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:113:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:114:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:113:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:114:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGL
+../src/example_opengl.cpp:159: error: undefined reference to 'gluPerspective'
+collect2: ld returned 1 exit status
+make: *** [OpenGL_Primary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+../src/example_opengl.cpp:115:9: warning: unused variable ‘u3’ [-Wunused-variable]
+../src/example_opengl.cpp:116:9: warning: unused variable ‘v3’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp: In function ‘void init()’:
+../src/example_opengl.cpp:65:11: warning: unused variable ‘error’ [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
