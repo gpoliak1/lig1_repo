@@ -12,20 +12,27 @@ size_t u2 = 1;
 size_t v2 = 1;
 double u3, v3;
 unsigned width, height;
+GLuint quadricList;
 
 //Containers
 std::vector<unsigned char> preArr;
 static GLuint texName[NUM_OF_TEXTURES];
 
 //Modifiable values
-float eyeX = 0.5;
-float eyeY = 0.5;
-float eyeZ = 2.0;
-float lookatX = 0.5;
-float lookatY = 0.5;
-float lookatZ = -15.0;
+float eyeX = -1.0;
+float eyeY = 2.0;
+float eyeZ = 1.0;
+float lookatX = 0.0;
+float lookatY = 1.0;
+float lookatZ = 0.0;
 
-GLfloat quad1[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
+GLfloat frontFace[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
+GLfloat backFace[] = { 0, 0, -1, 1, 0, -1, 1, 1, -1, 0, 1, -1 };
+GLfloat northFace[] = { 0, 1, 0, 1, 1, 0, 1, 1, -1, 0, 1, -1 };
+GLfloat westFace[] = { };
+GLfloat southFace[] = { 0, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1 };
+GLfloat eastFace[] = { };
+
 GLfloat quad2[] = { 1, 0, 0, 2, 0, 0, 2, 1, 0, 1, 1, 0 };
 
 /***********************************/
@@ -90,11 +97,27 @@ void init() {
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-	glDisable(GL_CULL_FACE);
-	glDisable(GL_DEPTH_TEST);
-	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	glEnable(GL_BLEND);
-	glDisable(GL_ALPHA_TEST);
+//	glDisable(GL_CULL_FACE);
+//	glDisable(GL_DEPTH_TEST);
+//	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
+//	glEnable(GL_BLEND);
+//	glDisable(GL_ALPHA_TEST);
+
+	/***********************************/
+	/***********  LIGHTING  ************/
+	/***********************************/
+	GLfloat left_light_pos[] = { 8.5, 8.5, 10.0, 0.0 };
+	GLfloat white_light[] = { 1.0, 1.0, 1.0, 1.0 };
+
+	glLightfv(GL_LIGHT0, GL_POSITION, left_light_pos);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
+
+	glEnable(GL_LIGHT0);
+
+//	glEnable(GL_LIGHTING);
+//	glEnable(GL_DEPTH_TEST);
+//	glEnable(GL_NORMALIZE);
 
 	/***********************************/
 	/***********  TEXTURE  ************/
@@ -119,20 +142,25 @@ void init() {
 	glEnable(GL_TEXTURE_2D);
 
 	/***********************************/
-	/***********  LIGHTING  ************/
+	/***********  QUADRICS  ************/
 	/***********************************/
-	GLfloat left_light_pos[] = { 0.5, 0.5, 2.0, 0.0 };
-	GLfloat white_light[] = { 1.0, 1.0, 1.0, 1.0 };
 
-	glLightfv(GL_LIGHT0, GL_POSITION, left_light_pos);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
+	GLUquadricObj *qobj = gluNewQuadric();
+	quadricList = glGenLists(1);
 
-	glEnable(GL_LIGHT0);
-
+	glNewList(quadricList, GL_COMPILE);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_NORMALIZE);
+
+	gluQuadricDrawStyle(qobj, GLU_FILL); /* smooth shaded */
+	gluQuadricNormals(qobj, GLU_SMOOTH);
+	gluSphere(qobj, 0.75, 15, 10);
+
+	glDisable(GL_LIGHTING);
+	glDisable(GL_DEPTH_TEST);
+	glDisable(GL_NORMALIZE);
+	glEndList();
 
 }
 
@@ -153,23 +181,34 @@ void display(void) {
 	//	glTranslatef(-2.0, -2.0, -4.6);
 	//	glScalef(7.0, 7.0, 7.0);
 
-	drawQuad(0, quad1);
+//	glTranslatef(-1.0, -1.0, 0.0);
+//	drawQuad(0, frontFace);
+	drawQuad(0, backFace);
+	drawQuad(0, northFace);
+	drawQuad(0, southFace);
 	drawQuad(1, quad2);
 
+	glPushMatrix();
+//	glLoadIdentity();
+//	glShadeModel(GL_SMOOTH);
+
+	glTranslatef(0.0, 2.0, 0.0);
+//	glCallList(quadricList);
+
 	glPopMatrix();
+	glPopMatrix();
+
+	glFlush();
 	glutSwapBuffers();
 }
 
 void reshape(int w, int h) {
 
 	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
-//	glMatrixMode(GL_PROJECTION);
-//	glLoadIdentity();
-//	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 30.0);
-//	glMatrixMode(GL_MODELVIEW);
-//	glLoadIdentity();
-//	glTranslatef(-2.0, -2.0, -4.6);
-//	glScalef(7.0, 7.0, 7.0);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 20.0);
+	glMatrixMode(GL_MODELVIEW);
 }
 
 int main(int argc, char *argv[]) {

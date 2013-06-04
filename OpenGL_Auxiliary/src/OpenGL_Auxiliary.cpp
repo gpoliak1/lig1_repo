@@ -1,229 +1,216 @@
-/* texture.c
- * This program reads in a single image from a .rgb file, uses the
- * utility routine gluScaleImage() to scale the image, if
- * necessary, sets up the minification and magnification filter,
- * and then uses glTexImage2D() to load the image into texture
- * memory. It then applies the texture to a rectangular polygon
- * using explicit texture coordinates.
- *
- *     <a> key     - toggle animation on/off
- *     Escape Key      - exit program
- */
+// simple.cpp - simple introduction to OpenGL and GLUT programming in C++
+// Compile on Linux with:
+//  g++ -L/usr/X11R6/lib simple.cpp -lglut -lGLU -lGL -lXmu -lX11 -lXi -lm
 
-#include <GL/glut.h>    /* includes gl.h, glu.h */
-
-#include <math.h>
 #include <stdio.h>
+#include <assert.h>
+#include <math.h>
+#include <list>
+#include <GL/gl.h>
+#include <GL/glut.h>
 
-#include "texture.h"   /* should be in ../../include */
+using namespace std;
 
-/*  Function Prototypes  */
+// ---------------- 2D point class ----------------------------------
 
-GLvoid initgfx(GLvoid);
-GLvoid animate(GLvoid);
-GLvoid visibility(GLint);
-GLvoid drawScene(GLvoid);
-GLvoid reshape(GLsizei, GLsizei);
-GLvoid keyboard(GLubyte, GLint, GLint);
+struct Point2D {
+	float x, y;
 
-GLvoid initTexture(GLubyte *, GLsizei, GLsizei);
-
-static GLuint nearestPower(GLuint);
-
-void printHelp(char *progname);
-
-/* Global Definitions */
-
-#define KEY_ESC 27  /* ascii value for the escape key */
-
-/* Global Variables */
-
-static GLfloat swim = 1.0;
-
-static GLboolean animateFlag = GL_TRUE;
-
-void main(int argc, char *argv[]) {
-	char *imageFileName = "fish.rgba";
-	GLubyte *image;
-	GLsizei width, height;
-	GLsizei imageWidth, imageHeight, components;
-
-	glutInit(&argc, argv);
-
-	if (argc < 2) {
-		fprintf(stderr, "usage: %s [imageFileName]\n", argv[0]);
-	} else
-		imageFileName = argv[1];
-
-	fprintf(stdout, "using image %s\n\n", imageFileName);
-
-	image = read_texture(imageFileName, &imageWidth, &imageHeight, &components);
-
-	/* create a window that is 1/4 the size of the screen */
-
-	width = glutGet(GLUT_SCREEN_WIDTH);
-	height = glutGet(GLUT_SCREEN_HEIGHT);
-	glutInitWindowPosition((width / 2) + 4, height / 4);
-	glutInitWindowSize((width / 2) - 4, height / 2);
-	glutInitDisplayMode(GLUT_RGBA | GLUT_DOUBLE);
-	glutCreateWindow(argv[0]);
-
-	initTexture(image, imageWidth, imageHeight);
-	initgfx();
-
-	glutKeyboardFunc(keyboard);
-	glutIdleFunc(animate);
-	glutVisibilityFunc(visibility);
-	glutReshapeFunc(reshape);
-	glutDisplayFunc(drawScene);
-
-	printHelp(argv[0]);
-
-	glutMainLoop();
-}
-
-GLvoid printHelp(char *progname) {
-	fprintf(stdout, "\n%s - demonstrates basic texture mapping\n"
-			"<a> key      - toggle animation on/off\n"
-			"Escape key   - exit the program\n\n", progname);
-}
-
-GLvoid initgfx(void) {
-	glClearColor(0.0, 0.0, 0.0, 1.0);
-}
-
-/* Compute the nearest power of 2 number that is
- * less than or equal to the value passed in.
- */
-static GLuint nearestPower(GLuint value) {
-	int i = 1;
-
-	if (value == 0)
-		return -1; /* Error! */
-	for (;;) {
-		if (value == 1)
-			return i;
-		else if (value == 3)
-			return i * 4;
-		value >>= 1;
-		i *= 2;
+	Point2D() {
+		x = 0.0;
+		y = 0.0;
 	}
-}
-
-GLvoid initTexture(GLubyte *image, GLsizei imageWidth, GLsizei imageHeight) {
-	GLsizei sWidth, sHeight;
-	GLubyte *sImage;
-
-	/* Find the largest power of two dimensions that are
-	 * less than or equal to the size of the image
-	 */
-	sWidth = nearestPower(imageWidth);
-	sHeight = nearestPower(imageHeight);
-
-	printf("input image size: %dx%d\n", imageWidth, imageHeight);
-	printf("scaled image size: %dx%d\n", sWidth, sHeight);
-
-	/* scale texture image to 2^m by 2^n if necessary */
-	if (sWidth == imageWidth && sHeight == imageHeight) {
-		sImage = (GLubyte *) image;
-	} else {
-		sImage = (GLubyte *) malloc(sHeight * sWidth * 4 * sizeof(GLubyte));
-		gluScaleImage(GL_RGBA, imageWidth, imageHeight, GL_UNSIGNED_BYTE, image,
-				sWidth, sHeight, GL_UNSIGNED_BYTE, sImage);
+	Point2D(float _x, float _y) :
+			x(_x), y(_y) {
 	}
 
-	/* Setting the minification and magnification filters
-	 * to nearest instead of linear, may run faster on some
-	 * platforms, with possibly lower quality
-	 */
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	double dist(Point2D a);
+	bool closeEnough(Point2D other);
+};
 
-	/* Set the minification filter to something other than
-	 * the default (GL_NEAREST_MIPMAP_LINEAR)
-	 */
-	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
-
-	/* load texture */
-	glTexImage2D(GL_TEXTURE_2D, 0, GL_RGBA, sWidth, sHeight, 0, GL_RGBA,
-			GL_UNSIGNED_BYTE, sImage);
-
-	/* enable 2D texture mapping */
-	glEnable(GL_TEXTURE_2D);
+// distance between this point and a
+double Point2D::dist(Point2D a) {
+	return sqrt((a.x - x) * (a.x - x) + (a.y - y) * (a.y - y));
 }
 
-GLvoid keyboard(GLubyte key, GLint x, GLint y) {
-	switch (key) {
-	case 'a': /* toggle animation */
-		animateFlag = !animateFlag;
-		if (animateFlag)
-			glutIdleFunc(animate);
-		else
-			glutIdleFunc(NULL);
-		break;
-	case KEY_ESC: /* Exit whenever the Escape key is pressed */
-		exit(0);
+// true if a is close enough to this point
+bool Point2D::closeEnough(Point2D a) {
+	return (dist(a) < 0.02);
+}
+
+//------------------- Interactive triangle class --------------------
+
+class Triangle {
+protected:
+	Point2D pts[3]; // the points defining the triangle
+	int dragPoint; // current drag corner if any (-1 if none)
+
+public:
+	Triangle();
+
+	void draw(); // draw the triangle
+	bool onDown(Point2D p); // call on mouse-down
+	void onDrag(Point2D p); // call on mouse drag to move the corner
+};
+
+Triangle::Triangle() {
+	// init default triangle
+	pts[0] = Point2D(0.30, 0.30);
+	pts[1] = Point2D(0.15, 0.50);
+	pts[2] = Point2D(0.15, 0.30);
+	dragPoint = -1;
+}
+
+void Triangle::draw() {
+	int i;
+
+	// draw the white triangle using the 3 points
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin(GL_TRIANGLES);
+	for (i = 0; i < 3; ++i) {
+		glVertex2f(pts[i].x, pts[i].y);
 	}
-}
-
-GLvoid animate(GLvoid) {
-	swim = fmod(swim + 0.1, 35.0);
-
-	/* Tell GLUT to redraw the scene */
-	glutPostRedisplay();
-}
-
-GLvoid visibility(int state) {
-	if (state == GLUT_VISIBLE && animateFlag) {
-		glutIdleFunc(animate);
-	} else {
-		glutIdleFunc(NULL);
-	}
-}
-
-GLvoid reshape(GLsizei width, GLsizei height) {
-	GLdouble aspect;
-
-	glViewport(0, 0, width, height);
-
-	aspect = (GLdouble) width / (GLdouble) height;
-
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
-	gluPerspective(45.0, aspect, 1.0, 50.0);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
-	glTranslatef(0.0, 0.0, -12.0);
-}
-
-GLvoid drawScene(void) {
-	static float v0[3] = { -1.5, -1.0, 0.0 };
-	static float v1[3] = { 1.5, -1.0, 0.0 };
-	static float v2[3] = { 1.5, 1.0, 0.0 };
-	static float v3[3] = { -1.5, 1.0, 0.0 };
-
-	static float t0[2] = { 0.0, 0.0 };
-	static float t1[2] = { 1.0, 0.0 };
-	static float t2[2] = { 1.0, 1.0 };
-	static float t3[2] = { 0.0, 1.0 };
-
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	glColor4f(1.0, 1.0, 1.0, 1.0);
-	glPushMatrix();
-	glTranslatef(-6.0 + swim, 0.2 * sin(swim * 3.0), -swim);
-
-	glBegin(GL_QUADS);
-	glTexCoord2fv(t0);
-	glVertex3fv(v0);
-	glTexCoord2fv(t1);
-	glVertex3fv(v1);
-	glTexCoord2fv(t2);
-	glVertex3fv(v2);
-	glTexCoord2fv(t3);
-	glVertex3fv(v3);
 	glEnd();
 
-	glPopMatrix();
+	// draw the red outline of the triangle on top
+	glColor3f(1.0, 0.0, 0.0);
+	glBegin(GL_LINE_LOOP);
+	for (i = 0; i < 3; ++i) {
+		glVertex2f(pts[i].x, pts[i].y);
+	}
+	glEnd();
+}
 
-	glutSwapBuffers();
+// test the mouse coordinate a against the 3 corners and return true
+// if the mouse is close enough. Also sets the dragPoint of the
+// triangle to corner that was hit if any.
+bool Triangle::onDown(Point2D a) {
+	int i;
+	for (i = 0; i < 3; ++i) {
+		if (a.closeEnough(pts[i])) {
+			dragPoint = i;
+			return true;
+		}
+	}
+	return false;
+}
+
+// move the dragPoint corner along with the mouse
+void Triangle::onDrag(Point2D a) {
+	if (dragPoint != -1) {
+		pts[dragPoint] = a;
+	}
+}
+
+//------------------ main program ------------------------------------
+
+// global variables
+typedef list<Triangle *> TriList;
+TriList triangles; // the list of our triangles
+Triangle *activeTriangle = NULL; // the active triangle while dragging
+int windowWidth, windowHeight; // dimensions of the window in pixel
+
+void init() {
+	triangles.push_back(new Triangle); // create initial triangle
+
+	// init some OpenGL state
+	glClearColor(0.0, 0.0, 1.0, 0.0); // blue background
+	glShadeModel(GL_FLAT);
+}
+
+// called on window refresh events via glut
+void display() {
+	TriList::iterator i;
+
+	glClear(GL_COLOR_BUFFER_BIT); // clear color buffer
+
+	// draw all the triangles
+	for (i = triangles.begin(); i != triangles.end(); ++i) {
+		(*i)->draw();
+	}
+	glFlush(); // flush gl pipe
+}
+
+// called initially and on window-resizing
+void reshape(int w, int h) {
+	// set the viewport to fill all of the window
+	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+	windowWidth = w;
+	windowHeight = h;
+
+	// set top projection matrix to do 2D parallel projection, and make
+	// the coordinate system of the window a unit square with origin at
+	// the bottom left corner.
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluOrtho2D(0.0, 1.0, 0.0, 1.0);
+}
+
+// convert mouse coordinate in pixel into the window coordinate system
+Point2D mouseToPoint(int x, int y) {
+	return Point2D(float(x) / windowWidth, 1.0 - float(y) / windowHeight);
+}
+
+// called on mouse button events
+void mouse(int button, int state, int x, int y) {
+	TriList::iterator i;
+
+	activeTriangle = NULL;
+	if (button == GLUT_LEFT_BUTTON && state == GLUT_DOWN) {
+		for (i = triangles.begin(); i != triangles.end(); ++i) {
+			if ((*i)->onDown(mouseToPoint(x, y))) {
+				activeTriangle = (*i);
+				break;
+			}
+		}
+	}
+}
+
+// called on mouse drag events
+void drag(int x, int y) {
+	if (activeTriangle != NULL) {
+		// drag corner of active triangle with the mouse
+		activeTriangle->onDrag(mouseToPoint(x, y));
+		glutPostRedisplay(); // force re-display
+	}
+}
+
+// called on popup-menu invocation
+void menuFunc(int item) {
+	switch (item) {
+	case 1:
+		// create another triangle
+		triangles.push_back(new Triangle);
+		break;
+	case 2:
+		exit(0);
+		break;
+	default:
+		break;
+	}
+	glutPostRedisplay(); // tell GLUT to call display()
+}
+
+int main(int argc, char *argv[]) {
+	glutInit(&argc, argv); // init GLUT library
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB); // ask for true color and single buffer
+	glutInitWindowSize(600, 500); // set initial window size
+	glutCreateWindow("Triangles"); // open window with a title
+
+	init();
+
+	// register callback functions for redraw, mouse events etc.
+	glutDisplayFunc(display);
+	glutMouseFunc(mouse);
+	glutMotionFunc(drag);
+	glutReshapeFunc(reshape);
+
+	// create right button popup menu
+	glutCreateMenu(menuFunc);
+	glutAddMenuEntry("New Triangle", 1);
+	glutAddMenuEntry("Quit", 2);
+	glutAttachMenu(GLUT_RIGHT_BUTTON);
+
+	glutMainLoop(); // enter main loop
+	return 0;
 }
