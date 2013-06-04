@@ -1,44 +1,3 @@
-/*
- LodePNG Examples
-
- Copyright (c) 2005-2012 Lode Vandevenne
-
- This software is provided 'as-is', without any express or implied
- warranty. In no event will the authors be held liable for any damages
- arising from the use of this software.
-
- Permission is granted to anyone to use this software for any purpose,
- including commercial applications, and to alter it and redistribute it
- freely, subject to the following restrictions:
-
- 1. The origin of this software must not be misrepresented; you must not
- claim that you wrote the original software. If you use this software
- in a product, an acknowledgment in the product documentation would be
- appreciated but is not required.
-
- 2. Altered source versions must be plainly marked as such, and must not be
- misrepresented as being the original software.
-
- 3. This notice may not be removed or altered from any source
- distribution.
- */
-
-//Compile command for Linux:
-//g++ lodepng.cpp example_opengl.cpp -lSDL -lGL -O3
-/*
- LodePNG OpenGL example. Decodes a PNG and shows it in OpenGL. PNG filename
- should be given as a command line parameter.
-
- It's written for the most basic old OpenGL version, and a correction for non
- power of two textures had to be added.
-
- Only very few lines on the sample are about loading the PNG. Most of the
- sample lines show a way to render a texture in 2D in OpenGL.
-
- No fancy 3D graphics are shown, it only shows the image statically. The sample
- shows LodePNG can be used to load PNG images as textures in OpenGL.
- */
-
 #include "lodepng.h"
 
 #include <iostream>
@@ -48,15 +7,17 @@
 
 #define NUM_OF_TEXTURES		2
 
+//Data member declarations
 size_t u2 = 1;
 size_t v2 = 1;
-double u3;
-double v3;
-
-std::vector<unsigned char> preArr;
+double u3, v3;
 unsigned width, height;
 
-//General values
+//Containers
+std::vector<unsigned char> preArr;
+static GLuint texName[NUM_OF_TEXTURES];
+
+//Modifiable values
 float eyeX = 0.5;
 float eyeY = 0.5;
 float eyeZ = 2.0;
@@ -64,7 +25,25 @@ float lookatX = 0.5;
 float lookatY = 0.5;
 float lookatZ = -15.0;
 
-static GLuint texName[NUM_OF_TEXTURES];
+GLfloat quad1[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
+GLfloat quad2[] = { 1, 0, 0, 2, 0, 0, 2, 1, 0, 1, 1, 0 };
+
+/***********************************/
+/***********  UTILITY  ************/
+/***********************************/
+void drawQuad(int texNamePos, GLfloat arr[]) {
+
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_VERTEX_ARRAY);
+
+	glBindTexture(GL_TEXTURE_2D, texName[texNamePos]);
+	glTexCoordPointer(3, GL_FLOAT, 0, arr);
+	glVertexPointer(3, GL_FLOAT, 0, arr);
+	glDrawArrays(GL_QUADS, 0, 4);
+
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	glDisableClientState(GL_VERTEX_ARRAY);
+}
 
 std::vector<unsigned char> makePowerOfTwo(size_t& u2, size_t& v2,
 		std::vector<unsigned char>& incArr,
@@ -102,6 +81,9 @@ void buildTexImg2D(std::vector<unsigned char> fullArr, int texArrPos) {
 			&fullArr[0]);
 }
 
+/***********************************/
+/***********    INIT    ************/
+/***********************************/
 void init() {
 	glViewport(0, 0, 768, 768);
 
@@ -114,6 +96,9 @@ void init() {
 	glEnable(GL_BLEND);
 	glDisable(GL_ALPHA_TEST);
 
+	/***********************************/
+	/***********  TEXTURE  ************/
+	/***********************************/
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 	glGenTextures(NUM_OF_TEXTURES, texName);
 
@@ -132,6 +117,23 @@ void init() {
 	/***********************************/
 
 	glEnable(GL_TEXTURE_2D);
+
+	/***********************************/
+	/***********  LIGHTING  ************/
+	/***********************************/
+	GLfloat left_light_pos[] = { 0.5, 0.5, 2.0, 0.0 };
+	GLfloat white_light[] = { 1.0, 1.0, 1.0, 1.0 };
+
+	glLightfv(GL_LIGHT0, GL_POSITION, left_light_pos);
+	glLightfv(GL_LIGHT0, GL_SPECULAR, white_light);
+	glLightfv(GL_LIGHT0, GL_DIFFUSE, white_light);
+
+	glEnable(GL_LIGHT0);
+
+	glEnable(GL_LIGHTING);
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_NORMALIZE);
+
 }
 
 void display(void) {
@@ -143,39 +145,16 @@ void display(void) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60.0, (GLdouble) w / (GLdouble) h, 0.1, 40.0);
+	gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
 	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
-
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 	glPushMatrix();
+	//	glTranslatef(-2.0, -2.0, -4.6);
+	//	glScalef(7.0, 7.0, 7.0);
 
-//	glTranslatef(-2.0, -2.0, -4.6);
-//	glScalef(7.0, 7.0, 7.0);
-
-	glBindTexture(GL_TEXTURE_2D, texName[0]);
-	glBegin(GL_QUADS);
-	glTexCoord2d(0, 0);
-	glVertex2f(0, 0);
-	glTexCoord2d(1, 0);
-	glVertex2f(1, 0);
-	glTexCoord2d(1, 1);
-	glVertex2f(1, 1);
-	glTexCoord2d(0, 1);
-	glVertex2f(0, 1);
-	glEnd();
-
-	glBindTexture(GL_TEXTURE_2D, texName[1]);
-	glBegin(GL_QUADS);
-	glTexCoord2d(1, 0);
-	glVertex2f(1, 0);
-	glTexCoord2d(2, 0);
-	glVertex2f(2, 0);
-	glTexCoord2d(2, 1);
-	glVertex2f(2, 1);
-	glTexCoord2d(1, 1);
-	glVertex2f(1, 1);
-	glEnd();
+	drawQuad(0, quad1);
+	drawQuad(1, quad2);
 
 	glPopMatrix();
 	glutSwapBuffers();
