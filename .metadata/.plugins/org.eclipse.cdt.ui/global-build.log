@@ -1732,3 +1732,2374 @@ Finished building target: OpenGL_Primary
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp:65:15: warning: ‘texName’ defined but not used [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp:65:15: warning: ‘texName’ defined but not used [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+../src/example_opengl.cpp:65:15: warning: ‘texName’ defined but not used [-Wunused-variable]
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+Building file: ../src/example_opengl.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/example_opengl.d" -MT"src/example_opengl.d" -o "src/example_opengl.o" "../src/example_opengl.cpp"
+Finished building: ../src/example_opengl.cpp
+ 
+Building target: OpenGL_Primary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Primary"  ./src/OpenGL_Primary.o ./src/example_opengl.o ./src/lodepng.o   -lglut -lGLU -lGLEW -lGL
+Finished building target: OpenGL_Primary
+ 
+
+**** Build Finished ****

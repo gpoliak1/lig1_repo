@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Create method makePowerOfTwo" description="Extract Method Refactoring" fileName="file:/home/gil/workspace/OpenGL_Primary/src/example_opengl.cpp" flags="4" id="org.eclipse.cdt.internal.ui.refactoring.extractfunction.ExtractFunctionRefactoring" name="makePowerOfTwo" replaceDuplicates="false" selection="3009,243" stamp="1370263947059" visibility="private"/>
+</session>

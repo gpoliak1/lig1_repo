@@ -1,0 +1,12 @@
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:18:56: fatal error: texture.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****

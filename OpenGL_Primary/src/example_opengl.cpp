@@ -46,8 +46,8 @@
 #include <GL/glut.h>
 #include <stdio.h>
 
-size_t u2;
-size_t v2;
+size_t u2 = 1;
+size_t v2 = 1;
 double u3;
 double v3;
 std::vector<unsigned char> bricks;
@@ -55,21 +55,34 @@ std::vector<unsigned char> wood;
 unsigned width, height;
 
 //General values
-float eyeX = 4.0;
-float eyeY = 4.0;
+//float eyeX = 4.0;
+//float eyeY = 4.0;
+//float eyeZ = 2.0;
+//float lookatX = 0.0;
+//float lookatY = 0.0;
+//float lookatZ = -15.0;
+float eyeX = 0.5;
+float eyeY = 0.5;
 float eyeZ = 2.0;
-float lookatX = 0.0;
-float lookatY = 0.0;
+float lookatX = 0.5;
+float lookatY = 0.5;
 float lookatZ = -15.0;
 
 static GLuint texName[2];
 
 std::vector<unsigned char> makeBricksPowerOfTwo(size_t& u2, size_t& v2) {
+
+	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
+	while (u2 < width)
+		u2 *= 2;
+	while (v2 < height)
+		v2 *= 2;
 	// Make power of two version of the image.
 	std::vector<unsigned char> bricks2(u2 * v2 * 4);
 	unsigned origWidth = width;
 	unsigned origHeight = height;
 
+	//for cropping, the top is lowered for height, right border moves left for width
 	for (size_t y = 0; y < height; y++)
 		for (size_t x = 0; x < width; x++)
 			for (size_t c = 0; c < 4; c++) {
@@ -79,15 +92,25 @@ std::vector<unsigned char> makeBricksPowerOfTwo(size_t& u2, size_t& v2) {
 	width = origWidth;
 	height = origHeight;
 
+	std::cout << "b_origWidth: " << origWidth << "\n";
+	std::cout << "b_origHeight: " << origHeight << "\n";
+
 	return bricks2;
 }
 
 std::vector<unsigned char> makeWoodPowerOfTwo(size_t& u2, size_t& v2) {
+
+	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
+	while (u2 < width)
+		u2 *= 2;
+	while (v2 < height)
+		v2 *= 2;
 	// Make power of two version of the image.
 	std::vector<unsigned char> wood2(u2 * v2 * 4);
 	unsigned origWidth = width;
 	unsigned origHeight = height;
 
+	//Dimensions here are effectively the cropping
 	for (size_t y = 0; y < height; y++)
 		for (size_t x = 0; x < width; x++)
 			for (size_t c = 0; c < 4; c++) {
@@ -96,49 +119,13 @@ std::vector<unsigned char> makeWoodPowerOfTwo(size_t& u2, size_t& v2) {
 	width = origWidth;
 	height = origHeight;
 
+	std::cout << "w_origWidth: " << origWidth << "\n";
+	std::cout << "w_origHeight: " << origHeight << "\n";
+
 	return wood2;
 }
 
 void init() {
-	// Load file and decode image.
-	lodepng::decode(bricks, width, height, "bricks.png");
-
-	u2 = 1;
-	v2 = 1;
-	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
-	while (u2 < width)
-		u2 *= 2;
-	while (v2 < height)
-		v2 *= 2;
-	// Ratio for power of two version compared to actual version, to render the non power of two image with proper size.
-	u3 = (double) (width) / u2;
-	v3 = (double) (height) / v2;
-
-	// Make power of two version of the image.
-	std::vector<unsigned char> bricks2 = makeBricksPowerOfTwo(u2, v2);
-
-	/*
-	// Load file and decode image.
-	lodepng::decode(wood, width, height, "wood.png");
-
-	u2 = 1;
-	v2 = 1;
-	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
-	while (u2 < width)
-		u2 *= 2;
-	while (v2 < height)
-		v2 *= 2;
-	// Ratio for power of two version compared to actual version, to render the non power of two image with proper size.
-	u3 = (double) (width) / u2;
-	v3 = (double) (height) / v2;
-
-	// Make power of two version of the image.
-	std::vector<unsigned char> wood2 = makeWoodPowerOfTwo(u2, v2);
-*/
-
-
-
-
 	// The official code for "Setting Your Raster Position to a Pixel Location" (i.e. set up a camera for 2D screen)
 	glViewport(0, 0, 768, 768);
 
@@ -152,13 +139,36 @@ void init() {
 	glEnable(GL_BLEND);
 	glDisable(GL_ALPHA_TEST);
 
-	// Enable the texture for OpenGL.
-	glEnable(GL_TEXTURE_2D);
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glGenTextures(2, texName);
+
+	/***********************************/
+	// Load file and decode image.
+	lodepng::decode(bricks, width, height, "colorfade.png");
+	// Make power of two version of the image.
+	std::vector<unsigned char> bricks2 = makeBricksPowerOfTwo(u2, v2);
+
+	glBindTexture(GL_TEXTURE_2D, texName[0]);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
 	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
 	glTexImage2D(GL_TEXTURE_2D, 0, 4, u2, v2, 0, GL_RGBA, GL_UNSIGNED_BYTE,
 			&bricks2[0]);
 
+	/***********************************/
+	// Load file and decode image.
+	lodepng::decode(wood, width, height, "wood.png");
+	// Make power of two version of the image.
+	std::vector<unsigned char> wood2 = makeWoodPowerOfTwo(u2, v2);
+
+	glBindTexture(GL_TEXTURE_2D, texName[1]);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 4, u2, v2, 0, GL_RGBA, GL_UNSIGNED_BYTE,
+			&wood2[0]);
+
+	/***********************************/
+
+	glEnable(GL_TEXTURE_2D);
 }
 
 void display(void) {
@@ -177,26 +187,34 @@ void display(void) {
 	glLoadIdentity();
 	glPushMatrix();
 
-	glTranslatef(-2.0, -2.0, -4.6);
-	glScalef(7.0, 7.0, 7.0);
+//	glTranslatef(-2.0, -2.0, -4.6);
+//	glScalef(7.0, 7.0, 7.0);
 
+	glBindTexture(GL_TEXTURE_2D, texName[1]);
 	glBegin(GL_QUADS);
-
 	glTexCoord2d(0, 0);
 	glVertex2f(0, 0);
-
 	glTexCoord2d(1, 0);
 	glVertex2f(1, 0);
-
 	glTexCoord2d(1, 1);
 	glVertex2f(1, 1);
-
 	glTexCoord2d(0, 1);
 	glVertex2f(0, 1);
-
 	glEnd();
-	glPopMatrix();
 
+	glBindTexture(GL_TEXTURE_2D, texName[1]);
+	glBegin(GL_QUADS);
+	glTexCoord2d(1, 0);
+	glVertex2f(1, 0);
+	glTexCoord2d(2, 0);
+	glVertex2f(2, 0);
+	glTexCoord2d(2, 1);
+	glVertex2f(2, 1);
+	glTexCoord2d(1, 1);
+	glVertex2f(1, 1);
+	glEnd();
+
+	glPopMatrix();
 	glutSwapBuffers();
 }
 
