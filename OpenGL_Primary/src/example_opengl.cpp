@@ -19,20 +19,14 @@ std::vector<unsigned char> preArr;
 static GLuint texName[NUM_OF_TEXTURES];
 
 //Modifiable values
-float eyeX = -1.0;
-float eyeY = 2.0;
-float eyeZ = 1.0;
+float eyeX = -2.0;
+float eyeY = 4.0;
+float eyeZ = 2.0;
 float lookatX = 0.0;
 float lookatY = 1.0;
 float lookatZ = 0.0;
 
-GLfloat frontFace[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
-GLfloat backFace[] = { 0, 0, -1, 1, 0, -1, 1, 1, -1, 0, 1, -1 };
-GLfloat northFace[] = { 0, 1, 0, 1, 1, 0, 1, 1, -1, 0, 1, -1 };
-GLfloat westFace[] = { };
-GLfloat southFace[] = { 0, 0, 0, 1, 0, 0, 1, 0, -1, 0, 0, -1 };
-GLfloat eastFace[] = { };
-
+GLfloat face[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
 GLfloat quad2[] = { 1, 0, 0, 2, 0, 0, 2, 1, 0, 1, 1, 0 };
 
 /***********************************/
@@ -132,7 +126,7 @@ void init() {
 	buildTexImg2D(brickArr, 0);
 
 	/***********************************/
-	loadTexture("wood.png");
+	loadTexture("sky.png");
 	std::vector<unsigned char> woodArr(u2 * v2 * 4);
 	woodArr = makePowerOfTwo(u2, v2, preArr, woodArr);
 	buildTexImg2D(woodArr, 1);
@@ -153,6 +147,8 @@ void init() {
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_NORMALIZE);
 
+	glBindTexture(GL_TEXTURE_2D, texName[1]);
+	gluQuadricTexture(qobj, texName[1]);
 	gluQuadricDrawStyle(qobj, GLU_FILL); /* smooth shaded */
 	gluQuadricNormals(qobj, GLU_SMOOTH);
 	gluSphere(qobj, 0.75, 15, 10);
@@ -168,6 +164,9 @@ void display(void) {
 	glClearColor(0, 0, 0, 0);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
+	glEnable(GL_DEPTH_TEST);
+	glEnable(GL_NORMALIZE);
+
 	int w = glutGet(GLUT_WINDOW_WIDTH);
 	int h = glutGet(GLUT_WINDOW_HEIGHT);
 
@@ -176,24 +175,48 @@ void display(void) {
 	gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
 	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
 	glMatrixMode(GL_MODELVIEW);
+
+	glPushMatrix();
 	glLoadIdentity();
-	glPushMatrix();
-	//	glTranslatef(-2.0, -2.0, -4.6);
-	//	glScalef(7.0, 7.0, 7.0);
 
-//	glTranslatef(-1.0, -1.0, 0.0);
-//	drawQuad(0, frontFace);
-	drawQuad(0, backFace);
-	drawQuad(0, northFace);
-	drawQuad(0, southFace);
-	drawQuad(1, quad2);
-
-	glPushMatrix();
-//	glLoadIdentity();
-//	glShadeModel(GL_SMOOTH);
-
+	glShadeModel(GL_SMOOTH);
 	glTranslatef(0.0, 2.0, 0.0);
-//	glCallList(quadricList);
+	glCallList(quadricList);
+
+	glPushMatrix();
+	glLoadIdentity();
+
+	glHint(GL_PERSPECTIVE_CORRECTION_HINT, GL_NICEST);
+
+	//back
+	glLoadIdentity();
+	glTranslatef(0.0, 0.0, -1.0);
+	drawQuad(0, face);
+
+	//east
+	glLoadIdentity();
+	glTranslatef(1.0, 0.0, 0.0);
+	glRotatef(90.0, 0.0, 31.0, 0.0);
+	drawQuad(0, face);
+
+	//front
+	glLoadIdentity();
+	drawQuad(0, face);
+
+	//west
+	glLoadIdentity();
+	glRotatef(90.0, 0.0, 31.0, 0.0);
+	drawQuad(0, face);
+
+//	glLoadIdentity();
+//	glTranslatef(0.0, 0.0, -1.0);
+//	glRotatef(90.0, 31.0, 0.0, 0.0);
+//	drawQuad(0, face);
+//
+//	glLoadIdentity();
+//	glTranslatef(0.0, 1.0, -1.0);
+//	glRotatef(90.0, 31.0, 0.0, 0.0);
+//	drawQuad(0, face);
 
 	glPopMatrix();
 	glPopMatrix();
@@ -214,7 +237,7 @@ void reshape(int w, int h) {
 int main(int argc, char *argv[]) {
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB | GLUT_DEPTH);
-	glutInitWindowSize(250, 250);
+	glutInitWindowSize(512, 512);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow(argv[0]);
 	init();
