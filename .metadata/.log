@@ -412,3 +412,24 @@ org.eclipse.core.internal.resources.ResourceException: Resource is out of sync w
 
 !ENTRY org.eclipse.cdt.core 1 0 2013-06-03 21:22:45.694
 !MESSAGE Indexed 'OpenGL_Auxiliary' (1 sources, 170 headers) in 2.15 sec: 10,398 declarations; 15,620 references; 0 unresolved inclusions; 7 syntax errors; 71 unresolved names (0.27%)
+!SESSION 2013-06-06 23:58:11.137 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-06-06 23:58:17.260
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-06-07 00:06:56.947
+!MESSAGE Indexed 'OpenGL_Auxiliary2' (1 sources, 170 headers) in 3.84 sec: 10,398 declarations; 15,620 references; 0 unresolved inclusions; 7 syntax errors; 71 unresolved names (0.27%)
+!SESSION 2013-06-07 15:35:29.524 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-06-07 15:35:35.279
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

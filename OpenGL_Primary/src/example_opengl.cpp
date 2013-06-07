@@ -19,19 +19,49 @@ std::vector<unsigned char> preArr;
 static GLuint texName[NUM_OF_TEXTURES];
 
 //Modifiable values
-float eyeX = -2.0;
-float eyeY = 4.0;
-float eyeZ = 2.0;
-float lookatX = 0.0;
-float lookatY = 1.0;
+float eyeX = -1.5;
+float eyeY = 1.5;
+float eyeZ = 1.5;
+float lookatX = 0.5;
+float lookatY = 0.5;
 float lookatZ = 0.0;
 
 GLfloat face[] = { 0, 0, 0, 1, 0, 0, 1, 1, 0, 0, 1, 0 };
-GLfloat quad2[] = { 1, 0, 0, 2, 0, 0, 2, 1, 0, 1, 1, 0 };
+
+GLfloat faceLeft[] = { 0, 0, 0, 0.333, 0, 0, 0.333, 1, 0, 0, 1, 0 };
+GLfloat faceTop[] = { 0.333, 0.666, 0, 0.666, 0.666, 0, 0.666, 1, 0, 0.333, 1, 0 };
+GLfloat faceRight[] = { 0.666, 0, 0, 1, 0, 0, 1, 1, 0, 0.666, 1, 0 };
+//GLfloat quad2[] = { 1, 0, 0, 2, 0, 0, 2, 1, 0, 1, 1, 0 };
 
 /***********************************/
 /***********  UTILITY  ************/
 /***********************************/
+void drawQuadWithDoor(int texNamePos, GLfloat arr[]) {
+
+	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
+	glEnableClientState(GL_VERTEX_ARRAY);
+
+	glBindTexture(GL_TEXTURE_2D, texName[texNamePos]);
+	glTexCoordPointer(3, GL_FLOAT, 0, faceLeft);
+	glVertexPointer(3, GL_FLOAT, 0, faceLeft);
+	glDrawArrays(GL_QUADS, 0, 4);
+
+	//glTranslatef(0.2, 0, 0);
+	glBindTexture(GL_TEXTURE_2D, texName[texNamePos]);
+	glTexCoordPointer(3, GL_FLOAT, 0, faceTop);
+	glVertexPointer(3, GL_FLOAT, 0, faceTop);
+	glDrawArrays(GL_QUADS, 0, 4);
+
+	//glTranslatef(0.2, 0, 0);
+	glBindTexture(GL_TEXTURE_2D, texName[texNamePos]);
+	glTexCoordPointer(3, GL_FLOAT, 0, faceRight);
+	glVertexPointer(3, GL_FLOAT, 0, faceRight);
+	glDrawArrays(GL_QUADS, 0, 4);
+
+	glDisableClientState(GL_TEXTURE_COORD_ARRAY);
+	glDisableClientState(GL_VERTEX_ARRAY);
+}
+
 void drawQuad(int texNamePos, GLfloat arr[]) {
 
 	glEnableClientState(GL_TEXTURE_COORD_ARRAY);
@@ -120,7 +150,7 @@ void init() {
 	glGenTextures(NUM_OF_TEXTURES, texName);
 
 	/***********************************/
-	loadTexture("colorfade.png");
+	loadTexture("bricks.png");
 	std::vector<unsigned char> brickArr(u2 * v2 * 4);
 	brickArr = makePowerOfTwo(u2, v2, preArr, brickArr);
 	buildTexImg2D(brickArr, 0);
@@ -193,20 +223,20 @@ void display(void) {
 	glTranslatef(0.0, 0.0, -1.0);
 	drawQuad(0, face);
 
-	//east
-	glLoadIdentity();
-	glTranslatef(1.0, 0.0, 0.0);
-	glRotatef(90.0, 0.0, 31.0, 0.0);
-	drawQuad(0, face);
+//east
+//	glLoadIdentity();
+//	glTranslatef(1.0, 0.0, 0.0);
+//	glRotatef(90.0, 0.0, 31.0, 0.0);
+//	drawQuad(0, face);
 
-	//front
+//front
 	glLoadIdentity();
-	drawQuad(0, face);
+	drawQuadWithDoor(0, face);
 
 	//west
-	glLoadIdentity();
-	glRotatef(90.0, 0.0, 31.0, 0.0);
-	drawQuad(0, face);
+//	glLoadIdentity();
+//	glRotatef(90.0, 0.0, 31.0, 0.0);
+//	drawQuad(0, face);
 
 //	glLoadIdentity();
 //	glTranslatef(0.0, 0.0, -1.0);

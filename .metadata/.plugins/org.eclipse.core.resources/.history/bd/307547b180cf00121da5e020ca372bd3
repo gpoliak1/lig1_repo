@@ -1,0 +1,197 @@
+/*  bezcurve.c
+ *  This program uses evaluators to draw a Bezier curve.
+ */
+#include <GL/glut.h>
+#include <stdlib.h>
+#include <stdio.h>
+
+int interpolate(double, double, double, double, double, double, double, double,
+		double, double, double, double, double, double);
+
+typedef struct tagVector3D {
+	double x, y, z;
+} Vector3D;
+//
+//Vector3D pos[4];
+
+GLfloat ctrlpoints[4][3] = { { 0, 0, 0 }, { 2.0875, 11.7893, 0 }, { -0.2289,
+		-5.1492, 0 }, { 3, 0, 0 } };
+
+void init(void) {
+	glClearColor(0.0, 0.0, 0.0, 0.0);
+	glShadeModel(GL_FLAT);
+	glMap1f(GL_MAP1_VERTEX_3, 0.0, 1.0, 3, 4, &ctrlpoints[0][0]);
+	glEnable(GL_MAP1_VERTEX_3);
+}
+
+void display(void) {
+	int i;
+	int w = glutGet(GLUT_WINDOW_WIDTH);
+	int h = glutGet(GLUT_WINDOW_HEIGHT);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
+	gluLookAt(2.0, 2.0, 15.0, 2.0, 2.0, 0.0, 0.0, 1.0, 0.0);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glColor3f(1.0, 1.0, 1.0);
+	glBegin(GL_LINE_STRIP);
+	for (i = 0; i <= 30; i++)
+		glEvalCoord1f((GLfloat) i / 30.0);
+	glEnd();
+	/* The following code displays the control points as dots. */
+	glPointSize(5.0);
+	glColor3f(1.0, 1.0, 0.0);
+	glBegin(GL_POINTS);
+	for (i = 0; i < 4; i++) {
+		glVertex3fv(&ctrlpoints[i][0]);
+	}
+	glColor3f(1.0, 0.0, 0.0);
+	glVertex3f(0, 0, 0);
+	glEnd();
+	glFlush();
+}
+
+void reshape(int w, int h) {
+	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
+	glMatrixMode(GL_PROJECTION);
+	glLoadIdentity();
+	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 20.0);
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+}
+
+void keyboard(unsigned char key, int x, int y) {
+	switch (key) {
+	case 27:
+		exit(0);
+		break;
+	}
+}
+
+int interpolate(double p0x, double p0y, double p0z, double u, double p1x,
+		double p1y, double p1z, double v, double p2x, double p2y, double p2z,
+		double p3x, double p3y, double p3z) {
+	double a = 0.0, b = 0.0, c = 0.0, d = 0.0, det = 0.0;
+	Vector3D q1, q2;
+
+	if ((u <= 0.0) || (u >= 1.0) || (v <= 0.0) || (v >= 1.0) || (u >= v))
+		return 0; /* failure */
+
+	a = 3 * (1 - u) * (1 - u) * u;
+	b = 3 * (1 - u) * u * u;
+	c = 3 * (1 - v) * (1 - v) * v;
+	d = 3 * (1 - v) * v * v;
+	det = a * d - b * c;
+	/* unnecessary, but just in case... */
+	if (det == 0.0)
+		return 0; /* failure */
+
+	ctrlpoints[0][0] = p0x;
+	ctrlpoints[0][1] = p0y;
+	ctrlpoints[0][2] = p0z;
+	ctrlpoints[3][0] = p3x;
+	ctrlpoints[3][1] = p3y;
+	ctrlpoints[3][2] = p3z;
+
+	q1.x = p1x - ((1 - u) * (1 - u) * (1 - u) * p0x + u * u * u * p3x);
+	q1.y = p1y - ((1 - u) * (1 - u) * (1 - u) * p0y + u * u * u * p3y);
+	q1.z = p1z - ((1 - u) * (1 - u) * (1 - u) * p0z + u * u * u * p3z);
+
+	q2.x = p2x - ((1 - v) * (1 - v) * (1 - v) * p0x + v * v * v * p3x);
+	q2.y = p2y - ((1 - v) * (1 - v) * (1 - v) * p0y + v * v * v * p3y);
+	q2.z = p2z - ((1 - v) * (1 - v) * (1 - v) * p0z + v * v * v * p3z);
+
+	ctrlpoints[1][0] = d * q1.x - b * q2.x;
+	ctrlpoints[1][1] = d * q1.y - b * q2.y;
+	ctrlpoints[1][2] = d * q1.z - b * q2.z;
+	ctrlpoints[1][0] /= det;
+	ctrlpoints[1][1] /= det;
+	ctrlpoints[1][2] /= det;
+
+	ctrlpoints[2][0] = (-c) * q1.x + a * q2.x;
+	ctrlpoints[2][1] = (-c) * q1.y + a * q2.y;
+	ctrlpoints[2][2] = (-c) * q1.z + a * q2.z;
+	ctrlpoints[2][0] /= det;
+	ctrlpoints[2][1] /= det;
+	ctrlpoints[2][2] /= det;
+
+	return 1; /* success */
+}
+
+void ask(void) {
+	int i, j, result;
+	char response;
+	double u, v;
+
+	do {
+		for (i = 0; i < 4; ++i) {
+			for (j = 0; j < 3; ++j) {
+				ctrlpoints[i][j] = 0.0;
+			}
+		}
+
+		printf(
+				"Enter the points, three components at a time (x y z) with a space between them.");
+		printf("\nEnter the first point : ");
+		double temp1, temp2, temp3;
+		scanf("%lf", &temp1); ctrlpoints[0][0] = (GLfloat) temp1;
+		scanf("%lf", &(ctrlpoints[0][1]));
+		scanf("%lf", &(ctrlpoints[0][2]));
+
+		printf("\nEnter u : ");
+		scanf("%lf", &u);
+		printf("Enter the second point : ");
+		scanf("%lf", &(ctrlpoints[1][0]));
+		scanf("%lf", &(ctrlpoints[1][1]));
+		scanf("%lf", &(ctrlpoints[1][2]));
+
+		printf("\nEnter v : ");
+		scanf("%lf", &v);
+		printf("Enter the third point : ");
+		scanf("%lf", &(ctrlpoints[2][0]));
+		scanf("%lf", &(ctrlpoints[2][1]));
+		scanf("%lf", &(ctrlpoints[2][2]));
+
+		printf("\nEnter the fourth point : ");
+		scanf("%lf", &(ctrlpoints[3][0]));
+		scanf("%lf", &(ctrlpoints[3][1]));
+		scanf("%lf", &(ctrlpoints[3][2]));
+
+		/* I understand the redundancy of passing global variables into
+		 the function when there's no need to. I am concentrating on the function,
+		 not the program semantics. Globals were used so that there are less
+		 function arguments. */
+		result = interpolate(ctrlpoints[0][0], ctrlpoints[0][1],
+				ctrlpoints[0][2], u, ctrlpoints[1][0], ctrlpoints[1][1],
+				ctrlpoints[1][2], v, ctrlpoints[2][0], ctrlpoints[2][1],
+				ctrlpoints[2][2], ctrlpoints[3][0], ctrlpoints[3][1],
+				ctrlpoints[3][2]);
+
+		if (result == 1) {
+			printf("\nThe calculated control points are:");
+			for (i = 0; i < 4; ++i) {
+				printf("\nPoint %d (%4.5f   %4.5f   %4.5f)", i + 1,
+						ctrlpoints[i][0], ctrlpoints[i][1], ctrlpoints[i][2]);
+			}
+		} else {
+			printf("\nUnable to calculate Bezier control points.");
+		}
+
+		printf("\n\nDo again? (Y/N) ");
+		scanf(" %c", &response);
+	} while (response == 'Y' || response == 'y');
+}
+
+int main(int argc, char** argv) {
+	glutInit(&argc, argv);
+	glutInitDisplayMode(GLUT_SINGLE | GLUT_RGB);
+	glutInitWindowSize(750, 750);
+	glutInitWindowPosition(100, 100);
+	glutCreateWindow(argv[0]);
+	init();
+	glutDisplayFunc(display);
+	glutReshapeFunc(reshape);
+	glutKeyboardFunc(keyboard);
+	glutMainLoop();
+	return 0;
+}

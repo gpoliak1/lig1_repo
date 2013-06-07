@@ -5,7 +5,7 @@
 		<item value="666" key="width"/>
 	</section>
 	<section name="RefactoringWizard.preview">
-		<item value="400" key="height"/>
+		<item value="425" key="height"/>
 		<item value="600" key="width"/>
 	</section>
 	<section name="org.eclipse.ltk.ui.refactoring.settings">
