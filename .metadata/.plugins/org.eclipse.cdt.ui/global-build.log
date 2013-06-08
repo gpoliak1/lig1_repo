@@ -10976,3 +10976,356 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void ask()’:
+../src/OpenGL_Auxiliary.cpp:132:7: warning: unused variable ‘response’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+../src/OpenGL_Auxiliary.cpp:20: error: undefined reference to 'glClearColor'
+../src/OpenGL_Auxiliary.cpp:21: error: undefined reference to 'glShadeModel'
+ 
+../src/OpenGL_Auxiliary.cpp:22: error: undefined reference to 'glMap1f'
+Building target: BezierDesign_1D
+../src/OpenGL_Auxiliary.cpp:23: error: undefined reference to 'glEnable'
+Invoking: GCC C++ Linker
+../src/OpenGL_Auxiliary.cpp:29: error: undefined reference to 'glutGet'
+g++  -o "BezierDesign_1D"  ./src/OpenGL_Auxiliary.o   
+../src/OpenGL_Auxiliary.cpp:30: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:32: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:33: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:34: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:35: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:36: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:37: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:39: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:41: error: undefined reference to 'glEvalCoord1f'
+../src/OpenGL_Auxiliary.cpp:43: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:45: error: undefined reference to 'glPointSize'
+../src/OpenGL_Auxiliary.cpp:46: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:48: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:50: error: undefined reference to 'glVertex3fv'
+../src/OpenGL_Auxiliary.cpp:52: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:53: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:54: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:56: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:61: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:62: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:63: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:64: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:65: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:66: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:190: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:191: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:192: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:193: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:194: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:197: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:198: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:199: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:200: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [BezierDesign_1D] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:37:6: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:37:9: warning: unused variable ‘j’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_2D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D"  ./src/OpenGL_Auxiliary.o   
+../src/OpenGL_Auxiliary.cpp:23: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:24: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:26: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:27: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:29: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:30: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:31: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:39: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:40: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:42: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:43: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:44: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:47: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:75: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:76: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:77: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:80: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:84: error: undefined reference to 'glClearColor'
+../src/OpenGL_Auxiliary.cpp:85: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:86: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:87: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:92: error: undefined reference to 'glMapGrid2f'
+../src/OpenGL_Auxiliary.cpp:96: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:101: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:102: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:103: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:104: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:105: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:106: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:118: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:119: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:120: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:121: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:122: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:124: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:125: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:126: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:127: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [BezierDesign_2D] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+Building target: BezierDesign_1D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D"  ./src/OpenGL_Auxiliary.o   
+../src/OpenGL_Auxiliary.cpp:20: error: undefined reference to 'glClearColor'
+../src/OpenGL_Auxiliary.cpp:21: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:22: error: undefined reference to 'glMap1f'
+../src/OpenGL_Auxiliary.cpp:23: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:29: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:30: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:32: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:33: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:34: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:35: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:36: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:37: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:39: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:41: error: undefined reference to 'glEvalCoord1f'
+../src/OpenGL_Auxiliary.cpp:43: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:45: error: undefined reference to 'glPointSize'
+../src/OpenGL_Auxiliary.cpp:46: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:48: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:50: error: undefined reference to 'glVertex3fv'
+../src/OpenGL_Auxiliary.cpp:52: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:53: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:54: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:56: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:61: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:62: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:63: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:64: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:65: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:66: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:190: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:191: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:192: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:193: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:194: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:197: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:198: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:199: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:200: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [BezierDesign_1D] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_2D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_2D
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+Building target: BezierDesign_1D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D"  ./src/OpenGL_Auxiliary.o   
+../src/OpenGL_Auxiliary.cpp:20: error: undefined reference to 'glClearColor'
+../src/OpenGL_Auxiliary.cpp:21: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:22: error: undefined reference to 'glMap1f'
+../src/OpenGL_Auxiliary.cpp:23: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:29: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:30: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:32: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:33: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:34: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:35: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:36: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:37: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:39: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:41: error: undefined reference to 'glEvalCoord1f'
+../src/OpenGL_Auxiliary.cpp:43: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:45: error: undefined reference to 'glPointSize'
+../src/OpenGL_Auxiliary.cpp:46: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:48: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:50: error: undefined reference to 'glVertex3fv'
+../src/OpenGL_Auxiliary.cpp:52: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:53: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:54: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:56: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:61: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:62: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:63: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:64: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:65: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:66: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:190: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:191: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:192: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:193: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:194: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:197: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:198: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:199: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:200: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [BezierDesign_1D] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_2D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_2D
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+Building target: BezierDesign_1D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_1D
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_2D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_2D
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+Error: Command canceled
+
+**** Build Finished ****

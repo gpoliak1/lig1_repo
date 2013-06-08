@@ -433,3 +433,39 @@ Command-line arguments:  -os linux -ws gtk -arch x86
 
 !ENTRY org.eclipse.core.resources 2 10035 2013-06-07 15:35:35.279
 !MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-06-07 20:19:48.833 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-06-07 20:19:54.799
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-06-07 21:04:46.492
+!MESSAGE Indexed 'BezierDesign_1D' (1 sources, 111 headers) in 2.44 sec: 13,697 declarations; 19,751 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-06-07 21:05:03.973
+!MESSAGE Indexed 'BezierDesign_2D' (0 sources, 98 headers) in 0.49 sec: 2,293 declarations; 2,514 references; 0 unresolved inclusions; 0 syntax errors; 0 unresolved names (0.00%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2013-06-07 21:07:00.314
+!MESSAGE Indexed 'BezierDesign_2D' (1 sources, 170 headers) in 3.12 sec: 10,398 declarations; 15,620 references; 0 unresolved inclusions; 7 syntax errors; 71 unresolved names (0.27%)
+!SESSION 2013-06-07 23:06:26.651 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-06-07 23:06:32.330
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+!SESSION 2013-06-08 21:23:49.013 -----------------------------------------------
+eclipse.buildId=I20110613-1736
+java.version=1.6.0_27
+java.vendor=Sun Microsystems Inc.
+BootLoader constants: OS=linux, ARCH=x86, WS=gtk, NL=en_US
+Command-line arguments:  -os linux -ws gtk -arch x86
+
+!ENTRY org.eclipse.core.resources 2 10035 2013-06-08 21:23:54.747
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.

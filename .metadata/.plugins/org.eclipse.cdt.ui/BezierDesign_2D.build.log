@@ -1,0 +1,16 @@
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_2D
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_2D
+ 
+
+**** Build Finished ****
