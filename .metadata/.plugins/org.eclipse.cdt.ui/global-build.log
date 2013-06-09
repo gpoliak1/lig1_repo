@@ -11662,3 +11662,714 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:124:7: error: expected ‘;’ before ‘glMapGrid2f’
+../src/OpenGL_Auxiliary.cpp:101:11: warning: unused variable ‘patch’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:101:11: warning: unused variable ‘patch’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:53:25: fatal error: SimpleNurbs.h: No such file or directory
+compilation terminated.
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:124:7: error: expected ‘;’ before ‘glMapGrid2f’
+../src/OpenGL_Auxiliary.cpp:101:11: warning: unused variable ‘patch’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:124:7: error: expected ‘;’ before ‘glMapGrid2f’
+../src/OpenGL_Auxiliary.cpp:101:11: warning: unused variable ‘patch’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:101:11: warning: unused variable ‘patch’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+ 
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:198:7: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:10: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:13: warning: unused variable ‘k’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:16: warning: unused variable ‘m’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:198:19: warning: unused variable ‘n’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void buildTexture()’:
+../src/OpenGL_Auxiliary.cpp:285:26: error: ‘loadTexture’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:286:2: error: ‘vector’ is not a member of ‘std’
+../src/OpenGL_Auxiliary.cpp:286:14: error: expected primary-expression before ‘unsigned’
+../src/OpenGL_Auxiliary.cpp:286:14: error: expected ‘;’ before ‘unsigned’
+../src/OpenGL_Auxiliary.cpp:287:2: error: ‘brickArr’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:287:36: error: ‘preArr’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:287:52: error: ‘makePowerOfTwo’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:288:27: error: ‘buildTexImg2D’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void display()’:
+../src/OpenGL_Auxiliary.cpp:101:8: warning: unused variable ‘texel’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp: In function ‘int main(int, char**)’:
+../src/OpenGL_Auxiliary.cpp:200:6: warning: unused variable ‘i’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:200:9: warning: unused variable ‘j’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:200:12: warning: unused variable ‘k’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+../src/OpenGL_Auxiliary.cpp:200:15: warning: unused variable ‘m’ [-Wunused-variable]
+ 
+../src/OpenGL_Auxiliary.cpp:200:18: warning: unused variable ‘n’ [-Wunused-variable]
+Building target: OpenGL_Auxiliary
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Auxiliary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Auxiliary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void loadTexture(const string&)’:
+../src/OpenGL_Auxiliary.cpp:290:21: error: ‘texDimenPowerOfTwo’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp: In function ‘void buildTexture()’:
+../src/OpenGL_Auxiliary.cpp:303:52: error: ‘makePowerOfTwo’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:304:27: error: ‘buildTexImg2D’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void buildTexture()’:
+../src/OpenGL_Auxiliary.cpp:313:52: error: ‘makePowerOfTwo’ was not declared in this scope
+../src/OpenGL_Auxiliary.cpp:314:27: error: ‘buildTexImg2D’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/lodepng.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lodepng.d" -MT"src/lodepng.d" -o "src/lodepng.o" "../src/lodepng.cpp"
+Finished building: ../src/lodepng.cpp
+ 
+Building target: BezierDesign2D_New
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign2D_New"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign2D_New
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign2D_New ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign2D_New
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign2D_New"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign2D_New
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Auxiliary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

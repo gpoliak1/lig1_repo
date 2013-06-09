@@ -97,7 +97,7 @@ void buildSurfaceOfRotation() {
 
 void display(void) {
 	int row, col;
-	GLfloat patch[4][4][3];
+//  GLfloat patch[4][4][3];
 	float texel[2][2][2] = { { { 0.0, 0.0 }, { 1.0, 0.0 } }, { { 0.0, 1.0 }, {
 			1.0, 1.0 } } };
 
@@ -105,7 +105,7 @@ void display(void) {
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 	buildSurfaceOfRotation();
 
-	glBindTexture(GL_TEXTURE_2D, tex[1]);
+	glBindTexture(GL_TEXTURE_2D, tex[0]);
 	glPushMatrix();
 	glTranslatef(0.0, -2.0, 0.0);
 	for (row = 0; row < 2; row++) {
@@ -129,9 +129,9 @@ void display(void) {
 	}
 	glPopMatrix();
 
-//	glEnable(GL_TEXTURE_GEN_S);
+	glEnable(GL_TEXTURE_GEN_S);
 //	glEnable(GL_TEXTURE_GEN_T);
-//	glBindTexture(GL_TEXTURE_2D, tex[1]);
+	glBindTexture(GL_TEXTURE_2D, tex[1]);
 	glPushMatrix();
 	glTranslatef(0.0, 4.0, 0.0);
 	for (row = 0; row < 2; row++) {
@@ -144,7 +144,7 @@ void display(void) {
 		}
 	}
 	glPopMatrix();
-//	glDisable(GL_TEXTURE_GEN_S);
+	glDisable(GL_TEXTURE_GEN_S);
 //	glDisable(GL_TEXTURE_GEN_T);
 
 	glutSwapBuffers();

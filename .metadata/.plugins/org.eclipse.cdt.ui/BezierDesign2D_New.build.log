@@ -2,6 +2,15 @@
 **** Build of configuration Debug for project BezierDesign2D_New ****
 
 make all 
-make: Nothing to be done for `all'.
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign2D_New
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign2D_New"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign2D_New
+ 
 
 **** Build Finished ****

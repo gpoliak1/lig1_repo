@@ -49,26 +49,33 @@
  *
  **/
 
+#include "lodepng.h"
+
+#include <iostream>
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <stdio.h>
+
 #include <stdlib.h>
 #include "SimpleNurbs.h"
 #include <math.h>
 #include <limits.h>
 #include <GL/glut.h>	// OpenGL Graphics Utility Library
-const float ctrlpoints[4][4][4] = {
-		{ { -2, -1, 0, 1 }, { -0.6667, -0.3333, 1.3333, 0.3333 }, { 0.6667,
-				-0.3333, 1.3333, 0.3333 }, { 2, -1, 0, 1 } }, { { -3, 0, 0, 1 },
-				{ -1, 0, 2, 0.3333 }, { 1, 0, 2, 0.3333 }, { 3, 0, 0, 1 } }, { {
-				-1.5, 0.5, 0, 1 }, { -0.5, 0.1667, 1, 0.3333 }, { 0.5, 0.1667,
-				1, 0.3333 }, { 1.5, 0.5, 0, 1 } }, { { -2, 1, 0, 1 }, { -0.6667,
-				0.3333, 1.3333, 0.3333 }, { 0.6667, 0.3333, 1.3333, 0.3333 }, {
-				2, 1, 0, 1 } } };
+//const float ctrlpoints[4][4][4] = {
+//		{ { -2, -1, 0, 1 }, { -0.6667, -0.3333, 1.3333, 0.3333 }, { 0.6667,
+//				-0.3333, 1.3333, 0.3333 }, { 2, -1, 0, 1 } }, { { -3, 0, 0, 1 },
+//				{ -1, 0, 2, 0.3333 }, { 1, 0, 2, 0.3333 }, { 3, 0, 0, 1 } }, { {
+//				-1.5, 0.5, 0, 1 }, { -0.5, 0.1667, 1, 0.3333 }, { 0.5, 0.1667,
+//				1, 0.3333 }, { 1.5, 0.5, 0, 1 } }, { { -2, 1, 0, 1 }, { -0.6667,
+//				0.3333, 1.3333, 0.3333 }, { 0.6667, 0.3333, 1.3333, 0.3333 }, {
+//				2, 1, 0, 1 } } };
 
-//GLfloat ctrlpoints[4][4][4] = { { { 1, 0, 1, 1 }, { 0.65, 1.5, -1, 1 }, { 1.65,
-//		3.0, -2, 1 }, { 2.5, 4.5, -8, 1 } }, { { 3, 0, 0, 1 },
-//		{ 1.9, 1.5, 0, 1 }, { 2.35, 3, 0, 1 }, { 2.6, 4.5, 0, 1 } }, { { 4, 0,
-//		0, 1 }, { 3.35, 1.5, 0, 1 }, { 3, 3, 0, 1 }, { 4, 4.5, 0, 1 } }, { {
-//		5.5, 0, 0, 1 }, { 4.2, 1.25, -1, 1 }, { 3.2, 2.51, -2, 1 }, { 5, 3.4,
-//		-4, 1 } } };
+GLfloat ctrlpoints[4][4][4] = { { { 1, 0, 1, 1 }, { 0.65, 1.5, -1, 1 }, { 1.65,
+		3.0, -2, 1 }, { 2.5, 4.5, -8, 1 } }, { { 3, 0, 0, 1 },
+		{ 1.9, 1.5, 0, 1 }, { 2.35, 3, 0, 1 }, { 2.6, 4.5, 0, 1 } }, { { 4, 0,
+		0, 1 }, { 3.35, 1.5, 0, 1 }, { 3, 3, 0, 1 }, { 4, 4.5, 0, 1 } }, { {
+		5.5, 0, 0, 1 }, { 4.2, 1.25, -1, 1 }, { 3.2, 2.51, -2, 1 }, { 5, 3.4,
+		-4, 1 } } };
 
 // Variables controlling the fineness of the polygonal mesh
 int NumUs = 4;
@@ -104,6 +111,14 @@ float Noemit[4] = { 0.0, 0.0, 0.0, 1.0 };
 float Matspec[4] = { 1.0, 1.0, 1.0, 1.0 };
 float Matnonspec[4] = { 0.8, 0.05, 0.4, 1.0 };
 float Matshiny = 50.0;
+
+#define NUM_OF_TEXTURES		2
+static GLuint texName[NUM_OF_TEXTURES];
+size_t u2 = 1;
+size_t v2 = 1;
+double u3, v3;
+unsigned width, height;
+std::vector<unsigned char> preArr;
 
 // glutKeyboardFunc is called below to set this function to handle
 //		all "normal" key presses.
@@ -266,9 +281,74 @@ void LessVs() {
 	}
 }
 
+void texDimenPowerOfTwo() {
+	// Texture size must be power of two for the primitive OpenGL version this is written for. Find next power of two.
+	while (u2 < width)
+		u2 *= 2;
+	while (v2 < height)
+		v2 *= 2;
+}
+
+void loadTexture(const std::string& filename) {
+	preArr.erase(preArr.begin(), preArr.end());
+	lodepng::decode(preArr, width, height, filename);
+	texDimenPowerOfTwo();
+}
+
+void buildTexImg2D(std::vector<unsigned char> fullArr, int texArrPos) {
+	glBindTexture(GL_TEXTURE_2D, texName[texArrPos]);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_NEAREST);
+	glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_NEAREST);
+	glTexImage2D(GL_TEXTURE_2D, 0, 4, u2, v2, 0, GL_RGBA, GL_UNSIGNED_BYTE,
+			&fullArr[0]);
+}
+
+std::vector<unsigned char> makePowerOfTwo(size_t& u2, size_t& v2,
+		std::vector<unsigned char>& incArr,
+		std::vector<unsigned char>& outArr) {
+
+	//for cropping, the top is lowered for height, right border moves left for width
+	for (size_t y = 0; y < height; y++)
+		for (size_t x = 0; x < width; x++)
+			for (size_t c = 0; c < 4; c++) {
+				outArr[4 * u2 * y + 4 * x + c] = incArr[4 * width * y + 4 * x
+						+ c];
+			}
+
+	return outArr;
+}
+
+void buildTexture(void) {
+	/**** TEXTURE INIT ***/
+	glMatrixMode(GL_MODELVIEW);
+	glLoadIdentity();
+	glEnable(GL_TEXTURE_2D); //made it change color
+	glEnable(GL_AUTO_NORMAL);
+//	glEnable(GL_MAP2_VERTEX_3);
+	glEnable(GL_NORMALIZE);
+	glEnable(GL_DEPTH_TEST);
+
+	/***********************************/
+	/***********  TEXTURE  ************/
+	/***********************************/
+	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
+	glGenTextures(NUM_OF_TEXTURES, texName);
+
+	/***********************************/
+	loadTexture("bricks.png");
+	std::vector<unsigned char> brickArr(u2 * v2 * 4);
+	brickArr = makePowerOfTwo(u2, v2, preArr, brickArr);
+	buildTexImg2D(brickArr, 0);
+
+}
+
 void updateScene(void) {
 	// Clear the rendering window
+	glEnable(GL_MAP2_TEXTURE_COORD_2);
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
+	float texel[2][2][2] = { { { 0.0, 0.0 }, { 1.0, 0.0 } }, { { 0.0, 1.0 }, {
+			1.0, 1.0 } } };
 
 	glShadeModel(shadeModel); // Set the shading to flat or smooth.
 	glPolygonMode(GL_FRONT_AND_BACK, polygonMode); // Set to be "wire" or "solid"
@@ -298,10 +378,21 @@ void updateScene(void) {
 
 	// Draw the Bezier patch
 	glEnable(GL_MAP2_VERTEX_4);
+	//	glEnable(GL_TEXTURE_GEN_T);
+	/****inserting texture*****/
+	glEnable(GL_TEXTURE);
+		glBindTexture(GL_TEXTURE_2D, texName[0]);
+	/***/
 	glMap2f(GL_MAP2_VERTEX_4, 0, 1, 4, 4, 0, 1, 16, 4, &ctrlpoints[0][0][0]);
-	//glMap2f(GL_MAP2_VERTEX_3, 0, 1, 3, 4, 0, 1, 12, 4, &ctrlpoints[0][0][0]);
+	glMap2f(GL_MAP2_TEXTURE_COORD_2, 0.0, 1.0, 2, 2, 0.0, 1.0, 4, 2,
+			&texel[0][0][0]);
 	glMapGrid2f(NumUs, 0, 1, NumVs, 0, 1);
 	glEvalMesh2(GL_FILL, 0, NumUs, 0, NumVs);
+
+
+	/****ending texture*****/
+	glDisable(GL_TEXTURE);
+	/***/
 
 	glPushMatrix();
 //	glLoadIdentity();
@@ -400,6 +491,7 @@ int main(int argc, char** argv) {
 	glutCreateWindow("Nurbs demo");
 
 	// Initialize OpenGL rendering modes
+	buildTexture();
 	initRendering();
 	resizeWindow(620, 160);
 
