@@ -1,0 +1,21 @@
+
+**** Build of configuration Debug for project BezierDesign2D_v2 ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/lodepng.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lodepng.d" -MT"src/lodepng.d" -o "src/lodepng.o" "../src/lodepng.cpp"
+Finished building: ../src/lodepng.cpp
+ 
+Building target: BezierDesign2D_v2
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign2D_v2"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign2D_v2
+ 
+
+**** Build Finished ****
