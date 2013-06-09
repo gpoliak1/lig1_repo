@@ -13,7 +13,7 @@ typedef struct tagVector3D {
 } Vector3D;
 
 double prePoints[4][3];
-GLfloat ctrlPoints[4][3];
+GLfloat ctrlPoints[4][3] = {{0, 0, 0}, {0.05, 0.6667, 0}, {0.95, 0.6667, 0}, {1, 0, 0}};
 
 void initOpenGL(void) {
 
@@ -192,7 +192,7 @@ int main(int argc, char** argv) {
 	glutInitWindowSize(750, 750);
 	glutInitWindowPosition(100, 100);
 	glutCreateWindow(argv[0]);
-	ask();
+//	ask();
 	initOpenGL();
 	glutDisplayFunc(display);
 	glutReshapeFunc(reshape);

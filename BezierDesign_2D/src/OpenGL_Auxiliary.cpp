@@ -5,7 +5,8 @@
 #include <stdlib.h>
 #include <GL/glut.h>
 
-bool bezSolid = true;
+bool perspective = false;
+bool bezSolid = false;
 bool rotateLeft = false;
 bool rotateRight = false;
 bool rotateStop = false;
@@ -29,9 +30,15 @@ float rotateX = 0.0;
 float rotateY = 0.5;
 float rotateZ = 0.0;
 
-float translateX = 0.0;
-float translateY = 0.0;
+float translateX = 3.0;
+float translateY = -2.0;
 float translateZ = 0.0;
+
+GLfloat ambient[] = { 0.2, 0.2, 0.2, 1.0 };
+GLfloat position[] = { lightX, lightY, lightZ, lightW };
+GLfloat mat_diffuse[] = { 0.6, 0.6, 0.6, 1.0 };
+GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
+GLfloat mat_shininess[] = { 50.0 };
 
 GLfloat ctrlpoints[4][4][3] = { { { 1, 0, 1 }, { 0.65, 1.5, -1 }, { 1.65, 3.0,
 		-2 }, { 2.5, 4.5, -8 } }, { { 3, 0, 0 }, { 1.9, 1.5, 0 },
@@ -46,15 +53,22 @@ void initlights(void) {
 	GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
 	GLfloat mat_shininess[] = { 50.0 };
 
-//	glEnable(GL_LIGHTING);
-	glEnable(GL_LIGHT0);
+//	glLightModeli(GL_LIGHT_MODEL_TWO_SIDE, GL_TRUE);
 
 	glLightfv(GL_LIGHT0, GL_AMBIENT, ambient);
 	glLightfv(GL_LIGHT0, GL_POSITION, position);
 
-	glMaterialfv(GL_FRONT, GL_DIFFUSE, mat_diffuse);
-	glMaterialfv(GL_FRONT, GL_SPECULAR, mat_specular);
-	glMaterialfv(GL_FRONT, GL_SHININESS, mat_shininess);
+//	GLfloat position2[] = { 0, 0, -5, 1 };
+//	glLightfv(GL_LIGHT1, GL_AMBIENT, ambient);
+//	glLightfv(GL_LIGHT1, GL_POSITION, position2);
+
+//	glMaterialfv(GL_BACK, GL_DIFFUSE, mat_diffuse);
+//	glMaterialfv(GL_BACK, GL_SPECULAR, mat_specular);
+//	glMaterialfv(GL_BACK, GL_SHININESS, mat_shininess);
+
+	glEnable(GL_LIGHT0);
+//	glEnable(GL_LIGHT1);
+
 }
 
 void display(void) {
@@ -65,8 +79,19 @@ void display(void) {
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
-	gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
+
+	if (perspective) {
+		gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
+		gluLookAt(eyeX, eyeY, eyeZ, lookatX, lookatY, lookatZ, 0.0, 1.0, 0.0);
+	} else {
+		if (w <= h) {
+			glOrtho(-4.0, 4.0, -4.0 * (GLfloat) h / (GLfloat) w,
+					4.0 * (GLfloat) h / (GLfloat) w, -4.0, 4.0);
+		} else {
+			glOrtho(-4.0 * (GLfloat) w / (GLfloat) h,
+					4.0 * (GLfloat) w / (GLfloat) h, -4.0, 4.0, -4.0, 4.0);
+		}
+	}
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
@@ -78,8 +103,14 @@ void display(void) {
 	glVertex3f(100, 0, 0);
 
 	glColor3f(0.0, 1.0, 0.0);
+	glVertex3f(-1, -100, 0);
+	glVertex3f(-1, 100, 0);
+	//
 	glVertex3f(0, -100, 0);
 	glVertex3f(0, 100, 0);
+	//
+	glVertex3f(1, -100, 0);
+	glVertex3f(1, 100, 0);
 
 	glColor3f(1.0, 0.0, 0.0);
 	glVertex3f(0, 0, -100);
@@ -96,8 +127,16 @@ void display(void) {
 	glRotatef(rotateDeg, rotateX, rotateY, rotateZ);
 
 	if (bezSolid) {
+		glShadeModel(GL_SMOOTH); //
+		glEnable(GL_DEPTH_TEST);
+			glMaterialfv(GL_BACK, GL_DIFFUSE, mat_diffuse);
+			glMaterialfv(GL_BACK, GL_SPECULAR, mat_specular);
+			glMaterialfv(GL_BACK, GL_SHININESS, mat_shininess);
+			glEnable(GL_LIGHTING);
 
-		glEnable(GL_LIGHTING);
+			glColorMaterial(GL_FRONT, GL_DIFFUSE);
+			glEnable(GL_COLOR_MATERIAL);
+
 		glEvalMesh2(GL_FILL, 0, 30, 0, 30);
 		glDisable(GL_LIGHTING);
 	} else {
@@ -113,7 +152,6 @@ void display(void) {
 				glEvalCoord2f((GLfloat) j / 8.0, (GLfloat) i / 30.0);
 			glEnd();
 		}
-
 	}
 	glPopMatrix();
 	glFlush();
@@ -135,7 +173,9 @@ void init(void) {
 	initlights(); /* for lighted version only */
 
 	if (bezSolid) {
+		glEnable(GL_DEPTH_TEST);
 		glEnable(GL_AUTO_NORMAL); //
+		//glEnable(NORMALIZE);
 		glMapGrid2f(30, 0.0, 1.0, 30, 0.0, 1.0); //
 	} else {
 //		glMapGrid2f(20, 0.0, 1.0, 20, 0.0, 1.0);
@@ -144,12 +184,25 @@ void init(void) {
 }
 
 void reshape(int w, int h) {
+
 	glViewport(0, 0, (GLsizei) w, (GLsizei) h);
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 20.0);
-	glMatrixMode(GL_MODELVIEW);
-	glLoadIdentity();
+
+	if (perspective) {
+		gluPerspective(60.0, (GLfloat) w / (GLfloat) h, 1.0, 20.0);
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+	} else {
+		if (w <= h)
+			glOrtho(-4.0, 4.0, -4.0 * (GLfloat) h / (GLfloat) w,
+					4.0 * (GLfloat) h / (GLfloat) w, -4.0, 4.0);
+		else
+			glOrtho(-4.0 * (GLfloat) w / (GLfloat) h,
+					4.0 * (GLfloat) w / (GLfloat) h, -4.0, 4.0, -4.0, 4.0);
+		glMatrixMode(GL_MODELVIEW);
+		glLoadIdentity();
+	}
 }
 
 void keyboard(unsigned char key, int x, int y) {
@@ -211,6 +264,14 @@ void keyboard(unsigned char key, int x, int y) {
 		break;
 	case 'o':
 		translateZ += 1;
+		glutPostRedisplay();
+		break;
+	case 'p':
+		if (!perspective) {
+			perspective = true;
+		} else if (perspective) {
+			perspective = false;
+		}
 		glutPostRedisplay();
 		break;
 	default:

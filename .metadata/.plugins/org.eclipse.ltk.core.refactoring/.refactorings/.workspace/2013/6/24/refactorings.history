@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;OpenGL_Auxiliary&apos; to &apos;BezierDesign2D_New&apos;" description="Rename resource &apos;OpenGL_Auxiliary&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/OpenGL_Auxiliary" name="BezierDesign2D_New" stamp="1370781580117" updateReferences="true"/>&#x0A;<refactoring comment="Delete resource &apos;OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp&apos;" deleteContents="false" description="Delete resource &apos;OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp&apos;" element1="/OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1370789494472"/>
+</session>
