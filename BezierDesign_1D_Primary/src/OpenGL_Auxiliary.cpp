@@ -13,7 +13,11 @@ typedef struct tagVector3D {
 } Vector3D;
 
 double prePoints[4][3];
-GLfloat ctrlPoints[4][3];// = {{0, 0, 0}, {0.05, 0.6667, 0}, {0.95, 0.6667, 0}, {1, 0, 0}};
+GLfloat ctrlPoints[4][3];// = {{0, 0, 0}, {0.1, 1.3333, 0}, {1.9, 1.3333, 0}, {2, 0, 0}};
+
+////
+float zOut = 15;
+////
 
 void initOpenGL(void) {
 
@@ -32,7 +36,7 @@ void display(void) {
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
 	gluPerspective(60.0, (GLdouble) (w) / (GLdouble) (h), 0.1, 40.0);
-	gluLookAt(2.0, 2.0, 15.0, 2.0, 2.0, 0.0, 0.0, 1.0, 0.0);
+	gluLookAt(0.0, 0.0, zOut, 0.0, 0.0, 0.0, 0.0, 1.0, 0.0);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glColor3f(1.0, 1.0, 1.0);
 
@@ -141,12 +145,14 @@ void ask(void) {
 	printf(
 			"Enter the points, three components at a time (x y z) with a space between them.");
 
-	printf("\nEnter u (0 - 100): ");
-	scanf("%lf", &u);
-	printf("Enter v (0 - 100): ");
-	scanf("%lf", &v);
+//	printf("\nEnter u (0 - 100): ");
+//	scanf("%lf", &u);
+//	printf("Enter v (0 - 100): ");
+//	scanf("%lf", &v);
 
 	printf("Enter 3-coordinate points 4 times: \n");
+	scanf("%lf", &u);
+	scanf("%lf", &v);
 	scanf("%lf", &(prePoints[0][0]));
 	scanf("%lf", &(prePoints[0][1]));
 	scanf("%lf", &(prePoints[0][2]));
@@ -168,7 +174,9 @@ void ask(void) {
 	if (result == 1) {
 		printf("\nThe calculated control points are:");
 		for (i = 0; i < 4; i++) {
-			printf("\nPoint %d (%4.5f   %4.5f   %4.5f)", i + 1, prePoints[i][0],
+//			printf("\nPoint %d (%4.5f   %4.5f   %4.5f)", i + 1, prePoints[i][0],
+//					prePoints[i][1], prePoints[i][2]);
+			printf("{%4.5f, %4.5f, %4.5f, 1}, ", prePoints[i][0],
 					prePoints[i][1], prePoints[i][2]);
 		}
 		printf("\n");

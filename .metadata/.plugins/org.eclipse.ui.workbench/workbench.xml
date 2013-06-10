@@ -35,21 +35,26 @@
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" partName="OpenGL_Auxiliary.cpp" path="/home/gil/workspace/BezierDesign_2D/src/OpenGL_Auxiliary.cpp" title="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_2D/src/OpenGL_Auxiliary.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BezierDesign_2D/src/OpenGL_Auxiliary.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="368" selectionOffset="2631" selectionTopPixel="1559"/>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" partName="OpenGL_Auxiliary.cpp" path="/home/gil/workspace/SurfacePrimary/src/OpenGL_Auxiliary.cpp" title="OpenGL_Auxiliary.cpp" tooltip="SurfacePrimary/src/OpenGL_Auxiliary.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/SurfacePrimary/src/OpenGL_Auxiliary.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3944" selectionTopPixel="1325"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" partName="OpenGL_Auxiliary.cpp" path="/home/gil/workspace/BezierDesign2D_New/src/OpenGL_Auxiliary.cpp" title="OpenGL_Auxiliary.cpp" tooltip="BezierDesign2D_New/src/OpenGL_Auxiliary.cpp" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BezierDesign2D_New/src/OpenGL_Auxiliary.cpp"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9027" selectionTopPixel="4947"/>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" partName="OpenGL_Auxiliary.cpp" path="/home/gil/workspace/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp" title="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp"/>
+<editorState selectionHorizontalPixel="0" selectionLength="58" selectionOffset="379" selectionTopPixel="35"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
 <viewState CommonNavigator.LINKING_ENABLED="0" org.eclipse.cdt.ui.cview.groupincludes="false" org.eclipse.cdt.ui.cview.groupmacros="false" org.eclipse.cdt.ui.editor.CUChildren="true" org.eclipse.ui.navigator.resources.workingSets.showTopLevelWorkingSets="0"/>
 </view>
-<view id="org.eclipse.ui.views.PropertySheet" partName="Properties"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
+<view id="org.eclipse.search.ui.views.SearchView" partName="Search">
+<viewState isPinned="false">
+<view IMemento.internal.id="org.eclipse.search.text.FileSearchResultPage" org.eclipse.search.lastActivation="1" org.eclipse.search.resultpage.layout="2" org.eclipse.search.resultpage.limit="1000" org.eclipse.search.resultpage.sorting="2"/>
+<view IMemento.internal.id="" org.eclipse.search.lastActivation="0"/>
+</viewState>
+</view>
 <view id="org.eclipse.debug.ui.DebugView" partName="Debug">
 <viewState/>
 </view>
@@ -59,6 +64,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
+<category IMemento.internal.id="Warnings (1 item)"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="594" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
@@ -71,9 +77,6 @@
 </view>
 <view id="org.eclipse.ui.console.ConsoleView" partName="Console">
 <viewState/>
-</view>
-<view id="org.eclipse.pde.runtime.LogView" partName="Error Log">
-<viewState activate="true" allSessions="true" column2="300" column3="150" column4="583" error="true" groupBy="0" info="true" limit="50" ok="true" orderType="2" orderValue="-1" show_filter_text="true" useLimit="true" warning="true"/>
 </view>
 <view id="org.eclipse.ui.views.TaskList" partName="Tasks">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.completionField" categoryGroup="none" markerContentGenerator="org.eclipse.ui.ide.tasksGenerator" partName="Tasks">
@@ -208,12 +211,10 @@
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
 <view id="org.eclipse.ui.navigator.ProjectExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
-<view id="org.eclipse.ui.views.TaskList"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
-<view id="org.eclipse.ui.views.PropertySheet"/>
 <view id="org.eclipse.cdt.ui.callHierarchy"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
-<view id="org.eclipse.pde.runtime.LogView"/>
+<view id="org.eclipse.search.ui.views.SearchView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
 <view id="org.eclipse.cdt.make.ui.views.MakeView"/>
 <fastViewBars/>
@@ -237,24 +238,23 @@
 <page content="org.eclipse.ui.cheatsheets.views.CheatSheetView" label="LabelNotFound"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.16515045" ratioLeft="236" ratioRight="1193" relationship="2" relative="topLeft"/>
+<info part="org.eclipse.ui.editorss" ratio="0.1896431" ratioLeft="271" ratioRight="1158" relationship="2" relative="topLeft"/>
 <info folder="true" part="bottom" ratio="0.8293651" ratioLeft="627" ratioRight="129" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.cdt.ui.callHierarchy" appearance="2" expanded="2">
+<folder activePageID="org.eclipse.ui.views.ProblemView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
-<page content="org.eclipse.ui.views.TaskList" label="Tasks"/>
 <page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
-<page content="org.eclipse.ui.views.PropertySheet" label="Properties"/>
 <page content="org.eclipse.cdt.ui.callHierarchy" label="Call Hierarchy"/>
 <page content="org.eclipse.debug.ui.DebugView" label="Debug"/>
-<page content="org.eclipse.pde.runtime.LogView" label="Error Log"/>
+<page content="org.eclipse.search.ui.views.SearchView" label="Search"/>
+<page content="org.eclipse.ui.views.TaskList" label="LabelNotFound"/>
+<page content="org.eclipse.ui.views.PropertySheet" label="LabelNotFound"/>
+<page content="org.eclipse.pde.runtime.LogView" label="LabelNotFound"/>
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="5"/>
-<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -275,138 +275,169 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_1D/src/OpenGL_Auxiliary.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D/src/OpenGL_Auxiliary.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OpenGL_Primary/src/example_opengl.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/OpenGL_Auxiliary/src/SimpleNurbs"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" path="/OpenGL_Auxiliary/src/SimpleNurbs.h"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D/src/OpenGL_Auxiliary.cpp"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign2D_New/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign2D_v2/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_v2/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_New/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_temp/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_Primary/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_v12/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_2D_v1/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SurfacePrimary/src/SurfacePrimary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/SurfacePrimary/src/OpenGL_Auxiliary.cpp"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp"/>
 </editors>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="0"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="8787" y="11"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="8798" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="13025" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="11385" y="13"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="10339" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="11266" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="0">
+<position info="not_deleted" x="13003" y="0"/>
+</item>
 <item historyLabel="OpenGL_Auxiliary.cpp" index="1">
+<position info="not_deleted" x="3359" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="2">
+<position info="not_deleted" x="3499" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="2">
+<position info="not_deleted" x="4050" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="4">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="4174" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="2">
+<position info="not_deleted" x="310" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="6">
+<position info="not_deleted" x="1069" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="4174" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5694" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="11316" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
+<position info="not_deleted" x="297" y="106"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="11316" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15557" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15553" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5051" y="14"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5357" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5635" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15648" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15552" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5051" y="14"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15551" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="5051" y="14"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15622" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="8">
+<position info="not_deleted" x="659" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="15477" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="13635" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="13740" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="13692" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="13671" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="5">
+<position info="not_deleted" x="2027" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="8">
+<position info="not_deleted" x="744" y="0"/>
+</item>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="9">
+<position info="not_deleted" x="352" y="0"/>
+</item>
+<item historyLabel="SurfacePrimary.cpp" index="10">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4198" y="4"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="9">
+<position info="not_deleted" x="352" y="88"/>
 </item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="5649" y="4"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="11">
+<position info="not_deleted" x="3803" y="0"/>
 </item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="2914" y="0"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="12">
+<position info="not_deleted" x="379" y="58"/>
 </item>
-<item historyLabel="example_opengl.cpp" index="2">
-<position info="not_deleted" x="4089" y="54"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="11">
+<position info="not_deleted" x="3944" y="0"/>
 </item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="3580" y="0"/>
+<item historyLabel="OpenGL_Auxiliary.cpp" index="12">
+<position info="not_deleted" x="379" y="58"/>
 </item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4522" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4466" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4198" y="4"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="5650" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4198" y="4"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4383" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="1202" y="10"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4377" y="10"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position info="not_deleted" x="1505" y="10"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="4377" y="10"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="3165" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="1">
-<position info="not_deleted" x="3107" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position info="not_deleted" x="12066" y="0"/>
-</item>
-<item historyLabel="SimpleNurbs" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SimpleNurbs.h" index="5">
-<position info="not_deleted" x="838" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position info="not_deleted" x="12066" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="6">
-<position info="not_deleted" x="878" y="317"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position info="not_deleted" x="2612" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="6">
-<position info="not_deleted" x="4273" y="73"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="3">
-<position info="not_deleted" x="2612" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9609" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="6">
-<position info="not_deleted" x="2631" y="368"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9609" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9074" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="11635" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9659" y="13"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="10358" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9730" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="9870" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="10462" y="0"/>
-</item>
-<item historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="7786" y="11"/>
-</item>
-<item active="true" historyLabel="OpenGL_Auxiliary.cpp" index="7">
-<position info="not_deleted" x="8850" y="77"/>
+<item active="true" historyLabel="OpenGL_Auxiliary.cpp" index="11">
+<position info="not_deleted" x="3944" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -425,17 +456,35 @@
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="SimpleNurbs" tooltip="OpenGL_Auxiliary/src/SimpleNurbs">
-<persistable path="/OpenGL_Auxiliary/src/SimpleNurbs"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp">
+<persistable path="/BezierDesign_1D_Primary/src/OpenGL_Auxiliary.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="SurfacePrimary/src/OpenGL_Auxiliary.cpp">
+<persistable path="/SurfacePrimary/src/OpenGL_Auxiliary.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="SurfacePrimary.cpp" tooltip="SurfacePrimary/src/SurfacePrimary.cpp">
+<persistable path="/SurfacePrimary/src/SurfacePrimary.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_2D_v1/src/OpenGL_Auxiliary.cpp">
+<persistable path="/BezierDesign_2D_v1/src/OpenGL_Auxiliary.cpp"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp">
 <persistable path="/OpenGL_Auxiliary/src/OpenGL_Auxiliary.cpp"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_2D/src/OpenGL_Auxiliary.cpp">
+<persistable path="/BezierDesign_2D/src/OpenGL_Auxiliary.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="BezierDesign2D_New/src/OpenGL_Auxiliary.cpp">
+<persistable path="/BezierDesign2D_New/src/OpenGL_Auxiliary.cpp"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="example_opengl.cpp" tooltip="OpenGL_Primary/src/example_opengl.cpp">
 <persistable path="/OpenGL_Primary/src/example_opengl.cpp"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Auxiliary.cpp" tooltip="BezierDesign_2D/src/OpenGL_Auxiliary.cpp">
-<persistable path="/BezierDesign_2D/src/OpenGL_Auxiliary.cpp"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Primary.cpp" tooltip="OpenGL_Primary/src/OpenGL_Primary.cpp">
+<persistable path="/OpenGL_Primary/src/OpenGL_Primary.cpp"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="SimpleNurbs" tooltip="OpenGL_Auxiliary/src/SimpleNurbs">
+<persistable path="/OpenGL_Auxiliary/src/SimpleNurbs"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="BezierDesign_2D.cpp" tooltip="BezierDesign_2D/src/BezierDesign_2D.cpp">
 <persistable path="/BezierDesign_2D/src/BezierDesign_2D.cpp"/>
@@ -451,12 +500,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="exec.sh" tooltip="OpenGL_Primary/src/exec.sh">
 <persistable path="/OpenGL_Primary/src/exec.sh"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="lodepng.h" tooltip="OpenGL_Primary/src/lodepng.h">
-<persistable path="/OpenGL_Primary/src/lodepng.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="OpenGL_Primary.cpp" tooltip="OpenGL_Primary/src/OpenGL_Primary.cpp">
-<persistable path="/OpenGL_Primary/src/OpenGL_Primary.cpp"/>
 </file>
 </mruList>
 </workbench>

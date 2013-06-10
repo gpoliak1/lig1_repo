@@ -59,3 +59,2051 @@ make all
 make: Nothing to be done for `all'.
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void ask()’:
+../src/OpenGL_Auxiliary.cpp:132:7: warning: unused variable ‘response’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_1D_Primary
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D_Primary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_1D_Primary
+ 
+
+**** Build Finished ****
+
+**** Clean-only build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make clean 
+rm -rf  ./src/OpenGL_Auxiliary.o ./src/lodepng.o  ./src/OpenGL_Auxiliary.d ./src/lodepng.d  BezierDesign_2D_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/lodepng.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lodepng.d" -MT"src/lodepng.d" -o "src/lodepng.o" "../src/lodepng.cpp"
+Finished building: ../src/lodepng.cpp
+ 
+Building target: BezierDesign_2D_PrimaryReserve
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_2D_PrimaryReserve"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_2D_PrimaryReserve
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void updateScene()’:
+../src/OpenGL_Auxiliary.cpp:501:54: error: ‘ctrlpoints’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/lodepng.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/lodepng.d" -MT"src/lodepng.d" -o "src/lodepng.o" "../src/lodepng.cpp"
+Finished building: ../src/lodepng.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   
+../src/OpenGL_Auxiliary.cpp:220: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:221: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:224: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:228: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:229: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:230: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:231: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:232: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:357: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:358: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:359: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:361: error: undefined reference to 'glTexImage2D'
+../src/OpenGL_Auxiliary.cpp:380: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:381: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:383: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:384: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:385: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:386: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:388: error: undefined reference to 'glPixelStorei'
+../src/OpenGL_Auxiliary.cpp:389: error: undefined reference to 'glGenTextures'
+../src/OpenGL_Auxiliary.cpp:399: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:400: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:402: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:403: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:404: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:406: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:407: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:408: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:416: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:420: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:442: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:450: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:451: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:453: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:454: error: undefined reference to 'glPolygonMode'
+../src/OpenGL_Auxiliary.cpp:457: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:458: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:459: error: undefined reference to 'glMaterialf'
+../src/OpenGL_Auxiliary.cpp:460: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:465: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:466: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:470: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:471: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:473: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:474: error: undefined reference to 'glMapGrid2f'
+../src/OpenGL_Auxiliary.cpp:475: error: undefined reference to 'glEvalMesh2'
+../src/OpenGL_Auxiliary.cpp:476: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:477: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:480: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:481: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:483: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:484: error: undefined reference to 'glPolygonMode'
+../src/OpenGL_Auxiliary.cpp:487: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:489: error: undefined reference to 'glMaterialf'
+../src/OpenGL_Auxiliary.cpp:495: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:496: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:500: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:501: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:503: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:504: error: undefined reference to 'glMapGrid2f'
+../src/OpenGL_Auxiliary.cpp:505: error: undefined reference to 'glEvalMesh2'
+../src/OpenGL_Auxiliary.cpp:506: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:507: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:510: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:512: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:515: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:516: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:518: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:519: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:520: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:521: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:523: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:524: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:526: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:529: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:531: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:532: error: undefined reference to 'glutSwapBuffers'
+../src/OpenGL_Auxiliary.cpp:544: error: undefined reference to 'glLightModelfv'
+../src/OpenGL_Auxiliary.cpp:545: error: undefined reference to 'glLightModeli'
+../src/OpenGL_Auxiliary.cpp:548: error: undefined reference to 'glFrontFace'
+../src/OpenGL_Auxiliary.cpp:551: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:552: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:553: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:554: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:565: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:569: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:571: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:581: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:582: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:583: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:584: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:585: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:591: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:592: error: undefined reference to 'glutSpecialFunc'
+../src/OpenGL_Auxiliary.cpp:593: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:594: error: undefined reference to 'glutIdleFunc'
+../src/OpenGL_Auxiliary.cpp:595: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:596: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [SurfacePrimary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   
+../src/OpenGL_Auxiliary.cpp:220: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:221: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:224: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:228: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:229: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:230: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:231: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:232: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:357: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:358: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:359: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:361: error: undefined reference to 'glTexImage2D'
+../src/OpenGL_Auxiliary.cpp:380: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:381: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:383: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:384: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:385: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:386: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:388: error: undefined reference to 'glPixelStorei'
+../src/OpenGL_Auxiliary.cpp:389: error: undefined reference to 'glGenTextures'
+../src/OpenGL_Auxiliary.cpp:399: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:400: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:402: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:403: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:404: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:406: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:407: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:408: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:416: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:420: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:442: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:450: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:451: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:453: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:454: error: undefined reference to 'glPolygonMode'
+../src/OpenGL_Auxiliary.cpp:457: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:458: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:459: error: undefined reference to 'glMaterialf'
+../src/OpenGL_Auxiliary.cpp:460: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:465: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:466: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:470: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:471: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:473: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:474: error: undefined reference to 'glMapGrid2f'
+../src/OpenGL_Auxiliary.cpp:475: error: undefined reference to 'glEvalMesh2'
+../src/OpenGL_Auxiliary.cpp:476: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:477: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:510: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:512: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:515: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:516: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:518: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:519: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:520: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:521: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:523: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:524: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:526: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:529: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:531: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:532: error: undefined reference to 'glutSwapBuffers'
+../src/OpenGL_Auxiliary.cpp:544: error: undefined reference to 'glLightModelfv'
+../src/OpenGL_Auxiliary.cpp:545: error: undefined reference to 'glLightModeli'
+../src/OpenGL_Auxiliary.cpp:548: error: undefined reference to 'glFrontFace'
+../src/OpenGL_Auxiliary.cpp:551: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:552: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:553: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:554: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:565: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:569: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:571: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:575: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:576: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:581: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:582: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:583: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:584: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:585: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:591: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:592: error: undefined reference to 'glutSpecialFunc'
+../src/OpenGL_Auxiliary.cpp:593: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:594: error: undefined reference to 'glutIdleFunc'
+../src/OpenGL_Auxiliary.cpp:595: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:596: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [SurfacePrimary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   
+../src/OpenGL_Auxiliary.cpp:220: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:221: error: undefined reference to 'glutGet'
+../src/OpenGL_Auxiliary.cpp:224: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:228: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:229: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:230: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:231: error: undefined reference to 'gluLookAt'
+../src/OpenGL_Auxiliary.cpp:232: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:357: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:358: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:359: error: undefined reference to 'glTexParameterf'
+../src/OpenGL_Auxiliary.cpp:361: error: undefined reference to 'glTexImage2D'
+../src/OpenGL_Auxiliary.cpp:380: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:381: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:383: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:384: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:385: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:386: error: undefined reference to 'glEnable'
+../src/OpenGL_Auxiliary.cpp:388: error: undefined reference to 'glPixelStorei'
+../src/OpenGL_Auxiliary.cpp:389: error: undefined reference to 'glGenTextures'
+../src/OpenGL_Auxiliary.cpp:399: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:400: error: undefined reference to 'glBegin'
+../src/OpenGL_Auxiliary.cpp:402: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:403: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:404: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:406: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:407: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:408: error: undefined reference to 'glVertex3f'
+../src/OpenGL_Auxiliary.cpp:416: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:420: error: undefined reference to 'glEnd'
+../src/OpenGL_Auxiliary.cpp:442: error: undefined reference to 'glClear'
+../src/OpenGL_Auxiliary.cpp:450: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:451: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:453: error: undefined reference to 'glShadeModel'
+../src/OpenGL_Auxiliary.cpp:454: error: undefined reference to 'glPolygonMode'
+../src/OpenGL_Auxiliary.cpp:457: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:458: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:459: error: undefined reference to 'glMaterialf'
+../src/OpenGL_Auxiliary.cpp:460: error: undefined reference to 'glMaterialfv'
+../src/OpenGL_Auxiliary.cpp:465: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:466: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:470: error: undefined reference to 'glBindTexture'
+../src/OpenGL_Auxiliary.cpp:471: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:473: error: undefined reference to 'glMap2f'
+../src/OpenGL_Auxiliary.cpp:474: error: undefined reference to 'glMapGrid2f'
+../src/OpenGL_Auxiliary.cpp:475: error: undefined reference to 'glEvalMesh2'
+../src/OpenGL_Auxiliary.cpp:476: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:477: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:510: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:512: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:515: error: undefined reference to 'glPushMatrix'
+../src/OpenGL_Auxiliary.cpp:516: error: undefined reference to 'glDisable'
+../src/OpenGL_Auxiliary.cpp:518: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:519: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:520: error: undefined reference to 'glColor3f'
+../src/OpenGL_Auxiliary.cpp:521: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:523: error: undefined reference to 'glLoadIdentity'
+../src/OpenGL_Auxiliary.cpp:524: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:526: error: undefined reference to 'glutWireCube'
+../src/OpenGL_Auxiliary.cpp:529: error: undefined reference to 'glPopMatrix'
+../src/OpenGL_Auxiliary.cpp:531: error: undefined reference to 'glFlush'
+../src/OpenGL_Auxiliary.cpp:532: error: undefined reference to 'glutSwapBuffers'
+../src/OpenGL_Auxiliary.cpp:544: error: undefined reference to 'glLightModelfv'
+../src/OpenGL_Auxiliary.cpp:545: error: undefined reference to 'glLightModeli'
+../src/OpenGL_Auxiliary.cpp:548: error: undefined reference to 'glFrontFace'
+../src/OpenGL_Auxiliary.cpp:551: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:552: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:553: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:554: error: undefined reference to 'glLightfv'
+../src/OpenGL_Auxiliary.cpp:565: error: undefined reference to 'glViewport'
+../src/OpenGL_Auxiliary.cpp:569: error: undefined reference to 'glMatrixMode'
+../src/OpenGL_Auxiliary.cpp:571: error: undefined reference to 'gluPerspective'
+../src/OpenGL_Auxiliary.cpp:575: error: undefined reference to 'glTranslatef'
+../src/OpenGL_Auxiliary.cpp:576: error: undefined reference to 'glRotatef'
+../src/OpenGL_Auxiliary.cpp:581: error: undefined reference to 'glutInit'
+../src/OpenGL_Auxiliary.cpp:582: error: undefined reference to 'glutInitDisplayMode'
+../src/OpenGL_Auxiliary.cpp:583: error: undefined reference to 'glutInitWindowPosition'
+../src/OpenGL_Auxiliary.cpp:584: error: undefined reference to 'glutInitWindowSize'
+../src/OpenGL_Auxiliary.cpp:585: error: undefined reference to 'glutCreateWindow'
+../src/OpenGL_Auxiliary.cpp:591: error: undefined reference to 'glutKeyboardFunc'
+../src/OpenGL_Auxiliary.cpp:592: error: undefined reference to 'glutSpecialFunc'
+../src/OpenGL_Auxiliary.cpp:593: error: undefined reference to 'glutReshapeFunc'
+../src/OpenGL_Auxiliary.cpp:594: error: undefined reference to 'glutIdleFunc'
+../src/OpenGL_Auxiliary.cpp:595: error: undefined reference to 'glutDisplayFunc'
+../src/OpenGL_Auxiliary.cpp:596: error: undefined reference to 'glutMainLoop'
+collect2: ld returned 1 exit status
+make: *** [SurfacePrimary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void ask()’:
+../src/OpenGL_Auxiliary.cpp:132:7: warning: unused variable ‘response’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_1D_Primary
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D_Primary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_1D_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+Building file: ../src/OpenGL_Temp.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Temp.d" -MT"src/OpenGL_Temp.d" -o "src/OpenGL_Temp.o" "../src/OpenGL_Temp.cpp"
+Finished building: ../src/OpenGL_Temp.cpp
+ 
+Building target: OpenGL_Temp
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Temp"  ./src/OpenGL_Temp.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Temp
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void ask()’:
+../src/OpenGL_Auxiliary.cpp:136:7: warning: unused variable ‘response’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: BezierDesign_1D_Primary
+Invoking: GCC C++ Linker
+g++  -o "BezierDesign_1D_Primary"  ./src/OpenGL_Auxiliary.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: BezierDesign_1D_Primary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+Building file: ../src/OpenGL_Temp.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Temp.d" -MT"src/OpenGL_Temp.d" -o "src/OpenGL_Temp.o" "../src/OpenGL_Temp.cpp"
+Finished building: ../src/OpenGL_Temp.cpp
+ 
+Building target: OpenGL_Temp
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Temp"  ./src/OpenGL_Temp.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Temp
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:114:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:114:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:114:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:115:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:114:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:115:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:116:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:117:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:114:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:116:1: error: ‘array’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:116:1: error: ‘array’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:116:1: error: ‘array’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp:113:1: error: ‘ctrlMaster’ does not name a type
+../src/OpenGL_Auxiliary.cpp:116:1: error: ‘array’ does not name a type
+../src/OpenGL_Auxiliary.cpp:119:1: error: ‘array4’ does not name a type
+../src/OpenGL_Auxiliary.cpp:122:1: error: ‘array2’ does not name a type
+../src/OpenGL_Auxiliary.cpp:125:1: error: ‘array2’ does not name a type
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:172:2: error: a function-definition is not allowed here before ‘{’ token
+../src/OpenGL_Auxiliary.cpp:636:1: error: expected ‘}’ at end of input
+../src/OpenGL_Auxiliary.cpp: At global scope:
+../src/OpenGL_Auxiliary.cpp:153:15: warning: ‘texName’ defined but not used [-Wunused-variable]
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:176:23: error: cannot convert ‘int (*)[1]’ to ‘int*’ in assignment
+../src/OpenGL_Auxiliary.cpp:180:31: error: cannot convert ‘GLfloat (*)[4][4] {aka float (*)[4][4]}’ to ‘GLfloat* {aka float*}’ in assignment
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:176:23: error: cannot convert ‘int (*)[1]’ to ‘int**’ in assignment
+../src/OpenGL_Auxiliary.cpp:180:31: error: cannot convert ‘GLfloat (*)[4][4] {aka float (*)[4][4]}’ to ‘GLfloat* {aka float*}’ in assignment
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:173:17: error: incompatible types in assignment of ‘int (*)[1]’ to ‘int** [3]’
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:173:20: error: incompatible types in assignment of ‘int*’ to ‘int** [3]’
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:173:12: error: incompatible types in assignment of ‘int (*)[3][1]’ to ‘int** [3]’
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:170:17: warning: unused variable ‘points’ [-Wunused-variable]
+../src/OpenGL_Auxiliary.cpp:173:11: warning: variable ‘ptr’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:173:11: warning: variable ‘ptr’ set but not used [-Wunused-but-set-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+../src/OpenGL_Auxiliary.cpp: In function ‘void temp()’:
+../src/OpenGL_Auxiliary.cpp:175:11: warning: unused variable ‘points’ [-Wunused-variable]
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
