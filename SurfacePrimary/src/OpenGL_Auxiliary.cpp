@@ -79,9 +79,11 @@ GLenum polygonMode = GL_LINE; // Toggles between GL_LINE and GL_FILL
 /************* ANIMATION ****************/
 GLenum runMode = GL_TRUE;
 float RotX = 0.0f; // Rotational position around x-axis
-float RotZ = 0.0f; // Rotational position around y-axis
+float RotY = 0.0f; // Rotational position around y-axis
+float RotZ = 0.0f; // Rotational position around z-axis
 float RotIncrementX = 0.0; // Rotational increment, x-axis
-float RotIncrementZ = 0.0; // Rotational increment, y-axis
+float RotIncrementY = 0.0; // Rotational increment, y-axis
+float RotIncrementZ = 0.0; // Rotational increment, z-axis
 const float RotIncFactor = 1.5; // Factor change in rot rate per key stroke
 
 /************* LIGHTING ****************/
@@ -319,77 +321,77 @@ void loadMasterArr(void) {
 
 void myKeyboardFunc(unsigned char key, int x, int y) {
 	switch (key) {
-	case 'a':
-		runMode = !runMode;
-		break;
-	case 's':
-		runMode = GL_TRUE;
-		updateScene();
-		runMode = GL_FALSE;
-		break;
-	case 27: // Escape key
-		exit(1);
-	case 'r': // Reset the animation (resets everything)
-		ResetAnimation();
-		break;
-	case '0': // Zero the rotation rates
-		ZeroRotation();
-		break;
-	case 'f': // Shade mode toggles from flat to smooth
-		ShadeModelToggle();
-		break;
-	case 'p': // Polygon mode toggles between fill and line
-		FillModeToggle();
-		break;
-	case 'u': // Decrement number of U's
-		LessUs();
-		break;
-	case 'U': // Increment number of U's
-		MoreUs();
-		break;
-	case 'v': // Decrement number of V's
-		LessVs();
-		break;
-	case 'V': // Increment number of V's
-		MoreVs();
-		break;
+		case 'a':
+			runMode = !runMode;
+			break;
+		case 's':
+			runMode = GL_TRUE;
+			updateScene();
+			runMode = GL_FALSE;
+			break;
+		case 27: // Escape key
+			exit(1);
+		case 'r': // Reset the animation (resets everything)
+			ResetAnimation();
+			break;
+		case '0': // Zero the rotation rates
+			ZeroRotation();
+			break;
+		case 'f': // Shade mode toggles from flat to smooth
+			ShadeModelToggle();
+			break;
+		case 'p': // Polygon mode toggles between fill and line
+			FillModeToggle();
+			break;
+		case 'u': // Decrement number of U's
+			LessUs();
+			break;
+		case 'U': // Increment number of U's
+			MoreUs();
+			break;
+		case 'v': // Decrement number of V's
+			LessVs();
+			break;
+		case 'V': // Increment number of V's
+			MoreVs();
+			break;
 
-	case 'i':
-		eyeY += 1;
-		targetY += 1;
-		break;
-	case 'k':
-		eyeY -= 1;
-		targetY -= 1;
-		break;
-	case 'j':
-		eyeX -= 1;
-		targetX -= 1;
-		break;
-	case 'l':
-		eyeX += 1;
-		targetX += 1;
-		break;
-	case 'x':
-		eyeZ -= 1;
-		targetZ -= 1;
-		break;
-	case 'z':
-		eyeZ += 1;
-		targetZ += 1;
-		break;
-	case 'n':
-		eyeX = 0;
-		eyeY = 0;
-		eyeZ = 0;
-		targetX = 0;
-		targetY = 0;
-		targetZ = -100;
-		break;
-	case 'b':
-		eyeZ *= -1;
-		targetZ = 0;
-		break;
+		case 'i':
+			eyeY += 1;
+			targetY += 1;
+			break;
+		case 'k':
+			eyeY -= 1;
+			targetY -= 1;
+			break;
+		case 'j':
+			eyeX -= 1;
+			targetX -= 1;
+			break;
+		case 'l':
+			eyeX += 1;
+			targetX += 1;
+			break;
+		case 'x':
+			eyeZ -= 1;
+			targetZ -= 1;
+			break;
+		case 'z':
+			eyeZ += 1;
+			targetZ += 1;
+			break;
+		case 'n':
+			eyeX = 0;
+			eyeY = 0;
+			eyeZ = 0;
+			targetX = 0;
+			targetY = 0;
+			targetZ = -100;
+			break;
+		case 'b':
+			eyeZ *= -1;
+			targetZ = 0;
+			break;
 	}
 
 	int w = glutGet(GLUT_WINDOW_WIDTH);
@@ -409,71 +411,29 @@ void myKeyboardFunc(unsigned char key, int x, int y) {
 
 void mySpecialKeyFunc(int key, int x, int y) {
 	switch (key) {
-	case GLUT_KEY_UP:
-		// Either increase upward rotation, or slow downward rotation
-		KeyUp();
-		break;
-	case GLUT_KEY_DOWN:
-		// Either increase downward rotation, or slow upward rotation
-		KeyDown();
-		break;
-	case GLUT_KEY_LEFT:
-		// Either increase left rotation, or slow down rightward rotation.
-		KeyLeft();
-		break;
-	case GLUT_KEY_RIGHT:
-		// Either increase right rotation, or slow down leftward rotation.
-		KeyRight();
-		break;
-	}
-}
-
-void KeyUp() {
-	if (RotIncrementX == 0.0) {
-		RotIncrementX = -0.1; // Initially, one-tenth degree rotation per update
-	} else if (RotIncrementX < 0.0f) {
-		RotIncrementX *= RotIncFactor;
-	} else {
-		RotIncrementX /= RotIncFactor;
-	}
-}
-
-void KeyDown() {
-	if (RotIncrementX == 0.0) {
-		RotIncrementX = 0.1; // Initially, one-tenth degree rotation per update
-	} else if (RotIncrementX > 0.0f) {
-		RotIncrementX *= RotIncFactor;
-	} else {
-		RotIncrementX /= RotIncFactor;
-	}
-}
-
-void KeyLeft() {
-	if (RotIncrementZ == 0.0) {
-		RotIncrementZ = -0.1; // Initially, one-tenth degree rotation per update
-	} else if (RotIncrementZ < 0.0) {
-		RotIncrementZ *= RotIncFactor;
-	} else {
-		RotIncrementZ /= RotIncFactor;
-	}
-}
-
-void KeyRight() {
-	if (RotIncrementZ == 0.0) {
-		RotIncrementZ = 0.1; // Initially, one-tenth degree rotation per update
-	} else if (RotIncrementZ > 0.0) {
-		RotIncrementZ *= RotIncFactor;
-	} else {
-		RotIncrementZ /= RotIncFactor;
+		case GLUT_KEY_LEFT:
+			RotIncrementX = -0.5;
+			break;
+		case GLUT_KEY_UP:
+			RotIncrementY = 0.5;
+			break;
+		case GLUT_KEY_RIGHT:
+			RotIncrementZ = 0.5;
+			break;
+		case GLUT_KEY_DOWN:
+			RotIncrementX = 0.0;
+			RotIncrementY = 0.0;
+			RotIncrementZ = 0.0;
+			break;
 	}
 }
 
 void ResetAnimation() {
-	RotX = RotZ = RotIncrementX = RotIncrementZ = 0.0;
+	RotX = RotY = RotZ = RotIncrementX = RotIncrementY = RotIncrementZ = 0.0;
 }
 
 void ZeroRotation() {
-	RotIncrementX = RotIncrementZ = 0.0;
+	RotIncrementX = RotIncrementY = RotIncrementZ = 0.0;
 }
 
 void ShadeModelToggle() {
@@ -596,13 +556,17 @@ void drawLines() {
 void updateOrientation() {
 	// Update the orientation, if the animation is running.
 	if (runMode) {
-		RotZ += RotIncrementZ;
-		if (fabs(RotZ) > 360.0) {
-			RotZ -= 360.0 * ((int) (((RotZ / 360.0))));
-		}
 		RotX += RotIncrementX;
 		if (fabs(RotX) > 360.0) {
 			RotX -= 360.0 * ((int) (((RotX / 360.0))));
+		}
+		RotY += RotIncrementY;
+		if (fabs(RotY) > 360.0) {
+			RotY -= 360.0 * ((int) (((RotY / 360.0))));
+		}
+		RotZ += RotIncrementZ;
+		if (fabs(RotZ) > 360.0) {
+			RotZ -= 360.0 * ((int) (((RotZ / 360.0))));
 		}
 	}
 
@@ -622,6 +586,14 @@ void updateScene(void) {
 				{0.0, 1.0},
 				{1.0, 1.0}}};
 
+	glPushMatrix();
+	/********** UPDATE ORIENTATION **********/ //needs to be in a matrix
+	updateOrientation();
+
+	glRotatef(RotX, 1.0, 0.0, 0.0);
+	glRotatef(RotY, 0.0, 1.0, 0.0);
+	glRotatef(RotZ, 0.0, 0.0, 1.0);
+
 	for (int i = 0; i < NUM_PARTS; i++) {
 		glPushMatrix();
 		glTranslatef(ctrlPtPartsArr[i].transX, ctrlPtPartsArr[i].transY, ctrlPtPartsArr[i].transZ);
@@ -635,11 +607,11 @@ void updateScene(void) {
 		glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, Matshiny);
 		glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, Noemit);
 
-		/********** UPDATE ORIENTATION **********/
-		updateOrientation();
-
-		glRotatef(RotX, 1.0, 0.0, 0.0);
-		glRotatef(RotZ, 0.0, 0.0, 1.0);
+//		/********** UPDATE ORIENTATION **********/
+//		updateOrientation();
+//
+//		glRotatef(RotX, 1.0, 0.0, 0.0);
+//		glRotatef(RotZ, 0.0, 1.0, 0.0);
 
 		/********** DRAW BEZIER AND TEXTURIZE **********/
 		glEnable(GL_TEXTURE);
@@ -652,6 +624,7 @@ void updateScene(void) {
 		glDisable(GL_TEXTURE);
 		glPopMatrix();
 	}
+	glPopMatrix();
 
 	////////////////////////////////////////////////////////
 //	glPushMatrix();
@@ -708,6 +681,7 @@ void updateScene(void) {
 
 	glFlush();
 	glutSwapBuffers();
+
 }
 
 /************* INIT ****************/
