@@ -497,7 +497,11 @@ void updateScene(void) {
 	/********** DRAW BEZIER AND TEXTURIZE **********/
 	glEnable(GL_TEXTURE);
 	glBindTexture(GL_TEXTURE_2D, texName[0]);
-	glMap2f(GL_MAP2_VERTEX_4, 0, 1, 4, 4, 0, 1, 16, 4, &ctrlpoints_C[0][0][0]);
+
+	//GLfloat* ctrlPoint = &ctrlpoints_C[0][0][0];
+	GLfloat* ctrlPoint = masterCtrl[0];
+
+	glMap2f(GL_MAP2_VERTEX_4, 0, 1, 4, 4, 0, 1, 16, 4, ctrlPoint);//&ctrlpoints_C[0][0][0]);
 	glMap2f(GL_MAP2_TEXTURE_COORD_2, 0.0, 1.0, 2, 2, 0.0, 1.0, 4, 2,
 			&texel[0][0][0]);
 	glMapGrid2f(NumUs, 0, 1, NumVs, 0, 1);
