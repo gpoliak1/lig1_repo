@@ -3762,3 +3762,900 @@ Finished building target: SurfacePrimary
  
 
 **** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building file: ../src/function_set.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/function_set.d" -MT"src/function_set.d" -o "src/function_set.o" "../src/function_set.cpp"
+Finished building: ../src/function_set.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+Finished building: ../src/main.cpp
+ 
+Building target: OpenGL_Temp
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Temp"  ./src/externVarDefinition.o ./src/function_set.o ./src/main.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Temp
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building file: ../src/function_set.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/function_set.d" -MT"src/function_set.d" -o "src/function_set.o" "../src/function_set.cpp"
+Finished building: ../src/function_set.cpp
+ 
+Building file: ../src/main.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.cpp"
+../src/main.cpp: In function ‘int main()’:
+../src/main.cpp:20:7: warning: unused variable ‘a’ [-Wunused-variable]
+Finished building: ../src/main.cpp
+ 
+Building target: OpenGL_Temp
+Invoking: GCC C++ Linker
+g++  -o "OpenGL_Temp"  ./src/externVarDefinition.o ./src/function_set.o ./src/main.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: OpenGL_Temp
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+In file included from ../src/OpenGL_Auxiliary.cpp:59:0:
+../src/externVarDeclaration.h:7:1: error: ‘GLfloat’ does not name a type
+../src/OpenGL_Auxiliary.cpp: In function ‘void loadMasterArr()’:
+../src/OpenGL_Auxiliary.cpp:574:32: error: ‘ctrlpoints_A’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+../src/externVarDefinition.cpp:21:29: error: redefinition of ‘GLfloat ctrlpoints_A [4][4][4]’
+../src/externVarDeclaration.h:21:9: error: ‘GLfloat ctrlpoints_A [4][4][4]’ previously declared here
+make: *** [src/externVarDefinition.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+In file included from ../src/OpenGL_Auxiliary.cpp:59:0:
+../src/externVarDeclaration.h:21:8: error: ‘GLfloat’ does not name a type
+../src/OpenGL_Auxiliary.cpp: In function ‘void loadMasterArr()’:
+../src/OpenGL_Auxiliary.cpp:574:32: error: ‘ctrlpoints_A’ was not declared in this scope
+make: *** [src/OpenGL_Auxiliary.o] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building file: ../src/Utils.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/Utils.d" -MT"src/Utils.d" -o "src/Utils.o" "../src/Utils.cpp"
+Finished building: ../src/Utils.cpp
+ 
+Building file: ../src/externVarDefinition.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/externVarDefinition.d" -MT"src/externVarDefinition.d" -o "src/externVarDefinition.o" "../src/externVarDefinition.cpp"
+Finished building: ../src/externVarDefinition.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/Utils.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/Utils.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+/usr/bin/ld: error: ./src/Utils.o: multiple definition of 'genRand()'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_A'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_B'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_C'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_D'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_H'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_G'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_F'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_E'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_AH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_BH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_CH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_DH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_HH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_GH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_EH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+/usr/bin/ld: error: ./src/externVarDefinition.o: multiple definition of 'ctrlpoints_FH'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+collect2: ld returned 1 exit status
+make: *** [SurfacePrimary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/Utils.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+/usr/bin/ld: error: ./src/Utils.o: multiple definition of 'genRand()'
+/usr/bin/ld: ./src/OpenGL_Auxiliary.o: previous definition here
+collect2: ld returned 1 exit status
+make: *** [SurfacePrimary] Error 1
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_1D_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_PrimaryReserve ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v1 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project BezierDesign_2D_v12 ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Primary ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project OpenGL_Temp ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project SurfacePrimary ****
+
+make all 
+Building file: ../src/OpenGL_Auxiliary.cpp
+Invoking: GCC C++ Compiler
+g++ -O0 -g3 -Wall -c -fmessage-length=0 -MMD -MP -MF"src/OpenGL_Auxiliary.d" -MT"src/OpenGL_Auxiliary.d" -o "src/OpenGL_Auxiliary.o" "../src/OpenGL_Auxiliary.cpp"
+Finished building: ../src/OpenGL_Auxiliary.cpp
+ 
+Building target: SurfacePrimary
+Invoking: GCC C++ Linker
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/Utils.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+Finished building target: SurfacePrimary
+ 
+
+**** Build Finished ****
+
+**** Build of configuration Debug for project lig1_repo ****
+
+make all 
+make: Nothing to be done for `all'.
+
+**** Build Finished ****

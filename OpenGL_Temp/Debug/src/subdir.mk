@@ -3,17 +3,20 @@
 ################################################################################
 
 # Add inputs and outputs from these tool invocations to the build variables 
-O_SRCS += \
-../src/OpenGL_Temp.o 
-
 CPP_SRCS += \
-../src/OpenGL_Temp.cpp 
+../src/externVarDefinition.cpp \
+../src/function_set.cpp \
+../src/main.cpp 
 
 OBJS += \
-./src/OpenGL_Temp.o 
+./src/externVarDefinition.o \
+./src/function_set.o \
+./src/main.o 
 
 CPP_DEPS += \
-./src/OpenGL_Temp.d 
+./src/externVarDefinition.d \
+./src/function_set.d \
+./src/main.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes

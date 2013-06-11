@@ -1,8 +1,8 @@
 #!/bin/bash
 
-g++ -lGL -lGLU -lGLEW -lglut -c lodepng.cpp OpenGL_Auxiliary.cpp
+g++ -lGL -lGLU -lGLEW -lglut -c lodepng.cpp Utils.cpp externVarDefinition.cpp OpenGL_Auxiliary.cpp
 
-g++ -lGL -lGLU -lGLEW -lglut -o final lodepng.o OpenGL_Auxiliary.o
+g++ -lGL -lGLU -lGLEW -lglut -o final lodepng.o Utils.o externVarDefinition.o OpenGL_Auxiliary.o
 
 #(exec wmctrl -k on)
 

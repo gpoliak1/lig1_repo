@@ -9,7 +9,7 @@ Finished building: ../src/OpenGL_Auxiliary.cpp
  
 Building target: SurfacePrimary
 Invoking: GCC C++ Linker
-g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
+g++  -o "SurfacePrimary"  ./src/OpenGL_Auxiliary.o ./src/Utils.o ./src/externVarDefinition.o ./src/lodepng.o   -lGL -lGLU -lGLEW -lglut
 Finished building target: SurfacePrimary
  
 
