@@ -1,0 +1,22 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+float PRNG()
+{
+    static unsigned int nSeed = 5323;
+    nSeed = (8253729 * nSeed + 2396403);
+
+    return (float)(nSeed  % 32767) / (float)32767;
+}
+
+int main()
+{
+    for (int nCount=0; nCount < 100; ++nCount)
+    {
+        cout << PRNG() << "\t";
+
+        if ((nCount+1) % 5 == 0)
+            cout << endl;
+    }
+}

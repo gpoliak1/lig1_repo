@@ -1,0 +1,18 @@
+#include <iostream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
+using namespace std;
+
+int main() {
+
+	srand(time(0));
+
+	for (int nCount = 0; nCount < 100; ++nCount) {
+
+		float f = (float) rand() / (float) 32767;
+		cout << f << "\t";
+
+		if ((nCount + 1) % 5 == 0)
+			cout << endl;
+	}
+}

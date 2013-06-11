@@ -1,0 +1,23 @@
+#include <iostream>
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
+using namespace std;
+
+int main() {
+
+	srand(time(0));
+
+	float h = 0;
+
+	for (int nCount = 0; nCount < 100; ++nCount) {
+
+		float f = (float) (rand() % 32767) / (float) 32767;
+		cout << f << "\t";
+		h += f;
+
+		if ((nCount + 1) % 5 == 0)
+			cout << endl;
+	}
+
+	cout << "AVG IS: " + h / 100;
+}

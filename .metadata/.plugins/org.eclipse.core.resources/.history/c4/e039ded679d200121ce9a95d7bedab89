@@ -1,0 +1,17 @@
+#include <iostream>
+#include <stdio.h>
+using namespace std;
+
+int main() {
+
+	srand(time(0));
+
+	float f = (float) rand() / (float) 32767;
+
+	for (int nCount = 0; nCount < 100; ++nCount) {
+		cout << f << "\t";
+
+		if ((nCount + 1) % 5 == 0)
+			cout << endl;
+	}
+}
