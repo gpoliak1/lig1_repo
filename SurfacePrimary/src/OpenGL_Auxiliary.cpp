@@ -68,7 +68,31 @@
 #include <limits.h>
 #include <GL/glut.h>
 
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
 #define NUM_OF_TEXTURES		2
+#define NUM_OF_LEAVES		400
+#define TREE_TRUNK_TEXTURE "wood.png"
+
+float leafBox_StartX = -5;
+float leafBox_EndX = 5;
+float leafBox_StartY = 9;
+float leafBox_EndY = 15;
+float leafBox_StartZ = -5;
+float leafBox_EndZ = 5;
+
+float xSpan = leafBox_EndX - leafBox_StartX;
+float ySpan = leafBox_EndY - leafBox_StartY;
+float zSpan = leafBox_EndZ - leafBox_StartZ;
+
+struct leaf {
+	float transX;
+	float transY;
+	float transZ;
+//	float transX;
+//	float transX;
+//	float transX;
+} leaves[NUM_OF_LEAVES];
 
 /************* POLYGON ****************/
 int NumUs = 4;
@@ -113,7 +137,7 @@ float Noemit[4] =
 float Matspec[4] =
 	{1.0, 1.0, 1.0, 1.0};
 float Matnonspec[4] =
-	{0.8, 0.05, 0.4, 1.0};
+	{0.8, 0.8, 0.8, 1.0}; //	{0.8, 0.05, 0.4, 1.0};
 float Matshiny = 50.0;
 
 /************* TEXTURE ****************/
@@ -155,18 +179,6 @@ float targetZ = -100;
 //		{{0, 0, -0.5, 1}, {0.05, 0.6667, -0.5, 1}, {0.95, 0.6667, -0.5, 1}, {1, 0, -0.5, 1}},
 //		{{0, 0, -3.5, 1}, {0.05, 0.6667, -3.5, 1}, {0.95, 0.6667, -3.5, 1}, {1, 0, -3.5, 1}}
 //};
-int pos = 0;
-#define NUM_PARTS	5
-
-struct ctrlPtParts {
-
-	GLfloat *points;
-
-	float transX;
-	float transY;
-	float transZ;
-} ctrlPtPartsArr[NUM_PARTS];
-
 GLfloat ctrlpoints_A[4][4][4] =
 	{
 		{
@@ -261,13 +273,177 @@ GLfloat ctrlpoints_D[4][4][4] =
 			{1.89882, 2.39460, 0.00000, 1},
 			{0.00000, 3.00000, 0.00000, 1}}};
 
+GLfloat ctrlpoints_H[4][4][4] =
+	{
+		{
+			{0, 0, 0, 1},
+			{0, 1, 0, 1},
+			{0, 2, 0, 1},
+			{0, 3.4, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{0, 1, 0, 1},
+			{0, 2, 0, 1},
+			{0, 3.4, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{0, 1, 0, 1},
+			{0, 2, 0, 1},
+			{0, 3.4, 0, 1}},
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{2.82294, -0.17694, 0.00000, 1},
+			{2.11837, 2.11402, 0.00000, 1},
+			{1.10000, 3.40000, 0.00000, 1}}};
+
+GLfloat ctrlpoints_G[4][4][4] =
+	{
+		{
+			{0, 0, 0, 1},
+			{0.333, 0, 0, 1},
+			{0.667, 0, 0, 1},
+			{1.0, 0, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{0.333, 0, 0, 1},
+			{0.667, 0, 0, 1},
+			{1.0, 0, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{0.333, 0, 0, 1},
+			{0.667, 0, 0, 1},
+			{1.0, 0, 0, 1}},
+		{
+			{0, 3.4, 0, 1},
+			{0.333, 3.4, 0, 1},
+			{0.667, 3.4, 0, 1},
+			{1.0, 3.4, 0, 1}}};
+
+GLfloat ctrlpoints_F[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{0.33348, -0.47344, 0.00000, 1},
+			{0.65152, -0.64658, 0.00000, 1},
+			{1.00000, -0.70000, 0.00000, 1}},
+		{
+			{0, 2.6, 0, 1},
+			{0.33, 2.6, 0, 1},
+			{0.66, 2.6, 0, 1},
+			{1, 2.6, 0, 1}},
+		{
+			{0, 2.6, 0, 1},
+			{0.33, 2.6, 0, 1},
+			{0.66, 2.6, 0, 1},
+			{1, 2.6, 0, 1}},
+		{
+			{0, 2.6, 0, 1},
+			{0.33, 2.6, 0, 1},
+			{0.66, 2.6, 0, 1},
+			{1, 2.6, 0, 1}}};
+
+GLfloat ctrlpoints_E[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{-0.58910, -1.86909, 0.00000, 1},
+			{2.09807, -1.62365, 0.00000, 1},
+			{3.10000, -3.30000, 0.00000, 1}},
+		{
+			{0, 0, 0, 1},
+			{1, 0, 0, 1},
+			{2, 0, 0, 1},
+			{3.1, 0, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{1, 0, 0, 1},
+			{2, 0, 0, 1},
+			{3.1, 0, 0, 1}},
+		{
+			{0, 0, 0, 1},
+			{1, 0, 0, 1},
+			{2, 0, 0, 1},
+			{3.1, 0, 0, 1}}};
+
+GLfloat ctrlpoints_AH[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 10.00000, 1},
+			{0.14444, 1.09603, 10.00000, 1},
+			{1.47937, 1.41825, 10.00000, 1},
+			{2.10000, 1.80000, 10.00000, 1}},
+		{
+			{0.00000, 0.00000, 2.00000, 1},
+			{0.14444, 1.09603, 2.00000, 1},
+			{1.47937, 1.41825, 2.00000, 1},
+			{2.10000, 1.80000, 2.00000, 1}},
+		{
+			{0.00000, 0.00000, 1.00000, 1},
+			{0.14444, 1.09603, 1.00000, 1},
+			{1.47937, 1.41825, 1.00000, 1},
+			{2.10000, 1.80000, 1.00000, 1}},
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{0.14444, 1.09603, 0.00000, 1},
+			{1.47937, 1.41825, 0.00000, 1},
+			{2.10000, 1.80000, 0.00000, 1}},
+
+	};
+
+GLfloat ctrlpoints_BH[4][4][4] =
+	{
+
+		{
+			{0.00000, 1.80000, 10.00000, 1},
+			{0.33333, 1.83056, 10.00000, 1},
+			{0.66667, 2.30278, 10.00000, 1},
+			{1.00000, 2.60000, 10.00000, 1}},
+		{
+			{0.00000, 1.80000, 2.00000, 1},
+			{0.33333, 1.83056, 2.00000, 1},
+			{0.66667, 2.30278, 2.00000, 1},
+			{1.00000, 2.60000, 2.00000, 1}},
+		{
+			{0.00000, 1.80000, 1.00000, 1},
+			{0.33333, 1.83056, 1.00000, 1},
+			{0.66667, 2.30278, 1.00000, 1},
+			{1.00000, 2.60000, 1.00000, 1}},
+		{
+			{0.00000, 1.80000, 0.00000, 1},
+			{0.33333, 1.83056, 0.00000, 1},
+			{0.66667, 2.30278, 0.00000, 1},
+			{1.00000, 2.60000, 0.00000, 1}}};
+
+GLfloat ctrlpoints_CH[4][4][4] =
+	{
+		{
+			{0.00000, 2.60000, 10.00000, 1},
+			{0.49206, 2.87619, 10.00000, 1},
+			{0.56085, 2.95661, 10.00000, 1},
+			{1.00000, 3.00000, 10.00000, 1}},
+		{
+			{0.00000, 2.60000, 2.00000, 1},
+			{0.49206, 2.87619, 2.00000, 1},
+			{0.56085, 2.95661, 2.00000, 1},
+			{1.00000, 3.00000, 2.00000, 1}},
+		{
+			{0.00000, 2.60000, 1.00000, 1},
+			{0.49206, 2.87619, 1.00000, 1},
+			{0.56085, 2.95661, 1.00000, 1},
+			{1.00000, 3.00000, 1.00000, 1}},
+		{
+			{0.00000, 2.60000, 0.00000, 1},
+			{0.49206, 2.87619, 0.00000, 1},
+			{0.56085, 2.95661, 0.00000, 1},
+			{1.00000, 3.00000, 0.00000, 1}}};
+
 GLfloat ctrlpoints_DH[4][4][4] =
 	{
 		{
-			{1.13000, 0.00000, 3.00000, 1},
-			{0.75300, 1.26593, 3.00000, 1},
-			{1.89882, 2.39460, 3.00000, 1},
-			{0.00000, 3.00000, 3.00000, 1}},
+			{1.13000, 0.00000, 10.00000, 1},
+			{0.75300, 1.26593, 10.00000, 1},
+			{1.89882, 2.39460, 10.00000, 1},
+			{0.00000, 3.00000, 10.00000, 1}},
 		{
 			{1.13000, 0.00000, 2.00000, 1},
 			{0.75300, 1.26593, 2.00000, 1},
@@ -284,6 +460,113 @@ GLfloat ctrlpoints_DH[4][4][4] =
 			{1.89882, 2.39460, 0.00000, 1},
 			{0.00000, 3.00000, 0.00000, 1}}};
 
+GLfloat ctrlpoints_HH[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 10.00000, 1},
+			{2.82294, -0.17694, 10.00000, 1},
+			{2.11837, 2.11402, 10.00000, 1},
+			{1.10000, 3.40000, 10.00000, 1}},
+		{
+			{0.00000, 0.00000, 2.00000, 1},
+			{2.82294, -0.17694, 2.00000, 1},
+			{2.11837, 2.11402, 2.00000, 1},
+			{1.10000, 3.40000, 2.00000, 1}},
+		{
+			{0.00000, 0.00000, 1.00000, 1},
+			{2.82294, -0.17694, 1.00000, 1},
+			{2.11837, 2.11402, 1.00000, 1},
+			{1.10000, 3.40000, 1.00000, 1}},
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{2.82294, -0.17694, 0.00000, 1},
+			{2.11837, 2.11402, 0.00000, 1},
+			{1.10000, 3.40000, 0.00000, 1}}};
+
+GLfloat ctrlpoints_GH[4][4][4] =
+	{
+		{
+			{0, 3.4, 10, 1},
+			{0.333, 3.4, 10, 1},
+			{0.667, 3.4, 10, 1},
+			{1.0, 3.4, 10, 1}},
+		{
+			{0, 3.4, 2, 1},
+			{0.333, 3.4, 2, 1},
+			{0.667, 3.4, 2, 1},
+			{1.0, 3.4, 2, 1}},
+		{
+			{0, 3.4, 1, 1},
+			{0.333, 3.4, 1, 1},
+			{0.667, 3.4, 1, 1},
+			{1.0, 3.4, 1, 1}},
+		{
+			{0, 3.4, 0, 1},
+			{0.333, 3.4, 0, 1},
+			{0.667, 3.4, 0, 1},
+			{1.0, 3.4, 0, 1}}};
+
+GLfloat ctrlpoints_EH[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 10.00000, 1},
+			{-0.58910, -1.86909, 10.00000, 1},
+			{2.09807, -1.62365, 10.00000, 1},
+			{3.10000, -3.30000, 10.00000, 1}},
+		{
+			{0.00000, 0.00000, 2.00000, 1},
+			{-0.58910, -1.86909, 2.00000, 1},
+			{2.09807, -1.62365, 2.00000, 1},
+			{3.10000, -3.30000, 2.00000, 1}},
+		{
+			{0.00000, 0.00000, 1.00000, 1},
+			{-0.58910, -1.86909, 1.00000, 1},
+			{2.09807, -1.62365, 1.00000, 1},
+			{3.10000, -3.30000, 1.00000, 1}},
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{-0.58910, -1.86909, 0.00000, 1},
+			{2.09807, -1.62365, 0.00000, 1},
+			{3.10000, -3.30000, 0.00000, 1}}};
+
+GLfloat ctrlpoints_FH[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 10.00000, 1},
+			{0.33348, -0.47344, 10.00000, 1},
+			{0.65152, -0.64658, 10.00000, 1},
+			{1.00000, -0.70000, 10.00000, 1}},
+		{
+			{0.00000, 0.00000, 2.00000, 1},
+			{0.33348, -0.47344, 2.00000, 1},
+			{0.65152, -0.64658, 2.00000, 1},
+			{1.00000, -0.70000, 2.00000, 1}},
+		{
+			{0.00000, 0.00000, 1.00000, 1},
+			{0.33348, -0.47344, 1.00000, 1},
+			{0.65152, -0.64658, 1.00000, 1},
+			{1.00000, -0.70000, 1.00000, 1}},
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{0.33348, -0.47344, 0.00000, 1},
+			{0.65152, -0.64658, 0.00000, 1},
+			{1.00000, -0.70000, 0.00000, 1}}};
+
+int pos = 0;
+#define NUM_PARTS	16
+
+struct ctrlPtParts {
+
+	GLfloat *points;
+
+	float transX;
+	float transY;
+	float transZ;
+	float scaleX;
+	float scaleY;
+	float scaleZ;
+} ctrlPtPartsArr[NUM_PARTS];
+
 /************* UTILS ****************/
 void loadMasterArr(void) {
 
@@ -291,32 +574,152 @@ void loadMasterArr(void) {
 	ctrlPtPartsArr[pos].transX = -3.1;
 	ctrlPtPartsArr[pos].transY = 0;
 	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
 	pos++;
 
 	ctrlPtPartsArr[pos].points = &ctrlpoints_B[0][0][0];
 	ctrlPtPartsArr[pos].transX = -1;
 	ctrlPtPartsArr[pos].transY = 0;
 	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
 	pos++;
 
 	ctrlPtPartsArr[pos].points = &ctrlpoints_C[0][0][0];
 	ctrlPtPartsArr[pos].transX = 0;
 	ctrlPtPartsArr[pos].transY = 0;
 	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
 	pos++;
 
 	ctrlPtPartsArr[pos].points = &ctrlpoints_D[0][0][0];
 	ctrlPtPartsArr[pos].transX = 1;
 	ctrlPtPartsArr[pos].transY = 0;
 	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
 	pos++;
 
-	//ctrlpoints_DH
+	ctrlPtPartsArr[pos].points = &ctrlpoints_H[0][0][0];
+	ctrlPtPartsArr[pos].transX = 1;
+	ctrlPtPartsArr[pos].transY = -3.4;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_G[0][0][0];
+	ctrlPtPartsArr[pos].transX = 0;
+	ctrlPtPartsArr[pos].transY = -3.4;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_F[0][0][0];
+	ctrlPtPartsArr[pos].transX = -1;
+	ctrlPtPartsArr[pos].transY = -2.6;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_E[0][0][0];
+	ctrlPtPartsArr[pos].transX = -3.1;
+	ctrlPtPartsArr[pos].transY = 0;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
 	ctrlPtPartsArr[pos].points = &ctrlpoints_DH[0][0][0];
 	ctrlPtPartsArr[pos].transX = 1;
 	ctrlPtPartsArr[pos].transY = 0;
 	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
 	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_CH[0][0][0];
+	ctrlPtPartsArr[pos].transX = 0;
+	ctrlPtPartsArr[pos].transY = 0;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_BH[0][0][0];
+	ctrlPtPartsArr[pos].transX = -1;
+	ctrlPtPartsArr[pos].transY = 0;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_AH[0][0][0];
+	ctrlPtPartsArr[pos].transX = -3.1;
+	ctrlPtPartsArr[pos].transY = 0;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_GH[0][0][0];
+	ctrlPtPartsArr[pos].transX = 0;
+	ctrlPtPartsArr[pos].transY = -6.8;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_HH[0][0][0];
+	ctrlPtPartsArr[pos].transX = 1;
+	ctrlPtPartsArr[pos].transY = -3.4;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_FH[0][0][0];
+	ctrlPtPartsArr[pos].transX = -1;
+	ctrlPtPartsArr[pos].transY = -2.6;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+
+	ctrlPtPartsArr[pos].points = &ctrlpoints_EH[0][0][0];
+	ctrlPtPartsArr[pos].transX = -3.1;
+	ctrlPtPartsArr[pos].transY = 0;
+	ctrlPtPartsArr[pos].transZ = 0;
+	ctrlPtPartsArr[pos].scaleX = 1;
+	ctrlPtPartsArr[pos].scaleY = 1;
+	ctrlPtPartsArr[pos].scaleZ = 1;
+	pos++;
+}
+
+float genRand() {
+
+	float f = (float) (rand() % 32767) / (float) 32767;
+
+	return f;
 }
 
 void myKeyboardFunc(unsigned char key, int x, int y) {
@@ -520,7 +923,7 @@ void initTexture(void) {
 	glPixelStorei(GL_UNPACK_ALIGNMENT, 1);
 	glGenTextures(NUM_OF_TEXTURES, texName);
 
-	loadTexture("bricks.png");
+	loadTexture(TREE_TRUNK_TEXTURE);
 	std::vector<unsigned char> brickArr(u2 * v2 * 4);
 	brickArr = makePowerOfTwo(u2, v2, preArr, brickArr);
 	buildTexImg2D(brickArr, 0);
@@ -589,14 +992,21 @@ void updateScene(void) {
 	glPushMatrix();
 	/********** UPDATE ORIENTATION **********/ //needs to be in a matrix
 	updateOrientation();
-
 	glRotatef(RotX, 1.0, 0.0, 0.0);
 	glRotatef(RotY, 0.0, 1.0, 0.0);
 	glRotatef(RotZ, 0.0, 0.0, 1.0);
 
+	glScalef(0.5, 1.0, 0.5);
+	glRotatef(-90, 1.0, 0.0, 0.0);
+
 	for (int i = 0; i < NUM_PARTS; i++) {
 		glPushMatrix();
+
+		//glRotatef(-90, 1.0, 0.0, 0.0);
 		glTranslatef(ctrlPtPartsArr[i].transX, ctrlPtPartsArr[i].transY, ctrlPtPartsArr[i].transZ);
+		glScalef(ctrlPtPartsArr[i].scaleX, ctrlPtPartsArr[i].scaleY, ctrlPtPartsArr[i].scaleZ);
+//		glRotatef(-90, 1.0, 0.0, 0.0);
+
 		/********** POLYGON **********/
 		glShadeModel(shadeModel);
 		glPolygonMode(GL_FRONT_AND_BACK, polygonMode);
@@ -607,12 +1017,6 @@ void updateScene(void) {
 		glMaterialf(GL_FRONT_AND_BACK, GL_SHININESS, Matshiny);
 		glMaterialfv(GL_FRONT_AND_BACK, GL_EMISSION, Noemit);
 
-//		/********** UPDATE ORIENTATION **********/
-//		updateOrientation();
-//
-//		glRotatef(RotX, 1.0, 0.0, 0.0);
-//		glRotatef(RotZ, 0.0, 1.0, 0.0);
-
 		/********** DRAW BEZIER AND TEXTURIZE **********/
 		glEnable(GL_TEXTURE);
 		glBindTexture(GL_TEXTURE_2D, texName[0]);
@@ -622,6 +1026,29 @@ void updateScene(void) {
 		glMapGrid2f(NumUs, 0, 1, NumVs, 0, 1);
 		glEvalMesh2(GL_FILL, 0, NumUs, 0, NumVs);
 		glDisable(GL_TEXTURE);
+		glPopMatrix();
+	}
+//	glPopMatrix();
+
+	//leaves
+	for (int i = 0; i < NUM_OF_LEAVES; i++) {
+		glPushMatrix();
+		glDisable(GL_LIGHTING);
+		glColor3f(0, 1, 0);
+
+		glTranslatef(leaves[i].transX, leaves[i].transZ, leaves[i].transY);//leaves[i].transZ);
+
+//		std::cout << "***X is: " << leaves[i].transX << " - Y is: " << leaves[i].transY << "\n";
+
+		glBegin(GL_QUADS);
+		glVertex3f(0, 0, 0);
+		glVertex3f(0.5, 0, 0);
+		glVertex3f(0.5, 0, 0.5);
+		glVertex3f(0, 0, 0.5);
+		glEnd();
+
+//		std::cout << "\n\n";
+		glEnable(GL_LIGHTING);
 		glPopMatrix();
 	}
 	glPopMatrix();
@@ -724,14 +1151,35 @@ void resizeWindow(int w, int h) {
 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
-	glTranslatef(0.0, 0.0, -10.0);
-	glRotatef(15.0, 1.0, 0.0, 0.0);
+//	glTranslatef(0.0, 0.0, -10.0);
+//	glRotatef(15.0, 1.0, 0.0, 0.0);
+}
+
+void genLeaves() {
+
+	srand(5888);
+
+	for (int i = 0; i < NUM_OF_LEAVES; i++) {
+
+		float randFloat = genRand();
+		leaves[i].transX = (xSpan * randFloat) + leafBox_StartX;
+
+		randFloat = genRand();
+		leaves[i].transY = (ySpan * randFloat) + leafBox_StartY;
+
+		randFloat = genRand();
+		leaves[i].transZ = (zSpan * randFloat) + leafBox_StartZ;
+
+		printf("Gen X is: %f - Gen Y is: %f - Gen Z is: %f - \n", leaves[i].transX, leaves[i].transY,
+				leaves[i].transZ);
+	}
 }
 
 /************* MAIN ****************/
 int main(int argc, char** argv) {
 
 	loadMasterArr();
+	genLeaves();
 
 	glutInit(&argc, argv);
 	glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
