@@ -1,0 +1,8 @@
+#include <GL/gl.h>
+
+#ifndef EXTERN_VAR_DECL_H
+#define EXTERN_VAR_DECL_H
+
+extern GLfloat ctrlpoints_A[4][4][4];
+
+#endif //EXTERN_VAR_DECL_H

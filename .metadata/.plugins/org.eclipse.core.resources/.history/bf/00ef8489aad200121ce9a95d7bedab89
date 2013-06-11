@@ -1,0 +1,44 @@
+#include "externVarDeclaration.h"
+
+#include <iostream>
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <stdio.h>
+
+#include <stdlib.h>
+#include "SimpleNurbs.h"
+#include <math.h>
+#include <limits.h>
+#include <GL/glut.h>
+
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
+
+int i = 500;
+int arr[4] = {1, 2, 3, 3};
+// HERE we define the VALUE of the extern'd variable i.
+
+GLfloat ctrlpoints_X[4][4][4] =
+	{
+		{
+			{0.00000, 0.00000, 0.00000, 1},
+			{0.14444, 1.09603, 0.00000, 1},
+			{1.47937, 1.41825, 0.00000, 1},
+			{2.10000, 1.80000, 0.00000, 1}},
+		{
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.10000, 1.80000, 0.00000, 1}},
+		{
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.10000, 1.80000, 0.00000, 1}},
+		{
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.1, 0, 0, 1},
+			{2.10000, 1.80000, 0.00000, 1}}
+
+	};
