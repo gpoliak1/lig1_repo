@@ -1,0 +1,30 @@
+/*
+ * controlPointLoader.h
+ *
+ *  Created on: Jun 11, 2013
+ *      Author: gil
+ */
+
+#ifndef CONTROLPOINTLOADER_H_
+#define CONTROLPOINTLOADER_H_
+
+struct ctrlPtParts {
+
+	GLfloat *points;
+
+	float transX;
+	float transY;
+	float transZ;
+	float scaleX;
+	float scaleY;
+	float scaleZ;
+};
+
+extern int numParts;
+extern void loadMasterArr(void);
+
+//struct ctrlPtParts;
+
+extern struct ctrlPtParts ctrlPtPartsArr[4];
+
+#endif /* CONTROLPOINTLOADER_H_ */

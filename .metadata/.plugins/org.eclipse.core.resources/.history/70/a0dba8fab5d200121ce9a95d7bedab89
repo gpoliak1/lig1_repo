@@ -1,0 +1,25 @@
+#include <GL/gl.h>
+
+#ifndef CONTROLPOINTLOADER_H_
+#define CONTROLPOINTLOADER_H_
+
+struct ctrlPtParts {
+
+	GLfloat *points;
+
+	float transX;
+	float transY;
+	float transZ;
+	float scaleX;
+	float scaleY;
+	float scaleZ;
+};
+
+extern int numParts;
+extern void loadMasterArr(void);
+
+//struct ctrlPtParts;
+
+extern struct ctrlPtParts ctrlPtPartsArr[numParts];
+
+#endif /* CONTROLPOINTLOADER_H_ */

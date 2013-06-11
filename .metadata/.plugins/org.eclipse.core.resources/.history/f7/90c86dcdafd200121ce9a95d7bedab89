@@ -1,0 +1,68 @@
+#include "Utils.h"
+
+#include <iostream>
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <stdio.h>
+
+#include <stdlib.h>
+#include "SimpleNurbs.h"
+#include <math.h>
+#include <limits.h>
+#include <GL/glut.h>
+
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
+
+float genRand() {
+
+	float f = (float) (rand() % 32767) / (float) 32767;
+
+	return f;
+}
+
+void ResetAnimation() {
+	RotX = RotY = RotZ = RotIncrementX = RotIncrementY = RotIncrementZ = 0.0;
+}
+
+void ZeroRotation() {
+	RotIncrementX = RotIncrementY = RotIncrementZ = 0.0;
+}
+
+void ShadeModelToggle() {
+	if (shadeModel == GL_FLAT) {
+		shadeModel = GL_SMOOTH;
+	} else {
+		shadeModel = GL_FLAT;
+	}
+}
+
+void FillModeToggle() {
+	if (polygonMode == GL_LINE) {
+		polygonMode = GL_FILL;
+	} else {
+		polygonMode = GL_LINE;
+	}
+}
+
+void MoreUs() {
+	NumUs++;
+}
+
+void LessUs() {
+	if (NumUs > 4) {
+		NumUs--;
+	}
+}
+
+void MoreVs() {
+	NumVs++;
+}
+
+void LessVs() {
+	if (NumVs > 4) {
+		NumVs--;
+	}
+}
+
+

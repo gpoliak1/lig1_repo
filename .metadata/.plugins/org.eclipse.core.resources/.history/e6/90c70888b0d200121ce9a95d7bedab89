@@ -1,0 +1,34 @@
+#include <GL/gl.h>
+
+#ifndef UTILS_H_
+#define UTILS_H_
+
+/************* POLYGON ****************/
+int NumUs = 4;
+int NumVs = 4;
+GLenum shadeModel = GL_FLAT; // Toggles between GL_FLAT and GL_SMOOTH
+GLenum polygonMode = GL_LINE; // Toggles between GL_LINE and GL_FILL
+
+/************* ANIMATION ****************/
+GLenum runMode = GL_TRUE;
+float RotX = 0.0f; // Rotational position around x-axis
+float RotY = 0.0f; // Rotational position around y-axis
+float RotZ = 0.0f; // Rotational position around z-axis
+float RotIncrementX = 0.0; // Rotational increment, x-axis
+float RotIncrementY = 0.0; // Rotational increment, y-axis
+float RotIncrementZ = 0.0; // Rotational increment, z-axis
+const float RotIncFactor = 1.5; // Factor change in rot rate per key stroke
+
+extern float genRand();
+
+extern void ResetAnimation();
+extern void ZeroRotation();
+extern void ShadeModelToggle();
+extern void FillModeToggle();
+extern void MoreUs();
+extern void LessUs();
+extern void MoreVs();
+extern void LessVs();
+
+
+#endif /* UTILS_H_ */

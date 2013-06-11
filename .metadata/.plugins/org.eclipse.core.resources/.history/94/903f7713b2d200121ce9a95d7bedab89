@@ -1,0 +1,14 @@
+/*
+ * controlPointLoader.h
+ *
+ *  Created on: Jun 11, 2013
+ *      Author: gil
+ */
+
+#ifndef CONTROLPOINTLOADER_H_
+#define CONTROLPOINTLOADER_H_
+
+extern int numParts;
+extern void loadMasterArr(void);
+
+#endif /* CONTROLPOINTLOADER_H_ */

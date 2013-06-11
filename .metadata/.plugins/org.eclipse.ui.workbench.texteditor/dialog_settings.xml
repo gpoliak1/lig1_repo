@@ -3,28 +3,30 @@
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog_dialogBounds">
 		<item value="290" key="DIALOG_WIDTH"/>
 		<item value="311" key="DIALOG_Y_ORIGIN"/>
-		<item value="398" key="DIALOG_HEIGHT"/>
 		<item value="774" key="DIALOG_X_ORIGIN"/>
-		<item value="1|Droid Sans|10.104167|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="398" key="DIALOG_HEIGHT"/>
+		<item value="1|Droid Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
 		<item value="true" key="wrap"/>
-		<item value="false" key="isRegEx"/>
 		<item value="false" key="casesensitive"/>
+		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="Lt0pos" key="selection"/>
+		<item value="wood" key="selection"/>
 		<list key="findhistory">
-			<item value="Lt0pos"/>
-			<item value="*** DRAW LINES *****"/>
-			<item value="aspectRatio"/>
-			<item value="*** CAMERA ****"/>
-			<item value="glulook"/>
-			<item value="glLoadIdentity"/>
-			<item value="e(GL_MAP2_VERTEX"/>
-			<item value="******* DISPLAY *****"/>
+			<item value="wood"/>
+			<item value="bricks"/>
+			<item value="ctrlpoints_FH"/>
+			<item value=", 8.00000, 1}"/>
+			<item value=", 13.00000, 1}"/>
+			<item value="ctrlPtPartsArr[i].scaleX"/>
+			<item value="x is"/>
+			<item value="glrot"/>
 		</list>
 		<list key="replacehistory">
+			<item value=", 10.00000, 1}"/>
+			<item value=", 8.00000, 1}"/>
 		</list>
 	</section>
 	<section name="org.eclipse.ui.texteditor.GotoLineAction$GotoLineDialog_dialogBounds">

@@ -1,0 +1,23 @@
+/*
+ * Utils.h
+ *
+ *  Created on: Jun 11, 2013
+ *      Author: gil
+ */
+
+#ifndef UTILS_H_
+#define UTILS_H_
+
+float genRand();
+
+void ResetAnimation();
+void ZeroRotation();
+void ShadeModelToggle();
+void FillModeToggle();
+void MoreUs();
+void LessUs();
+void MoreVs();
+void LessVs();
+
+
+#endif /* UTILS_H_ */

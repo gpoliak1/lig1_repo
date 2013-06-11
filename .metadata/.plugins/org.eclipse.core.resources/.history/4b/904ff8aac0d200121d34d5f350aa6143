@@ -1,0 +1,28 @@
+#include "leaves.h"
+
+#include <iostream>
+#include <GL/gl.h>
+#include <GL/glut.h>
+#include <stdio.h>
+
+#include <stdlib.h>
+#include <math.h>
+#include <limits.h>
+#include <GL/glut.h>
+
+#include <cstdlib> // for rand() and srand()
+#include <ctime> // for time()
+#define NUM_OF_LEAVES		400
+#define TREE_TRUNK_TEXTURE "texture/wood.png"
+
+float leafBox_StartX = -5;
+float leafBox_EndX = 5;
+float leafBox_StartY = 9;
+float leafBox_EndY = 15;
+float leafBox_StartZ = -5;
+float leafBox_EndZ = 5;
+
+float xSpan = leafBox_EndX - leafBox_StartX;
+float ySpan = leafBox_EndY - leafBox_StartY;
+float zSpan = leafBox_EndZ - leafBox_StartZ;
+

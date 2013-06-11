@@ -1,0 +1,5 @@
+1370970320629	Move 'controlPointLoader.cpp' to 'controlPoints'
+1370971227862	Rename resource 'textures'
+1370971252440	Move 'lodepng.cpp' to 'texture'
+1370971324633	Move 'OpenGL_Auxiliary.cpp' to 'main'
+1370971611506	Move 'OpenGL_Auxiliary.cpp' to 'src'
