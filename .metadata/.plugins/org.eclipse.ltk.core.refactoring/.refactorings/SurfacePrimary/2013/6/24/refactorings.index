@@ -3,3 +3,14 @@
 1370971252440	Move 'lodepng.cpp' to 'texture'
 1370971324633	Move 'OpenGL_Auxiliary.cpp' to 'main'
 1370971611506	Move 'OpenGL_Auxiliary.cpp' to 'src'
+1371032397250	Move 'lodepng.cpp' to 'utils'
+1371032596177	Rename resource 'Utils.h'
+1371032709494	Rename resource 'Utils.cpp'
+1371032726208	Move 'utils.cpp' to 'utils'
+1371036150755	Rename resource 'OpenGL_Auxiliary.cpp'
+1371036168126	Rename resource 'SimpleNurbs.h'
+1371037388305	Rename resource 'externVarDeclaration.h'
+1371037398324	Rename resource 'externVarDefinition.cpp'
+1371040182527	Extract Method Refactoring
+1371040591536	Extract Method Refactoring
+1371040695573	Extract Method Refactoring

@@ -6,14 +6,16 @@
 #include <stdio.h>
 
 #include <stdlib.h>
-#include "SimpleNurbs.h"
+#include "displayMain.h"
 #include <math.h>
 #include <limits.h>
 #include <GL/glut.h>
 #include <vector>
-#include <cstdlib> // for rand() and srand()
-#include <ctime> // for time()
-#define NUM_OF_TEXTURES		2
+#include <cstdlib>
+#include <ctime>
+
+int windowWidth = 600;
+int windowHeight = 400;
 
 /************* LIGHTING ****************/
 float ambientLight[4] =
@@ -60,3 +62,19 @@ float eyeZ = 0;
 float targetX = 0;
 float targetY = 0;
 float targetZ = -100;
+
+/************* POLYGON ****************/
+int NumUs = 4;
+int NumVs = 4;
+GLenum shadeModel = GL_SMOOTH; // Toggles between GL_FLAT and GL_SMOOTH
+GLenum polygonMode = GL_FILL; // Toggles between GL_LINE and GL_FILL
+
+/************* ANIMATION ****************/
+GLenum runMode = GL_TRUE;
+float RotX = 0.0f; // Rotational position around x-axis
+float RotY = 0.0f; // Rotational position around y-axis
+float RotZ = 0.0f; // Rotational position around z-axis
+float RotIncrementX = 0.0; // Rotational increment, x-axis
+float RotIncrementY = 0.0; // Rotational increment, y-axis
+float RotIncrementZ = 0.0; // Rotational increment, z-axis
+float RotIncFactor = 1.5; // Factor change in rot rate per key stroke

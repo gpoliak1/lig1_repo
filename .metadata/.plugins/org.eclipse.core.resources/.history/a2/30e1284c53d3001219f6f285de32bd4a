@@ -1,0 +1,10 @@
+#ifndef TEXTUREUTILS_H_
+#define TEXTUREUTILS_H_
+
+void texDimenPowerOfTwo();
+void loadTexture(const std::string& filename);
+void buildTexImg2D(std::vector<unsigned char> fullArr, int texArrPos);
+std::vector<unsigned char> makePowerOfTwo(size_t& u2, size_t& v2, std::vector<unsigned char>& incArr,
+		std::vector<unsigned char>& outArr);
+
+#endif /* TEXTUREUTILS_H_ */

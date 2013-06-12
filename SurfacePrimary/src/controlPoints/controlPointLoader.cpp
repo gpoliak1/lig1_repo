@@ -1,12 +1,12 @@
 #include "controlPointLoader.h"
-#include "externVarDeclaration.h"
+#include "controlPointArrs.h"
 #include <GL/gl.h>
 
 int pos = 0;
 
 struct ctrlPtParts ctrlPtPartsArr[NUM_PARTS];
 
-void loadMasterArr(void) {
+void loadControlPointsArr(void) {
 
 	ctrlPtPartsArr[pos].points = &ctrlpoints_A[0][0][0];
 	ctrlPtPartsArr[pos].transX = -3.1;

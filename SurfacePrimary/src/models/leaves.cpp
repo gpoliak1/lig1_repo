@@ -1,5 +1,5 @@
 #include "leaves.h"
-#include "../Utils.h"
+#include "../utils/utils.h"
 
 #include <iostream>
 #include <GL/gl.h>

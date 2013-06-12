@@ -1,10 +1,3 @@
-/*
- * leaves.h
- *
- *  Created on: Jun 11, 2013
- *      Author: gil
- */
-
 #ifndef LEAVES_H_
 #define LEAVES_H_
 

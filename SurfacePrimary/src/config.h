@@ -6,6 +6,9 @@
 #ifndef CONFIG_H_
 #define CONFIG_H_
 
+extern int windowWidth;
+extern int windowHeight;
+
 /************* LIGHTING ****************/
 extern float ambientLight[4];
 extern float Lt0amb[4];
@@ -39,5 +42,21 @@ extern float eyeZ;
 extern float targetX;
 extern float targetY;
 extern float targetZ;
+
+/************* POLYGON ****************/
+extern int NumUs;
+extern int NumVs;
+extern GLenum shadeModel; // Toggles between GL_FLAT and GL_SMOOTH
+extern GLenum polygonMode; // Toggles between GL_LINE and GL_FILL
+
+/************* ANIMATION ****************/
+extern GLenum runMode;
+extern float RotX;
+extern float RotY;
+extern float RotZ;
+extern float RotIncrementX;
+extern float RotIncrementY;
+extern float RotIncrementZ;
+extern float RotIncFactor;
 
 #endif /* CONFIG_H_ */

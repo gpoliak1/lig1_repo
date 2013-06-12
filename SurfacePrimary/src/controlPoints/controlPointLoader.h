@@ -16,7 +16,7 @@ struct ctrlPtParts {
 	float scaleZ;
 };
 
-extern void loadMasterArr(void);
+extern void loadControlPointsArr(void);
 extern struct ctrlPtParts ctrlPtPartsArr[NUM_PARTS];
 
 #endif /* CONTROLPOINTLOADER_H_ */
